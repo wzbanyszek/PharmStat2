@@ -1,3 +1,4 @@
+import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
@@ -46,4 +47,6 @@ equation = f"y = {intercept:.2f} + {slope:.2f}x"
 plt.text(1, 0.8, equation, fontsize=12, color='red')
 
 plt.grid(True)
-plt.show()
+#plt.show()
+
+st.pyplot(plt)
