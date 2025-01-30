@@ -2,7 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
+#from sklearn.linear_model import LinearRegression
+import sklearn
 
 st.title("Regresja Liniowa w Streamlit")
 
