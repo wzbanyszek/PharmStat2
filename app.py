@@ -10,10 +10,10 @@ from scipy.stats import linregress
 st.title("Wielostronicowa aplikacja w Streamlit (przykład SPC)")
 
 # ---------------------------------------------------------
-# MENU W BOCZNYM PANELU
+# MENU W BOCZNYM PANELU (RADIO BUTTONS)
 # ---------------------------------------------------------
-page = st.sidebar.selectbox(
-    "Wybierz podstronę",
+page = st.sidebar.radio(
+    "Wybierz podstronę:",
     [
         "Wprowadzenie",
         "Wykres punktowy i liniowy",
@@ -153,8 +153,6 @@ elif page == "Analiza SPC (Shewhart & Cpk)":
     # Przycisk: generuj dane, narysuj wykres, oblicz Cpk
     if st.button("Analizuj proces"):
         # Generowanie losowych pomiarów
-        # np.random.randn(n) -> rozkład normalny o średniej 0 i std 1
-        # mnożymy przez std_process i dodajemy mean_process
         data = mean_process + std_process * np.random.randn(n_measurements)
 
         # Obliczamy podstawowe statystyki
@@ -186,10 +184,12 @@ elif page == "Analiza SPC (Shewhart & Cpk)":
 
         # Obliczanie Cpk
         # Formuła: Cpk = min( (mean - LSL)/(3σ), (USL - mean)/(3σ) )
-        # Zakładamy, że LSL < USL. Jeśli jest odwrotnie, cpk będzie ujemny lub bez sensu.
-        cpk_lower = (x_mean - lsl) / (3 * x_std) if x_std > 0 else np.nan
-        cpk_upper = (usl - x_mean) / (3 * x_std) if x_std > 0 else np.nan
-        cpk_value = min(cpk_lower, cpk_upper) if x_std > 0 else np.nan
+        if x_std > 0:
+            cpk_lower = (x_mean - lsl) / (3 * x_std)
+            cpk_upper = (usl - x_mean) / (3 * x_std)
+            cpk_value = min(cpk_lower, cpk_upper)
+        else:
+            cpk_value = np.nan
 
         st.write(f"**Cpk** = {cpk_value:.3f}")
 
@@ -201,9 +201,6 @@ elif page == "Analiza SPC (Shewhart & Cpk)":
         (Oczywiście wartości te mogą się różnić w zależności od branży i standardów).
         """)
 
-        # Dodatkowa informacja o tym, czy LSL < USL
+        # Kontrola LSL >= USL
         if lsl >= usl:
             st.error("Uwaga: LSL >= USL! Sprawdź poprawność granic specyfikacji.")
-
-        # Można rozbudować logikę (np. zaznaczyć, które punkty przekraczają UCL/LSL)
-
