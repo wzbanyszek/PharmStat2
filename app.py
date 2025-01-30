@@ -10,8 +10,10 @@ st.title("Aplikacja z wyborem typu wykresu (matplotlib + Streamlit)")
 num_rows = st.slider("Liczba wierszy danych:", 5, 100, 20)
 
 a = st.sidebar.radio("Select one:", [1, 2])
-import hello
+import reglin
 
+
+'''
 # Generowanie przykładowych danych (trzy kolumny: X, Y, Z)
 random_data = np.random.randn(num_rows, 3)
 df = pd.DataFrame(random_data, columns=["X", "Y", "Z"])
