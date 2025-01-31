@@ -9,6 +9,7 @@ import io
 # Importy z biblioteki sixsigmaspc
 # (zamiast SPC.*)
 # ---------------------------------------------------------
+!pip install sixsigmaspc
 from sixsigmaspc import Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
 from sixsigmaspc import XbarRControlChart
 
