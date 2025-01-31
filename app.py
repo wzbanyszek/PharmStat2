@@ -269,7 +269,7 @@ def show_temp_hum_analysis():
 # ---------------------------------------------------------
 # GŁÓWNA CZĘŚĆ APLIKACJI – MENU
 # ---------------------------------------------------------
-st.title("Aplikacja wielostronicowa w Streamlit")
+st.title("Santo Pharmstat")
 
 page = st.sidebar.radio(
     "Wybierz podstronę:",
