@@ -8,7 +8,7 @@ import io
 # ---------------------------------------------------------
 # Ustawienia matplotlib (opcjonalne)
 # ---------------------------------------------------------
-plt.style.use("seaborn")
+#plt.style.use("seaborn")
 
 # ---------------------------------------------------------
 # Funkcje i limity dla temperatury i wilgotności
