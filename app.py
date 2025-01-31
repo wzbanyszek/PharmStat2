@@ -7,7 +7,7 @@ from scipy.stats import linregress
 # ---------------------------------------------------------
 # Tytuł główny aplikacji
 # ---------------------------------------------------------
-st.title("Wielostronicowa aplikacja w Streamlit (przykład SPC)")
+st.title("Przykładowa wielostronicowa aplikacja w Streamlit")
 
 # ---------------------------------------------------------
 # MENU W BOCZNYM PANELU (RADIO BUTTONS)
@@ -19,6 +19,7 @@ page = st.sidebar.radio(
         "Wykres punktowy i liniowy",
         "Regresja liniowa (SciPy)",
         "Analiza SPC (Shewhart & Cpk)",
+        "Wczytanie pliku Excel"
     ]
 )
 
@@ -30,16 +31,18 @@ if page == "Wprowadzenie":
     st.write("""
     **Witaj w przykładowej aplikacji Streamlit!**  
     W bocznym menu możesz przełączać się między kilkoma podstronami:
-    1. Wprowadzenie (ten ekran)
-    2. Wykres punktowy i liniowy
-    3. Regresja liniowa (SciPy)
-    4. Analiza SPC (Shewhart & Cpk)
+    
+    1. **Wprowadzenie**  
+    2. **Wykres punktowy i liniowy**  
+    3. **Regresja liniowa (SciPy)**  
+    4. **Analiza SPC (Shewhart & Cpk)**  
+    5. **Wczytanie pliku Excel**  
 
     ---
     **Jak korzystać z aplikacji?**  
     - Wybierz interesującą Cię podstronę z listy w bocznym panelu.
-    - Interakcja z aplikacją odbywa się przez widżety (suwaki, przyciski, itp.).
-    - Wyniki, takie jak wykresy czy tabele, pojawią się w głównym obszarze strony.
+    - Interakcja odbywa się przez widżety (suwaki, przyciski, pola do wczytania pliku, itp.).
+    - Wyniki (wykresy, tabele, statystyki) pojawiają się w głównym obszarze strony.
     """)
     st.info("Przejdź do kolejnych podstron za pomocą menu w bocznym panelu po lewej stronie.")
 
@@ -183,24 +186,57 @@ elif page == "Analiza SPC (Shewhart & Cpk)":
         st.pyplot(fig)
 
         # Obliczanie Cpk
-        # Formuła: Cpk = min( (mean - LSL)/(3σ), (USL - mean)/(3σ) )
         if x_std > 0:
             cpk_lower = (x_mean - lsl) / (3 * x_std)
             cpk_upper = (usl - x_mean) / (3 * x_std)
             cpk_value = min(cpk_lower, cpk_upper)
         else:
-            cpk_value = np.nan
+            cpk_value = np.nan  # brak zmienności w danych
 
         st.write(f"**Cpk** = {cpk_value:.3f}")
 
         st.warning("""
         Interpretacja Cpk:
-        - Cpk > 1.33 -> proces z reguły uznawany za zdolny,
+        - Cpk > 1.33 -> proces uznawany za zdolny,
         - 1.0 < Cpk < 1.33 -> może wymagać usprawnień,
         - Cpk < 1.0 -> proces nie spełnia wymagań.
-        (Oczywiście wartości te mogą się różnić w zależności od branży i standardów).
+        (Wartości mogą się różnić w zależności od standardów branżowych.)
         """)
 
-        # Kontrola LSL >= USL
         if lsl >= usl:
             st.error("Uwaga: LSL >= USL! Sprawdź poprawność granic specyfikacji.")
+
+# ==================================================================
+# STRONA 5: Wczytywanie pliku Excel
+# ==================================================================
+elif page == "Wczytanie pliku Excel":
+    st.header("Wczytywanie pliku Excel")
+
+    st.write("""
+    Ta część aplikacji pozwala wgrać własny plik Excel (format `.xlsx` lub `.xls`) 
+    i wyświetlić jego zawartość w postaci tabeli.  
+    (Następnie możesz dodać własną logikę, np. obliczenia statystyk, wykresy itp.)
+    """)
+
+    uploaded_file = st.file_uploader(
+        "Wybierz plik Excel (xlsx, xls):",
+        type=["xlsx", "xls"]
+    )
+
+    if uploaded_file is not None:
+        try:
+            # Wczytanie danych z Excela do DataFrame
+            df_excel = pd.read_excel(uploaded_file)
+            st.success("Plik wczytany poprawnie. Oto podgląd danych:")
+            st.dataframe(df_excel.head(20))  # pokażmy np. 20 pierwszych wierszy
+
+            # Przykładowa sekcja: obliczenie podstawowych statystyk
+            st.subheader("Podstawowe statystyki")
+            st.write(df_excel.describe())
+            
+            # (Możesz tutaj dodać np. wykres, zależny od zawartości pliku)
+        except Exception as e:
+            st.error(f"Błąd odczytu pliku: {e}")
+    else:
+        st.info("Najpierw wybierz plik w polu powyżej.")
+
