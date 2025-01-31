@@ -6,9 +6,11 @@ from scipy.stats import linregress
 import io
 
 # ---------------------------------------------------------
-# Ustawienia matplotlib (opcjonalne)
+# Importy z biblioteki sixsigmaspc
+# (zamiast SPC.*)
 # ---------------------------------------------------------
-#plt.style.use("seaborn")
+from sixsigmaspc import Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
+from sixsigmaspc import XbarRControlChart
 
 # ---------------------------------------------------------
 # Funkcje i limity dla temperatury i wilgotności
@@ -19,20 +21,15 @@ humidity_limit = (55, 65)     # 55% - 65%
 def generate_report_streamlit(file_content):
     """
     Generuje raport z pliku Excel (pomiary temperatury i wilgotności),
-    wyświetla wyniki w Streamlit (zamiast print/plt.show).
+    wyświetla wyniki w Streamlit.
     """
-
     try:
-        # Wczytujemy plik Excel do DataFrame
         df = pd.read_excel(io.BytesIO(file_content), header=None, skiprows=1)
         df.columns = ['time', 'temperature', 'humidity']
 
-        # Konwersja kolumny daty na format datetime
         df['time'] = pd.to_datetime(df['time'], format='%m/%d/%y %H:%M', errors='coerce')
-        # Usunięcie wierszy z błędną datą
         df = df.dropna(subset=['time'])
 
-        # Wyszukiwanie przekroczeń progów (threshold crossing)
         threshold_crossings = []
         for i in range(1, len(df)):
             prev_temp = df['temperature'].iloc[i-1]
@@ -56,7 +53,6 @@ def generate_report_streamlit(file_content):
 
         crossings_df = pd.DataFrame(threshold_crossings)
 
-        # Wyświetlamy krótką tabelkę przekroczeń
         st.subheader("Przekroczenia progów temperatury / wilgotności")
         if not crossings_df.empty:
             st.dataframe(crossings_df)
@@ -86,7 +82,7 @@ def generate_report_streamlit(file_content):
         st.write(f"- **RSD:** {rsd_hum:.2f}%")
         st.write(f"- **Liczba pomiarów:** {len(df['humidity'])}")
 
-        # Rysujemy wykres temperatury i wilgotności + linie limitów
+        # Rysowanie wykresu
         fig, ax = plt.subplots(figsize=(10, 6))
         ax.plot(df['time'], df['temperature'], label='Temperature')
         ax.plot(df['time'], df['humidity'], label='Humidity')
@@ -107,15 +103,26 @@ def generate_report_streamlit(file_content):
     except Exception as e:
         st.error(f"Wystąpił błąd podczas analizy pliku: {e}")
 
-# ---------------------------------------------------------
-# Strony istniejącej aplikacji
-# ---------------------------------------------------------
+
+# -------------------- STRONY ISTNIEJĄCE -------------------- #
 def show_intro():
     st.header("Wprowadzenie")
     st.write("""
     **Witaj w przykładowej aplikacji Streamlit!**  
-    ...
-    (Treść wprowadzenia)
+    W bocznym menu możesz przełączać się między kilkoma podstronami:
+    
+    1. **Wprowadzenie**  
+    2. **Wykres punktowy i liniowy**  
+    3. **Regresja liniowa (SciPy)**  
+    4. **Wczytanie pliku Excel**  
+    5. **Analiza temperatury i wilgotności**  
+    6. **Karta kontrolna Shewharta (X-bar / R)**  
+
+    ---
+    **Jak korzystać z aplikacji?**  
+    - Wybierz interesującą Cię podstronę w bocznym panelu.
+    - Interakcja odbywa się przez widżety (suwaki, przyciski, pola do wczytania pliku, itp.).
+    - Wyniki (wykresy, tabele, statystyki) pojawiają się w głównym obszarze strony.
     """)
 
 def show_scatter_line():
@@ -145,7 +152,10 @@ def show_scatter_line():
 
 def show_linreg_scipy():
     st.header("Regresja Liniowa (SciPy)")
-    st.write("... opis ...")
+    st.write("""
+    W tej sekcji losujemy punkty (X, Y) i dopasowujemy do nich linię 
+    z wykorzystaniem `scipy.stats.linregress`. 
+    """)
     num_points = st.slider("Liczba punktów danych:", 10, 300, 50)
     X = np.linspace(0, 10, num_points)
     true_a = 3.0
@@ -153,6 +163,7 @@ def show_linreg_scipy():
     noise = np.random.randn(num_points) * 3
     Y = true_a * X + true_b + noise
     df_reg = pd.DataFrame({"X": X, "Y": Y})
+    st.write("**Podgląd danych (pierwsze 5 wierszy):**")
     st.dataframe(df_reg.head())
 
     if st.button("Dopasuj regresję i narysuj wykres"):
@@ -162,10 +173,10 @@ def show_linreg_scipy():
         fig, ax = plt.subplots()
         ax.scatter(X, Y, label="Dane (punkty)", alpha=0.7)
         ax.plot(X, Y_pred, color="red", label="Linia regresji")
-        ax.set_title("Regresja Liniowa: Y = aX + b")
         ax.set_xlabel("X")
         ax.set_ylabel("Y")
         ax.legend()
+        ax.set_title("Regresja Liniowa: Y = aX + b")
         st.pyplot(fig)
 
         st.write(f"**Nachylenie (slope)** = {slope:.3f}")
@@ -173,53 +184,6 @@ def show_linreg_scipy():
         st.write(f"**Współczynnik korelacji (r)** = {r_value:.3f}")
         st.write(f"**Wartość p (p-value)** = {p_value:.3e}")
         st.write(f"**Odchylenie standardowe (std_err)** = {std_err:.3f}")
-
-def show_spc():
-    st.header("Analiza SPC (Shewhart & Cpk)")
-    st.write("... opis ...")
-    n_measurements = st.slider("Ile pomiarów chcesz wygenerować?", 10, 300, 50)
-    mean_process = st.number_input("Średnia procesu (np. 50.0)", value=50.0)
-    std_process = st.number_input("Odchylenie standardowe procesu (np. 2.0)", value=2.0, min_value=0.0, step=0.1)
-    lsl = st.number_input("LSL (Lower Spec Limit)", value=45.0)
-    usl = st.number_input("USL (Upper Spec Limit)", value=55.0)
-
-    if st.button("Analizuj proces"):
-        data = mean_process + std_process * np.random.randn(n_measurements)
-        x_mean = np.mean(data)
-        x_std = np.std(data, ddof=1)
-        st.write(f"**Średnia z próby =** {x_mean:.3f}")
-        st.write(f"**Odchylenie standardowe z próby =** {x_std:.3f}")
-
-        ucl = x_mean + 3 * x_std
-        lcl = x_mean - 3 * x_std
-
-        fig, ax = plt.subplots()
-        ax.plot(data, marker='o', label='Pomiary')
-        ax.axhline(x_mean, color='green', linestyle='--', label='CL (Center Line)')
-        ax.axhline(ucl, color='red', linestyle='--', label='UCL (+3σ)')
-        ax.axhline(lcl, color='red', linestyle='--', label='LCL (–3σ)')
-        ax.set_title("Wykres Shewharta (X-chart)")
-        ax.set_xlabel("Nr pomiaru")
-        ax.set_ylabel("Wartość pomiaru")
-        ax.legend()
-        st.pyplot(fig)
-
-        if x_std > 0:
-            cpk_lower = (x_mean - lsl) / (3 * x_std)
-            cpk_upper = (usl - x_mean) / (3 * x_std)
-            cpk_value = min(cpk_lower, cpk_upper)
-        else:
-            cpk_value = np.nan
-
-        st.write(f"**Cpk** = {cpk_value:.3f}")
-        st.warning("""
-        Interpretacja Cpk:
-        - Cpk > 1.33 -> proces uznawany za zdolny,
-        - 1.0 < Cpk < 1.33 -> może wymagać usprawnień,
-        - Cpk < 1.0 -> proces nie spełnia wymagań.
-        """)
-        if lsl >= usl:
-            st.error("Uwaga: LSL >= USL! Sprawdź poprawność granic specyfikacji.")
 
 def show_excel_upload():
     st.header("Wczytywanie pliku Excel")
@@ -260,11 +224,95 @@ def show_temp_hum_analysis():
     if uploaded_file is not None:
         st.write(f"Analiza pliku: **{uploaded_file.name}**")
         file_bytes = uploaded_file.read()
-        # Wywołujemy zmodyfikowaną funkcję generowania raportu
         generate_report_streamlit(file_bytes)
     else:
         st.info("Nie wybrano pliku - proszę wgrać plik Excel powyżej.")
 
+
+# -------------------- NOWA STRONA: X-BAR / R-CHART -------------------- #
+def show_shewart_xbar_r():
+    """
+    Strona prezentująca przykład użycia XbarRControlChart z biblioteki sixsigmaspc
+    (X-bar i R-chart) na przykładowych danych.
+    """
+    st.header("Karta kontrolna Shewharta (X-bar / R-chart)")
+    st.write("""
+    The x-bar and R-chart are control charts used to monitor the mean and variation 
+    of a process based on samples taken in a given time.
+
+    - **X-Bar chart**: Śledzi średnią procesu (z poszczególnych podgrup).  
+    - **R-chart**: Śledzi rozstęp (range) procesu w tych podgrupach.
+
+    (Źródło inspiracji: [sixsigmastudyguide.com/x-bar-r-control-charts](https://sixsigmastudyguide.com/x-bar-r-control-charts/))
+    """)
+
+    # Przykładowe dane i daty
+    data = np.array([
+        [23, 25, 24, 26],
+        [22, 26, 24, 25],
+        [28, 28, 22, 23],
+        [25, 25, 26, 36],
+        [22, 22, 25, 26],
+        [26, 24, 23, 22],
+        [29, 24, 24, 24],
+        [26, 25, 25, 22],
+        [22, 25, 24, 24],
+        [25, 22, 26, 24],
+        [24, 24, 24, 23],
+        [24, 25, 26, 23],
+        [22, 28, 22, 26],
+        [23, 24, 25, 26],
+        [24, 25, 29, 24],
+        [24, 22, 28, 26],
+        [24, 25, 25, 25],
+        [22, 24, 25, 26],
+        [26, 25, 22, 24],
+        [26, 22, 24, 25]
+    ])
+    dates = [
+        '21-12-21', '22-12-21', '23-12-21', '24-12-21', '25-12-21',
+        '26-12-21', '27-12-21', '28-12-21', '29-12-21', '30-12-21',
+        '31-12-21', '01-01-22', '02-01-22', '03-01-22', '05-01-22',
+        '06-01-22', '07-01-22', '08-01-22', '09-01-22', '10-01-22'
+    ]
+
+    # Tworzymy wykres X-Bar / R
+    chart = XbarRControlChart(
+        data=data,
+        xlabel="x-label",
+        ylabel_top="Średnia (X-bar)",
+        ylabel_bottom="Rozstęp (R)"
+    )
+
+    # Sprawdzamy normalność
+    normally_distributed = chart.normally_distributed(data=chart.value_X, significance_level=0.05)
+    st.write(f"Czy rozkład wartości X jest normalny (test na poziomie 0.05)? **{normally_distributed}**")
+
+    # Ustawiamy daty
+    chart.dates = dates
+    chart.dateformat = "%d-%m-%y"
+
+    # Dodajemy limity i reguły
+    chart.limits = True
+    chart.append_rules([Rule01(), Rule02(), Rule03(), Rule04(), Rule05(), Rule06(), Rule07(), Rule08()])
+
+    # Rysujemy wykres (przechwytujemy aktualną figurę)
+    chart.plot()
+    fig = plt.gcf()
+    st.pyplot(fig)
+
+    # Dane wykresu X-bar
+    df_xbar = chart.data(0)
+    st.write("**Dane wykresu X-bar** (CL, UCL, LCL):")
+    st.dataframe(df_xbar[["CL", "UCL", "LCL"]].reset_index(drop=True))
+
+    # Dane wykresu R
+    df_range = chart.data(1)
+    st.write("**Dane wykresu R** (CL, UCL, LCL):")
+    st.dataframe(df_range[["CL", "UCL", "LCL"]].reset_index(drop=True))
+
+    st.write("---")
+    st.write(f"Czy wykres jest stabilny wg reguł? **{chart.stable()}**")
 
 # ---------------------------------------------------------
 # GŁÓWNA CZĘŚĆ APLIKACJI – MENU
@@ -277,9 +325,9 @@ page = st.sidebar.radio(
         "Wprowadzenie",
         "Wykres punktowy i liniowy",
         "Regresja liniowa (SciPy)",
-        "Analiza SPC (Shewhart & Cpk)",
         "Wczytanie pliku Excel",
-        "Analiza temperatury i wilgotności"
+        "Analiza temperatury i wilgotności",
+        "Karta kontrolna Shewharta (X-bar / R)"
     ]
 )
 
@@ -292,11 +340,11 @@ elif page == "Wykres punktowy i liniowy":
 elif page == "Regresja liniowa (SciPy)":
     show_linreg_scipy()
 
-elif page == "Analiza SPC (Shewhart & Cpk)":
-    show_spc()
-
 elif page == "Wczytanie pliku Excel":
     show_excel_upload()
 
 elif page == "Analiza temperatury i wilgotności":
     show_temp_hum_analysis()
+
+elif page == "Karta kontrolna Shewharta (X-bar / R)":
+    show_shewart_xbar_r()
