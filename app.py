@@ -14,7 +14,8 @@ page = st.sidebar.radio(
         "Wczytanie pliku Excel",
         "Analiza temperatury i wilgotności",
         "Karta kontrolna Shewharta (X-bar / R)",
-        "Wykresy BoxPlot"
+        "Wykresy BoxPlot",
+        "Analiza zdolności procesowej"  
     ]
 )
 
@@ -52,3 +53,7 @@ elif page == "Karta kontrolna Shewharta (X-bar / R)":
 elif page == "Wykresy BoxPlot":
     from pages import BoxPlot
     BoxPlot.show()
+
+elif page == "Analiza zdolności procesowej":
+    from pages import process_capability
+    process_capability.show()
