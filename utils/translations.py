@@ -2,7 +2,7 @@ translations = {
     "Polski": {
         "menu_title": "Menu",
         "intro": "Witaj w aplikacji Santo Pharmstat!",
-        "intro_desc": "Ogólny przegląd funkcji aplikacji oraz instrukcje obsługi.",
+        "intro_desc": "Aplikacja umożliwia przeprowadzanie analizy danych statystycznych i jakościowych w prosty i intuicyjny sposób. W bocznym menu znajdziesz moduły, które pomogą Ci w analizie danych z różnych perspektyw.",
         "choose_page": "Wybierz podstronę:",
         "upload_data": "Wczytaj dane do analizy przy pomocy wbudowanych formularzy.",
         "view_results": "Wyniki analizy (wykresy, tabele, statystyki) pojawią się w głównym obszarze strony.",
@@ -26,7 +26,7 @@ translations = {
     "English": {
         "menu_title": "Menu",
         "intro": "Welcome to Santo Pharmstat!",
-        "intro_desc": "General overview of the application's features and usage instructions.",
+        "intro_desc": "The application allows you to perform statistical and quality data analysis in a simple and intuitive way. In the sidebar, you will find modules that will help you analyze data from different perspectives.",
         "choose_page": "Select a page:",
         "upload_data": "Upload data for analysis using the built-in forms.",
         "view_results": "The analysis results (charts, tables, statistics) will appear in the main area.",
@@ -50,7 +50,7 @@ translations = {
     "Русский": {
         "menu_title": "Меню",
         "intro": "Добро пожаловать в Santo Pharmstat!",
-        "intro_desc": "Общий обзор функций приложения и инструкции по использованию.",
+        "intro_desc": "Приложение позволяет выполнять статистический и качественный анализ данных простым и интуитивно понятным способом. В боковом меню вы найдете модули, которые помогут вам проанализировать данные с разных точек зрения.",
         "choose_page": "Выберите страницу:",
         "upload_data": "Загрузите данные для анализа с помощью встроенных форм.",
         "view_results": "Результаты анализа (графики, таблицы, статистика) появятся в главной области.",
