@@ -107,7 +107,7 @@ translations = {
         "descriptive_statistics": "Descriptive Statistics",
         "shapiro_test": "Shapiro-Wilk p-value",
         "skewness": "Skewness",
-        "kurtosis": "Kurtosis"
+        "kurtosis": "Kurtosis",
         "instructions": "Instructions",
         "upload_file_instruction": "Upload an Excel file containing measurement data.",
         "select_columns_instruction": "Select the columns for which you want to calculate descriptive statistics.",
@@ -166,7 +166,7 @@ translations = {
         "descriptive_statistics": "Описательная статистика",
         "shapiro_test": "Тест Шапиро-Уилка p-значение",
         "skewness": "Асимметрия",
-        "kurtosis": "Эксцесс"
+        "kurtosis": "Эксцесс",
         "instructions": "Инструкции",
         "upload_file_instruction": "Загрузите файл Excel с данными измерений.",
         "select_columns_instruction": "Выберите столбцы, для которых нужно рассчитать описательную статистику.",
