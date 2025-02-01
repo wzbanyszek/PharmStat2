@@ -21,8 +21,3 @@ page = st.sidebar.radio(
 if page == "Wprowadzenie":
     from pages import Wprowadzenie
     Wprowadzenie.show()
-
-
-elif page == "Karta kontrolna Shewharta (X-bar / R)":
-    from pages import Karta_kontrolna_Shewharta
-    Karta_kontrolna_Shewharta.show()
