@@ -32,7 +32,7 @@ page = st.sidebar.radio(
 
 # Routing podstron
 if page == t["intro"]:
-    from pages import Wprowadzenie
+    import Wprowadzenie
     Wprowadzenie.show(language)
 
 elif page == t["descriptive_stats"]:
