@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def show():
+def show(language):
     """
     Podstrona aplikacji Streamlit do analizy temperatury i wilgotności
     na podstawie pliku Excel z kolumnami: time, temperature, humidity.
