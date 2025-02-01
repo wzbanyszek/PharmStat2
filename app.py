@@ -47,7 +47,7 @@ elif page == "Analiza temperatury i wilgotności":
 
 elif page == "Karta kontrolna Shewharta (X-bar / R)":
     #from pages import Karta_kontrolna_Shewharta
-    #Karta_kontrolna_Shewharta.show
+    #Karta_kontrolna_Shewharta.show()
     from pages import Wprowadzenie
     Wprowadzenie.show()
 
