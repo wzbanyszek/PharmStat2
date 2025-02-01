@@ -43,7 +43,7 @@ elif page == "Wczytanie pliku Excel":
 
 elif page == "Analiza temperatury i wilgotności":
     from pages import Analiza_temperatury_wilgotnosci
-    Analiza_temperatury_wilgotnosci.show
+    Analiza_temperatury_wilgotnosci.show()
 
 elif page == "Karta kontrolna Shewharta (X-bar / R)":
     #from pages import Karta_kontrolna_Shewharta
