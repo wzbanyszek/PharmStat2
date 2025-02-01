@@ -54,7 +54,5 @@ elif page == "Karta kontrolna Shewharta (X-bar / R)":
     Wprowadzenie.show()
 
 elif page == "Wykresy BoxPlot":
-    #from pages import BoxPlot
-    #BoxPlot.show
-    from pages import Wprowadzenie
-    Wprowadzenie.show()
+    from pages import BoxPlot
+    BoxPlot.show
