@@ -15,9 +15,11 @@ page = st.sidebar.radio(
         "Analiza temperatury i wilgotności",
         "Karta kontrolna Shewharta (X-bar / R)",
         "Wykresy BoxPlot",
-        "Analiza zdolności procesowej"  
+        "Analiza zdolności procesowej",
+        "Histogramy"  
     ]
 )
+
 
 # Routing podstron
 if page == "Wprowadzenie":
@@ -57,3 +59,7 @@ elif page == "Wykresy BoxPlot":
 elif page == "Analiza zdolności procesowej":
     from pages import process_capability
     process_capability.show()
+
+elif page == "Histogramy":
+    from pages import histogram_analysis
+    histogram_analysis.show()
