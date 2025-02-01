@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Importujemy klasy i reguły z sixsigmaspc (załóżmy, że tam są):
-from sixsigmaspc import XbarRControlChart, Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
+# Importujemy klasy i reguły z SPC:
+from SPC import XbarRControlChart, Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
 
 def show():
     """
