@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from scipy.stats import norm, shapiro, skew, kurtosis
 
 def show():
     st.header("Analiza histogramów")
@@ -51,6 +52,22 @@ def show():
             st.write(f"**Minimum:** {data.min()}")
             st.write(f"**Mediana:** {np.median(data)}")
             st.write(f"**Współczynnik zmienności (RSD %):** {round((data.std() / data.mean()) * 100, 2)}%")
+
+            # Ocena normalności rozkładu (test Shapiro-Wilka)
+            st.subheader("Ocena normalności rozkładu")
+            stat, p_value = shapiro(data)
+            st.write(f"**Test Shapiro-Wilka:** statystyka = {round(stat, 4)}, p-wartość = {round(p_value, 4)}")
+            if p_value > 0.05:
+                st.success("Brak podstaw do odrzucenia hipotezy o normalności rozkładu.")
+            else:
+                st.error("Dane nie pochodzą z rozkładu normalnego.")
+
+            # Skośność i kurtoza
+            st.subheader("Skośność i kurtoza")
+            skewness = skew(data)
+            kurt = kurtosis(data)
+            st.write(f"**Skośność:** {round(skewness, 2)}")
+            st.write(f"**Kurtoza:** {round(kurt, 2)}")
 
         except Exception as e:
             st.error(f"Wystąpił błąd podczas analizy pliku: {e}")
