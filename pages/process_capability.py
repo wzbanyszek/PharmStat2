@@ -28,6 +28,12 @@ def show():
 
             data = df[selected_column].dropna()
 
+            # Podgląd danych z możliwością włączania i wyłączania
+            show_data = st.checkbox("Pokaż podgląd danych", value=True)
+            if show_data:
+                st.subheader("Podgląd danych (pierwsze 10 wierszy):")
+                st.dataframe(data.head(10))
+
             # Ustawienie granic specyfikacji i wartości docelowej
             st.subheader("Ustawienia specyfikacji")
             target = st.number_input("Wartość docelowa (Target)", value=float(data.mean()))
