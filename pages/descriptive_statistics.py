@@ -3,7 +3,7 @@ import pandas as pd
 from scipy.stats import shapiro, skew, kurtosis
 from utils.data_processing import calculate_descriptive_stats
 
-def show():
+def show(language):
     st.header("Statystyki opisowe")
 
     st.write("""
