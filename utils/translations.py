@@ -43,20 +43,13 @@ translations = {
         "MR_chart_data": "Dane wykresu MR (ruchomy rozstęp)",
         "process_stable": "Czy proces jest stabilny wg reguł?",
         "error_processing_file": "Wystąpił błąd podczas analizy pliku",
-        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej.",
 
-        "choose_file": "Wybierz plik Excel (xlsx lub xls):",
         "select_columns": "Wybierz kolumny do analizy:",
-        "show_data_preview": "Pokaż podgląd danych",
-        "data_preview": "Podgląd danych (pierwsze 5 wierszy):",
         "descriptive_statistics": "Statystyki opisowe",
         "shapiro_test": "Shapiro-Wilk p-wartość",
         "skewness": "Skośność",
-        "kurtosis": "Kurtoza",
-        "error_processing_file": "Wystąpił błąd podczas analizy pliku",
-        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
-        
-        
+        "kurtosis": "Kurtoza"
     },
 
     "English": {
@@ -103,19 +96,15 @@ translations = {
         "MR_chart_data": "MR Chart Data (Moving Range)",
         "process_stable": "Is the process stable according to the rules?",
         "error_processing_file": "An error occurred while processing the file",
-        "no_file_uploaded": "No file selected - please upload an Excel file above."
+        "no_file_uploaded": "No file selected - please upload an Excel file above.",
 
-        "choose_file": "Select an Excel file (xlsx or xls):",
         "select_columns": "Select columns for analysis:",
-        "show_data_preview": "Show data preview",
-        "data_preview": "Preview of data (first 5 rows):",
         "descriptive_statistics": "Descriptive Statistics",
         "shapiro_test": "Shapiro-Wilk p-value",
         "skewness": "Skewness",
-        "kurtosis": "Kurtosis",
-        "error_processing_file": "An error occurred while processing the file",
-        "no_file_uploaded": "No file selected - please upload an Excel file above."
+        "kurtosis": "Kurtosis"
     },
+
     "Русский": {
         "menu_title": "Меню",
         "intro": "Добро пожаловать в Santo Pharmstat!",
@@ -160,17 +149,12 @@ translations = {
         "MR_chart_data": "Данные диаграммы MR (Подвижный диапазон)",
         "process_stable": "Процесс стабилен в соответствии с правилами?",
         "error_processing_file": "Произошла ошибка при обработке файла",
-        "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel выше."
+        "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel выше.",
 
-        "choose_file": "Выберите файл Excel (xlsx или xls):",
         "select_columns": "Выберите столбцы для анализа:",
-        "show_data_preview": "Показать предварительный просмотр данных",
-        "data_preview": "Предварительный просмотр данных (первые 5 строк):",
         "descriptive_statistics": "Описательная статистика",
         "shapiro_test": "Тест Шапиро-Уилка p-значение",
         "skewness": "Асимметрия",
-        "kurtosis": "Эксцесс",
-        "error_processing_file": "Произошла ошибка при обработке файла",
-        "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel выше."        
+        "kurtosis": "Эксцесс"
     }
 }
