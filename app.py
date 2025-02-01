@@ -36,29 +36,29 @@ if page == t["intro"]:
     Wprowadzenie.show(language)
 
 elif page == t["descriptive_stats"]:
-    from pages import descriptive_statistics
+    from AppPages import descriptive_statistics
     descriptive_statistics.show(language)
 
 elif page == t["histograms"]:
-    from pages import histogram_analysis
+    from AppPages import histogram_analysis
     histogram_analysis.show(language)
 
 elif page == t["boxplot"]:
-    from pages import BoxPlot
+    from AppPages import BoxPlot
     BoxPlot.show(language)
 
 elif page == t["control_charts"]:
-    from pages import control_charts
+    from AppPages import control_charts
     control_charts.show(language)
 
 elif page == t["process_capability"]:
-    from pages import process_capability
+    from AppPages import process_capability
     process_capability.show(language)
 
 elif page == t["stability_regression"]:
-    from pages import stability_analysis
+    from AppPages import stability_analysis
     stability_analysis.show(language)
 
 elif page == t["temp_humidity"]:
-    from pages import Analiza_temperatury_wilgotnosci
+    from AppPages import Analiza_temperatury_wilgotnosci
     Analiza_temperatury_wilgotnosci.show(language)
