@@ -1,9 +1,8 @@
-
 translations = {
     "Polski": {
         "menu_title": "Menu",
         "intro": "Witaj w aplikacji Santo Pharmstat!",
-        "intro_desc": "Aplikacja umożliwia przeprowadzanie analizy danych statystycznych i jakościowych w prosty i intuicyjny sposób. W bocznym menu znajdziesz moduły, które pomogą Ci w analizie danych z różnych perspektyw.",
+        "intro_desc": "Aplikacja umożliwią przeprowadzanie analizy danych statystycznych i jakościowych w prosty i intuicyjny sposób. W bocznym menu znajdziesz moduły, które pomogą Ci w analizie danych z różnych perspektyw.",
         "choose_page": "Wybierz podstronę:",
         "upload_data": "Wczytaj dane do analizy przy pomocy wbudowanych formularzy.",
         "view_results": "Wyniki analizy (wykresy, tabele, statystyki) pojawią się w głównym obszarze strony.",
@@ -22,8 +21,31 @@ translations = {
         "stability_regression": "Regresja dla stabilności",
         "stability_regression_desc": "Analiza regresji dla danych stabilnościowych.",
         "temp_humidity": "Analiza temperatury i wilgotności",
-        "temp_humidity_desc": "Analiza danych środowiskowych i identyfikacja przekroczeń limitów."
+        "temp_humidity_desc": "Analiza danych środowiskowych i identyfikacja przekroczeń limitów.",
+
+        "choose_file": "Wybierz plik Excel (xlsx lub xls):",
+        "time_series": "Czas/ID",
+        "values": "Wartość",
+        "extra_columns": "Jeśli plik zawiera więcej niż 2 kolumny, zostaną one pominięte.",
+        "individual_values": "I (Wartość indywidualna)",
+        "moving_range": "MR (Ruchomy rozstęp)",
+        "error_two_columns": "Plik musi zawierać co najmniej 2 kolumny (Czas/ID, Wartość).",
+        "warning_extra_columns": "Plik zawiera więcej kolumn:",
+        "using_first_two": "Wykorzystamy tylko pierwsze dwie.",
+        "show_data_preview": "Pokaż podgląd wczytanych danych",
+        "data_preview": "Podgląd wczytanych danych (pierwsze 10 wierszy):",
+        "error_no_numeric_data": "Brak prawidłowych danych liczbowych w kolumnie 'Wartość'.",
+        "observation": "Obserwacja",
+        "normal_distribution_check": "Czy rozkład wartości I jest normalny (test α=0.05)?",
+        "show_I_chart": "Pokaż dane wykresu I (wartości indywidualne)",
+        "show_MR_chart": "Pokaż dane wykresu MR (ruchomy rozstęp)",
+        "I_chart_data": "Dane wykresu I (wartości indywidualne)",
+        "MR_chart_data": "Dane wykresu MR (ruchomy rozstęp)",
+        "process_stable": "Czy proces jest stabilny wg reguł?",
+        "error_processing_file": "Wystąpił błąd podczas analizy pliku",
+        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
     },
+
     "English": {
         "menu_title": "Menu",
         "intro": "Welcome to Santo Pharmstat!",
@@ -46,7 +68,29 @@ translations = {
         "stability_regression": "Stability Regression",
         "stability_regression_desc": "Perform regression analysis for stability data.",
         "temp_humidity": "Temperature and Humidity Analysis",
-        "temp_humidity_desc": "Analyze environmental data and detect specification limit violations."
+        "temp_humidity_desc": "Analyze environmental data and detect specification limit violations.",
+
+        "choose_file": "Select an Excel file (xlsx or xls):",
+        "time_series": "Time/ID",
+        "values": "Value",
+        "extra_columns": "If the file contains more than 2 columns, the additional ones will be ignored.",
+        "individual_values": "I (Individual Value)",
+        "moving_range": "MR (Moving Range)",
+        "error_two_columns": "The file must contain at least 2 columns (Time/ID, Value).",
+        "warning_extra_columns": "The file contains more columns:",
+        "using_first_two": "Only the first two will be used.",
+        "show_data_preview": "Show preview of uploaded data",
+        "data_preview": "Preview of uploaded data (first 10 rows):",
+        "error_no_numeric_data": "No valid numeric data found in the 'Value' column.",
+        "observation": "Observation",
+        "normal_distribution_check": "Is the distribution of I values normal (test α=0.05)?",
+        "show_I_chart": "Show I Chart Data (Individual Values)",
+        "show_MR_chart": "Show MR Chart Data (Moving Range)",
+        "I_chart_data": "I Chart Data (Individual Values)",
+        "MR_chart_data": "MR Chart Data (Moving Range)",
+        "process_stable": "Is the process stable according to the rules?",
+        "error_processing_file": "An error occurred while processing the file",
+        "no_file_uploaded": "No file selected - please upload an Excel file above."
     },
     "Русский": {
         "menu_title": "Меню",
