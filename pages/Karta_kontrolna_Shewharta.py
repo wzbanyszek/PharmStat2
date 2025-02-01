@@ -3,20 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Poprawiony import klasy wykresu ImR z biblioteki SPC
+# Import klasy ImRControlChart i reguł z biblioteki SPC
 from SPC import ImRControlChart, Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
 
 def show():
-    """
-    Strona aplikacji Streamlit do generowania wykresu ImR (Individual – Moving Range).
-    Wczytujemy dane z pliku Excel: 
-    - 1. kolumna: Daty / ID serii (np. numery próbki, daty),
-    - 2. kolumna: Wartości pomiarowe (liczby).
-    
-    Jeśli plik zawiera więcej kolumn, pomijamy je i informujemy użytkownika.
-    Użytkownik może zdecydować, czy chce wyświetlić podgląd danych.
-    """
-
     st.header("Karta kontrolna ImR (Individual – Moving Range)")
 
     st.write("""
@@ -30,7 +20,6 @@ def show():
       - Ruchomy rozstęp między kolejnymi pomiarami (MR-chart).
     """)
 
-    # Uploader pliku
     uploaded_file = st.file_uploader(
         "Wybierz plik Excel (xlsx lub xls):",
         type=["xlsx", "xls"]
@@ -54,16 +43,14 @@ def show():
             df = df.iloc[:, :2]
             df.columns = ["Czas/ID", "Wartość"]
 
-            # Checkbox do włączania/wyłączania podglądu danych
+            # Checkbox do podglądu danych
             show_data = st.checkbox("Pokaż podgląd wczytanych danych", value=True)
             if show_data:
                 st.subheader("Podgląd wczytanych danych (pierwsze 10 wierszy):")
                 st.dataframe(df.head(10))
 
-            # Konwersja kolumny "Czas/ID" na string (dla spójności)
+            # Konwersja kolumn
             df["Czas/ID"] = df["Czas/ID"].astype(str)
-
-            # Konwersja kolumny "Wartość" na numeryczne
             df["Wartość"] = pd.to_numeric(df["Wartość"], errors='coerce')
             df.dropna(subset=["Wartość"], inplace=True)
 
@@ -71,10 +58,10 @@ def show():
                 st.error("Brak prawidłowych danych liczbowych w kolumnie 'Wartość'.")
                 return
 
-            # Tworzymy tablicę n x 1 (n = liczba pomiarów)
+            # Tworzenie tablicy n x 1 (n = liczba pomiarów)
             data_array = df["Wartość"].to_numpy().reshape(-1, 1)
 
-            # Tworzenie obiektu ImRControlChart (z poprawioną nazwą)
+            # Tworzenie wykresu ImR
             chart = ImRControlChart(
                 data=data_array,
                 xlabel="Obserwacja",
@@ -82,21 +69,21 @@ def show():
                 ylabel_bottom="MR (Ruchomy rozstęp)"
             )
 
-            # Dodajemy limity i reguły
+            # Dodawanie reguł
             chart.limits = True
             chart.append_rules([
                 Rule01(), Rule02(), Rule03(), Rule04(),
                 Rule05(), Rule06(), Rule07(), Rule08()
             ])
 
-            # Sprawdzamy normalność danych (opcjonalnie)
+            # Sprawdzanie normalności danych (użycie value_I)
             normally_distributed = chart.normally_distributed(
-                data=chart.value_X, significance_level=0.05
+                data=chart.value_I, significance_level=0.05
             )
             st.write(f"Czy rozkład wartości I jest normalny (test α=0.05)? **{normally_distributed}**")
 
-            # Rysujemy wykres ImR
-            chart.plot()  # zakładamy, że ta metoda rysuje oba wykresy
+            # Rysowanie wykresu
+            chart.plot()
             fig = plt.gcf()
             st.pyplot(fig)
 
