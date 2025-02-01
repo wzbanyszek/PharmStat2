@@ -26,23 +26,35 @@ if page == "Wprowadzenie":
 elif page == "Wykres punktowy i liniowy":
     #from pages import Wykres_punktowy_i_liniowy
     #Wykres_punktowy_i_liniowy.show()
-
+    from pages import Wprowadzenie
+    Wprowadzenie.show()
+    
 elif page == "Regresja liniowa (SciPy)":
     #from pages import Regresja_liniowa
     #Regresja_liniowa.show()
+    from pages import Wprowadzenie
+    Wprowadzenie.show()
 
 elif page == "Wczytanie pliku Excel":
     #from pages import Wczytanie_Excel
     #Wczytanie_Excel.show()
+    from pages import Wprowadzenie
+    Wprowadzenie.show()
 
 elif page == "Analiza temperatury i wilgotności":
     #from pages import Analiza_temperatury_wilgotnosci
-    #Analiza_temperatury_wilgotnosci.show()
+    #Analiza_temperatury_wilgotnosci.show
+    from pages import Wprowadzenie
+    Wprowadzenie.show()
 
 elif page == "Karta kontrolna Shewharta (X-bar / R)":
     #from pages import Karta_kontrolna_Shewharta
-    #Karta_kontrolna_Shewharta.show()
+    #Karta_kontrolna_Shewharta.show
+    from pages import Wprowadzenie
+    Wprowadzenie.show()
 
 elif page == "Wykresy BoxPlot":
     #from pages import BoxPlot
-    #BoxPlot.show()
+    #BoxPlot.show
+    from pages import Wprowadzenie
+    Wprowadzenie.show()
