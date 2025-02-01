@@ -37,8 +37,8 @@ elif page == "Wykresy pudełkowe BoxPlot":
     BoxPlot.show()
 
 elif page == "Karty kontrolne ImR":
-    from pages import ImR_control_charts
-    ImR_control_charts.show()
+    from pages import control_charts
+    control_charts.show()
 
 elif page == "Analiza zdolności procesowej":
     from pages import process_capability
