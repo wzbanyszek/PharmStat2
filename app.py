@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Santo Pharmstat", layout="wide")
 
 # Menu boczne
-st.sidebar.title("Menu")
+#st.sidebar.title("Menu")
 page = st.sidebar.radio(
     "Wybierz podstronę:",
     [
