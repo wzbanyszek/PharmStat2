@@ -45,16 +45,18 @@ translations = {
         "error_processing_file": "Wystąpił błąd podczas analizy pliku",
         "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
 
-        "choose_file": "Select an Excel file (xlsx or xls):",
-        "select_columns": "Select columns for analysis:",
-        "show_data_preview": "Show data preview",
-        "data_preview": "Preview of data (first 5 rows):",
-        "descriptive_statistics": "Descriptive Statistics",
-        "shapiro_test": "Shapiro-Wilk p-value",
-        "skewness": "Skewness",
-        "kurtosis": "Kurtosis",
-        "error_processing_file": "An error occurred while processing the file",
-        "no_file_uploaded": "No file selected - please upload an Excel file above."
+        "choose_file": "Wybierz plik Excel (xlsx lub xls):",
+        "select_columns": "Wybierz kolumny do analizy:",
+        "show_data_preview": "Pokaż podgląd danych",
+        "data_preview": "Podgląd danych (pierwsze 5 wierszy):",
+        "descriptive_statistics": "Statystyki opisowe",
+        "shapiro_test": "Shapiro-Wilk p-wartość",
+        "skewness": "Skośność",
+        "kurtosis": "Kurtoza",
+        "error_processing_file": "Wystąpił błąd podczas analizy pliku",
+        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+        
+        
     },
 
     "English": {
@@ -103,16 +105,16 @@ translations = {
         "error_processing_file": "An error occurred while processing the file",
         "no_file_uploaded": "No file selected - please upload an Excel file above."
 
-        "choose_file": "Wybierz plik Excel (xlsx lub xls):",
-        "select_columns": "Wybierz kolumny do analizy:",
-        "show_data_preview": "Pokaż podgląd danych",
-        "data_preview": "Podgląd danych (pierwsze 5 wierszy):",
-        "descriptive_statistics": "Statystyki opisowe",
-        "shapiro_test": "Shapiro-Wilk p-wartość",
-        "skewness": "Skośność",
-        "kurtosis": "Kurtoza",
-        "error_processing_file": "Wystąpił błąd podczas analizy pliku",
-        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+        "choose_file": "Select an Excel file (xlsx or xls):",
+        "select_columns": "Select columns for analysis:",
+        "show_data_preview": "Show data preview",
+        "data_preview": "Preview of data (first 5 rows):",
+        "descriptive_statistics": "Descriptive Statistics",
+        "shapiro_test": "Shapiro-Wilk p-value",
+        "skewness": "Skewness",
+        "kurtosis": "Kurtosis",
+        "error_processing_file": "An error occurred while processing the file",
+        "no_file_uploaded": "No file selected - please upload an Excel file above."
     },
     "Русский": {
         "menu_title": "Меню",
