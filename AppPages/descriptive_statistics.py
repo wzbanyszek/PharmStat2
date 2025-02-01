@@ -2,40 +2,43 @@ import streamlit as st
 import pandas as pd
 from scipy.stats import shapiro, skew, kurtosis
 from utils.data_processing import calculate_descriptive_stats
+from utils.translations import translations
 
 def show(language):
-    st.header("Statystyki opisowe")
+    t = translations[language]
 
-    st.write("""
-    **Instrukcje:**
-    - Wczytaj plik Excel zawierający dane pomiarowe.
-    - Wybierz kolumny, dla których chcesz obliczyć statystyki opisowe.
-    - Otrzymasz zestawienie najważniejszych statystyk, takich jak Średnia, mediana, odchylenie standardowe i inne.
-    - Dodatkowo ocenisz normalność rozkładu oraz uzyskasz informacje o skośności i kurtozie.
+    st.header(t["descriptive_stats"])
+
+    st.write(f"""
+    **{t["instructions"]}:**
+    - {t["upload_file_instruction"]}
+    - {t["select_columns_instruction"]}
+    - {t["stats_summary_instruction"]}
+    - {t["normality_skew_kurtosis_instruction"]}
     """)
 
     # Wczytywanie pliku
-    uploaded_file = st.file_uploader("Wybierz plik Excel (xlsx lub xls):", type=["xlsx", "xls"])
+    uploaded_file = st.file_uploader(t["choose_file"], type=["xlsx", "xls"])
 
     if uploaded_file is not None:
         try:
             df = pd.read_excel(uploaded_file)
 
             # Podgląd danych z możliwością włączania i wyłączania
-            show_data = st.checkbox("Pokaż podgląd danych", value=True)
+            show_data = st.checkbox(t["show_data_preview"], value=True)
             if show_data:
-                st.write("**Podgląd danych (pierwsze 5 wierszy):**")
+                st.write(f"**{t['data_preview']}**")
                 st.dataframe(df.head())
 
             columns = df.columns.tolist()
             selected_columns = st.multiselect(
-                "Wybierz kolumny do analizy:",
+                t["select_columns"],
                 columns,
                 default=columns
             )
 
             if selected_columns:
-                st.subheader("Statystyki opisowe")
+                st.subheader(t["descriptive_stats"])
                 stats = calculate_descriptive_stats(df[selected_columns])
 
                 # Dodanie wyników testu normalności, skośności i kurtozy jako wierszy
@@ -46,9 +49,9 @@ def show(language):
                     skewness = skew(data)
                     kurt = kurtosis(data)
 
-                    additional_stats.setdefault("Shapiro-Wilk p-wartość", []).append(round(p_value, 4))
-                    additional_stats.setdefault("Skośność", []).append(round(skewness, 2))
-                    additional_stats.setdefault("Kurtoza", []).append(round(kurt, 2))
+                    additional_stats.setdefault(t["shapiro_p_value"], []).append(round(p_value, 4))
+                    additional_stats.setdefault(t["skewness"], []).append(round(skewness, 2))
+                    additional_stats.setdefault(t["kurtosis"], []).append(round(kurt, 2))
 
                 # Konwersja dodatkowych wyników do DataFrame
                 additional_stats_df = pd.DataFrame(additional_stats, index=selected_columns).T
@@ -59,6 +62,6 @@ def show(language):
                 st.dataframe(full_stats)
 
         except Exception as e:
-            st.error(f"Wystąpił błąd podczas analizy pliku: {e}")
+            st.error(f"{t['error_processing_file']}: {e}")
     else:
-        st.info("Nie wybrano pliku - proszę wgrać plik Excel powyżej.")
+        st.info(t["no_file_uploaded"])
