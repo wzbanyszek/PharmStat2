@@ -50,7 +50,11 @@ translations = {
         "shapiro_test": "Shapiro-Wilk p-wartość",
         "skewness": "Skośność",
         "kurtosis": "Kurtoza",
-        "instructions": "Instructions"
+        "instructions": "Instrukcje",
+        "upload_file_instruction": "Wczytaj plik Excel zawierający dane pomiarowe.",
+        "select_columns_instruction": "Wybierz kolumny, dla których chcesz obliczyć statystyki opisowe.",
+        "stats_summary_instruction": "Otrzymasz zestawienie najważniejszych statystyk, takich jak średnia, mediana, odchylenie standardowe i inne.",
+        "normality_skew_kurtosis_instruction": "Dodatkowo ocenisz normalność rozkładu oraz uzyskasz informacje o skośności i kurtozie."
     },
 
     "English": {
@@ -104,6 +108,12 @@ translations = {
         "shapiro_test": "Shapiro-Wilk p-value",
         "skewness": "Skewness",
         "kurtosis": "Kurtosis"
+        "instructions": "Instructions",
+        "upload_file_instruction": "Upload an Excel file containing measurement data.",
+        "select_columns_instruction": "Select the columns for which you want to calculate descriptive statistics.",
+        "stats_summary_instruction": "You will receive a summary of key statistics such as mean, median, standard deviation, and more.",
+        "normality_skew_kurtosis_instruction": "Additionally, you will assess normality of distribution and obtain information on skewness and kurtosis."
+    
     },
 
     "Русский": {
@@ -157,5 +167,11 @@ translations = {
         "shapiro_test": "Тест Шапиро-Уилка p-значение",
         "skewness": "Асимметрия",
         "kurtosis": "Эксцесс"
+        "instructions": "Инструкции",
+        "upload_file_instruction": "Загрузите файл Excel с данными измерений.",
+        "select_columns_instruction": "Выберите столбцы, для которых нужно рассчитать описательную статистику.",
+        "stats_summary_instruction": "Вы получите сводку основных статистик, таких как среднее, медиана, стандартное отклонение и другие.",
+        "normality_skew_kurtosis_instruction": "Кроме того, вы оцените нормальность распределения и получите информацию об асимметрии и эксцессе."
+
     }
 }
