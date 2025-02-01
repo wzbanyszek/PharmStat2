@@ -6,7 +6,7 @@ import numpy as np
 # Import klasy ImRControlChart i reguł z biblioteki SPC
 from SPC import ImRControlChart, Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
 
-def show():
+def show(language):
     st.header("Karta kontrolna ImR (Individual – Moving Range)")
 
     st.write("""
