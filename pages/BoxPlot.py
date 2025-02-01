@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from utils.data_processing import calculate_descriptive_stats
 
-def show():
+def show(language):
     st.header("Wykresy BoxPlot")
     st.write("""
     Ta sekcja pozwala wczytać plik Excel i wygenerować wykresy BoxPlot dla poszczególnych kolumn.
