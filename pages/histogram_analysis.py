@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import norm, shapiro, skew, kurtosis
 
-def show():
+def show(language):
     st.header("Analiza histogramów")
 
     st.write("""
