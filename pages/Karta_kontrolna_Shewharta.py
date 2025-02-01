@@ -3,12 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Importujemy klasy i reguły z biblioteki SPC
-from SPC import IMRControlChart, Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
+# Poprawiony import klasy wykresu ImR z biblioteki SPC
+from SPC import ImRControlChart, Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
 
 def show():
     """
-    Strona aplikacji Streamlit do generowania wykresu I-MR (Individual – Moving Range).
+    Strona aplikacji Streamlit do generowania wykresu ImR (Individual – Moving Range).
     Wczytujemy dane z pliku Excel: 
     - 1. kolumna: Daty / ID serii (np. numery próbki, daty),
     - 2. kolumna: Wartości pomiarowe (liczby).
@@ -17,7 +17,7 @@ def show():
     Użytkownik może zdecydować, czy chce wyświetlić podgląd danych.
     """
 
-    st.header("Karta kontrolna I-MR (Individual – Moving Range)")
+    st.header("Karta kontrolna ImR (Individual – Moving Range)")
 
     st.write("""
     **Instrukcje**:
@@ -25,7 +25,7 @@ def show():
       1. **Czas / ID serii** (np. daty, numery próbki),
       2. **Wartości** (liczby).
     - Jeśli plik zawiera więcej niż 2 kolumny, zostaną one pominięte.
-    - Wykres **I-MR** (Individual – Moving Range) pokazuje:
+    - Wykres **ImR** (Individual – Moving Range) pokazuje:
       - Wartości indywidualne (I-chart),
       - Ruchomy rozstęp między kolejnymi pomiarami (MR-chart).
     """)
@@ -74,8 +74,8 @@ def show():
             # Tworzymy tablicę n x 1 (n = liczba pomiarów)
             data_array = df["Wartość"].to_numpy().reshape(-1, 1)
 
-            # Tworzenie obiektu IMRControlChart
-            chart = IMRControlChart(
+            # Tworzenie obiektu ImRControlChart (z poprawioną nazwą)
+            chart = ImRControlChart(
                 data=data_array,
                 xlabel="Obserwacja",
                 ylabel_top="I (Wartość indywidualna)",
@@ -95,7 +95,7 @@ def show():
             )
             st.write(f"Czy rozkład wartości I jest normalny (test α=0.05)? **{normally_distributed}**")
 
-            # Rysujemy wykres I-MR
+            # Rysujemy wykres ImR
             chart.plot()  # zakładamy, że ta metoda rysuje oba wykresy
             fig = plt.gcf()
             st.pyplot(fig)
