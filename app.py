@@ -19,5 +19,5 @@ page = st.sidebar.radio(
 
 # Routing podstron
 if page == "Wprowadzenie":
-    import wprowadzenie
+    from pages import wprowadzenie
     wprowadzenie.show()
