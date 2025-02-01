@@ -1,4 +1,5 @@
 import streamlit as st
+from utils.translations import translations
 
 # Konfiguracja strony
 st.set_page_config(page_title="Santo Pharmstat", layout="wide")
