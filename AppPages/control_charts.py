@@ -2,26 +2,27 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from utils.translations import translations
 
 # Import klasy ImRControlChart i reguł z biblioteki SPC
 from SPC import ImRControlChart, Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
 
 def show(language):
-    st.header("Karta kontrolna ImR (Individual – Moving Range)")
+    t = translations[language]
 
-    st.write("""
-    **Instrukcje**:
-    - Wczytaj plik Excel zawierający **co najmniej 2 kolumny**:
-      1. **Czas / ID serii** (np. daty, numery próbki),
-      2. **Wartości** (liczby).
-    - Jeśli plik zawiera więcej niż 2 kolumny, zostaną one pominięte.
-    - Wykres **ImR** (Individual – Moving Range) pokazuje:
-      - Wartości indywidualne (I-chart),
-      - Ruchomy rozstęp między kolejnymi pomiarami (MR-chart).
+    st.header(t["control_charts"])
+
+    st.write(f"""
+    **{t["how_to_use"]}:**
+    - {t["upload_data"]}
+      1. **{t["time_series"]}** (e.g., dates, sample IDs),
+      2. **{t["values"]}** (numerical data).
+    - {t["extra_columns"]}
+    - **ImR Chart** ({t["individual_values"]}, {t["moving_range"]}).
     """)
 
     uploaded_file = st.file_uploader(
-        "Wybierz plik Excel (xlsx lub xls):",
+        t["choose_file"],
         type=["xlsx", "xls"]
     )
 
@@ -29,84 +30,71 @@ def show(language):
         try:
             df = pd.read_excel(uploaded_file)
 
-            # Sprawdzamy liczbę kolumn
             col_count = df.shape[1]
             if col_count < 2:
-                st.error("Plik musi zawierać co najmniej 2 kolumny (Czas/ID, Wartość).")
+                st.error(t["error_two_columns"])
                 return
 
-            # Informacja, jeśli jest więcej kolumn
             if col_count > 2:
-                st.warning(f"Plik zawiera {col_count} kolumn. Wykorzystamy tylko pierwsze dwie.")
+                st.warning(f"{t["warning_extra_columns"]} {col_count}. {t["using_first_two"]}")
 
-            # Wybieramy tylko pierwsze dwie kolumny
             df = df.iloc[:, :2]
-            df.columns = ["Czas/ID", "Wartość"]
+            df.columns = [t["time_series"], t["values"]]
 
-            # Checkbox do podglądu danych
-            show_data = st.checkbox("Pokaż podgląd wczytanych danych", value=True)
+            show_data = st.checkbox(t["show_data_preview"], value=True)
             if show_data:
-                st.subheader("Podgląd wczytanych danych (pierwsze 10 wierszy):")
+                st.subheader(t["data_preview"])
                 st.dataframe(df.head(10))
 
-            # Konwersja kolumn
-            df["Czas/ID"] = df["Czas/ID"].astype(str)
-            df["Wartość"] = pd.to_numeric(df["Wartość"], errors='coerce')
-            df.dropna(subset=["Wartość"], inplace=True)
+            df[t["time_series"]] = df[t["time_series"]].astype(str)
+            df[t["values"]] = pd.to_numeric(df[t["values"]], errors='coerce')
+            df.dropna(subset=[t["values"]], inplace=True)
 
             if df.empty:
-                st.error("Brak prawidłowych danych liczbowych w kolumnie 'Wartość'.")
+                st.error(t["error_no_numeric_data"])
                 return
 
-            # Tworzenie tablicy n x 1 (n = liczba pomiarów)
-            data_array = df["Wartość"].to_numpy().reshape(-1, 1)
+            data_array = df[t["values"]].to_numpy().reshape(-1, 1)
 
-            # Tworzenie wykresu ImR
             chart = ImRControlChart(
                 data=data_array,
-                xlabel="Obserwacja",
-                ylabel_top="I (Wartość indywidualna)",
-                ylabel_bottom="MR (Ruchomy rozstęp)"
+                xlabel=t["observation"],
+                ylabel_top=t["individual_values"],
+                ylabel_bottom=t["moving_range"]
             )
 
-            # Dodawanie reguł
             chart.limits = True
             chart.append_rules([
                 Rule01(), Rule02(), Rule03(), Rule04(),
                 Rule05(), Rule06(), Rule07(), Rule08()
             ])
 
-            # Sprawdzanie normalności danych (użycie value_I)
             normally_distributed = chart.normally_distributed(
                 data=chart.value_I, significance_level=0.05
             )
-            st.write(f"Czy rozkład wartości I jest normalny (test α=0.05)? **{normally_distributed}**")
+            st.write(f"{t["normal_distribution_check"]} **{normally_distributed}**")
 
-            # Rysowanie wykresu
             chart.plot()
             fig = plt.gcf()
             st.pyplot(fig)
 
-            # Checkboxy do ukrywania/wyświetlania tabel z danymi
-            show_I_data = st.checkbox("Pokaż dane wykresu I (wartości indywidualne)", value=True)
-            show_MR_data = st.checkbox("Pokaż dane wykresu MR (ruchomy rozstęp)", value=True)
+            show_I_data = st.checkbox(t["show_I_chart"], value=True)
+            show_MR_data = st.checkbox(t["show_MR_chart"], value=True)
 
-            # Dane wykresu I
             if show_I_data:
                 df_I = chart.data(0)
-                st.write("**Dane wykresu I (wartości indywidualne)** (CL, UCL, LCL):")
+                st.write(f"**{t["I_chart_data"]}** (CL, UCL, LCL):")
                 st.dataframe(df_I[["CL", "UCL", "LCL"]].reset_index(drop=True))
 
-            # Dane wykresu MR
             if show_MR_data:
                 df_MR = chart.data(1)
-                st.write("**Dane wykresu MR (ruchomy rozstęp)** (CL, UCL, LCL):")
+                st.write(f"**{t["MR_chart_data"]}** (CL, UCL, LCL):")
                 st.dataframe(df_MR[["CL", "UCL", "LCL"]].reset_index(drop=True))
 
             st.write("---")
-            st.write(f"Czy proces jest stabilny wg reguł? **{chart.stable()}**")
+            st.write(f"{t["process_stable"]} **{chart.stable()}**")
 
         except Exception as e:
-            st.error(f"Wystąpił błąd podczas analizy pliku: {e}")
+            st.error(f"{t["error_processing_file"]}: {e}")
     else:
-        st.info("Nie wybrano pliku - proszę wgrać plik Excel powyżej.")
+        st.info(t["no_file_uploaded"])
