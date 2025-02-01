@@ -49,7 +49,8 @@ translations = {
         "descriptive_statistics": "Statystyki opisowe",
         "shapiro_test": "Shapiro-Wilk p-wartość",
         "skewness": "Skośność",
-        "kurtosis": "Kurtoza"
+        "kurtosis": "Kurtoza",
+        "instructions": "Instructions"
     },
 
     "English": {
