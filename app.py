@@ -46,10 +46,8 @@ elif page == "Analiza temperatury i wilgotności":
     Analiza_temperatury_wilgotnosci.show()
 
 elif page == "Karta kontrolna Shewharta (X-bar / R)":
-    #from pages import Karta_kontrolna_Shewharta
-    #Karta_kontrolna_Shewharta.show()
-    from pages import Wprowadzenie
-    Wprowadzenie.show()
+    from pages import Karta_kontrolna_Shewharta
+    Karta_kontrolna_Shewharta.show()
 
 elif page == "Wykresy BoxPlot":
     from pages import BoxPlot
