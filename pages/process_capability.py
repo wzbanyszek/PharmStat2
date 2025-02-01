@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import norm
 
-def show():
+def show(language):
     st.header("Analiza zdolności procesowej (Process Capability Analysis)")
 
     st.write("""
