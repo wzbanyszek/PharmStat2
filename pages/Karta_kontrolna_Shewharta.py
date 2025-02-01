@@ -3,32 +3,37 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Importujemy klasy i reguły z SPC:
+# Zakładamy, że w bibliotece SPC masz te klasy i reguły:
 from SPC import XbarRControlChart, Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
 
 def show():
     """
-    Strona prezentująca możliwość wczytania pliku Excel
-    (pierwsza kolumna: daty/serie, druga kolumna: wartości),
-    a następnie stworzenie karty kontrolnej Shewharta (X-bar / R).
-    Zakładamy podgrupy o domyślnej wielkości 4.
+    Strona prezentująca możliwość wczytania pliku Excel (XLS, XLSX),
+    zawierającego co najmniej 2 kolumny:
+    1) Daty / ID serii (dowolny tekst lub datetime),
+    2) Wartości (liczby, np. pomiar procesu).
+    
+    Jeśli w pliku jest więcej kolumn, pomijamy je i informujemy użytkownika.
+    
+    Po wczytaniu:
+    - Brak podziału na subgrupy (pomijamy grupowanie),
+      co oznacza, że XbarRControlChart będzie otrzymywał tablicę (n x 1).
+    - Rysujemy wykres X-bar / R (choć w sensie statystycznym jest to osobliwe,
+      bo typowe X-bar / R zakłada >1 pomiar na subgrupę).
     """
-    st.header("Karta kontrolna Shewharta (X-bar / R)")
+
+    st.header("Karta kontrolna Shewharta (X-bar / R) bez grupowania danych")
 
     st.write("""
     **Instrukcje**:
     - Plik Excel musi mieć co najmniej 2 kolumny:
-      1. **Czas / ID serii** (np. daty, numer próbki),
-      2. **Wartości** (pomiar procesu).
-    - Jeśli plik zawiera więcej kolumn, zostaną pominięte.
-    - Dane w drugiej kolumnie zostaną grupowane w podgrupy (domyślnie po 4 wiersze na grupę).
+      1. **Czas / ID serii** (np. daty, numery próbki, wczytamy jako tekst).
+      2. **Wartości** (liczby).
+    - Jeśli w pliku jest więcej kolumn, zostaną pominięte.
+    - Każda wartość traktowana jest jako osobna „subgrupa” wielkości 1. 
+      Dla klasycznego X-bar / R to nietypowa sytuacja (lepszy byłby wykres I–MR),
+      jednak to kod zgodny z Twoimi wytycznymi, aby „pominąć grupowanie”.
     """)
-
-    # Parametr: rozmiar podgrupy (X-bar / R wymaga wielkości > 1)
-    subgroup_size = st.number_input(
-        "Rozmiar podgrupy (liczba pomiarów w jednej grupie)",
-        min_value=2, max_value=50, value=4
-    )
 
     uploaded_file = st.file_uploader(
         "Wybierz plik Excel (xlsx lub xls):",
@@ -42,56 +47,48 @@ def show():
             # Sprawdzamy liczbę kolumn
             col_count = df.shape[1]
             if col_count < 2:
-                st.error("Plik musi zawierać co najmniej 2 kolumny (czas/ID, wartość).")
+                st.error("Plik musi zawierać co najmniej 2 kolumny (Czas/ID, Wartość).")
                 return
             
-            # Jeżeli jest więcej kolumn, poinformuj użytkownika
+            # Komunikat, jeśli jest więcej niż 2 kolumny
             if col_count > 2:
-                st.warning(f"Plik zawiera {col_count} kolumn. Wykorzystam tylko pierwsze 2.")
+                st.warning(f"Plik zawiera {col_count} kolumn. Wykorzystamy tylko pierwsze dwie.")
 
             # Wybieramy tylko pierwsze dwie kolumny
             df = df.iloc[:, :2]
-            df.columns = ["Serie/Czas", "Wartość"]
+            df.columns = ["Czas/ID", "Wartość"]
 
-            # Wyświetlamy podgląd danych
-            st.subheader("Podgląd wczytanych danych (pierwszych 10 wierszy):")
-            st.dataframe(df.head(10))
+            # Checkbox do włączania/wyłączania podglądu danych
+            show_data = st.checkbox("Pokaż podgląd wczytanych danych", value=True)
+            if show_data:
+                st.subheader("Podgląd wczytanych danych (pierwszych 10 wierszy):")
+                st.dataframe(df.head(10))
 
-            # Konwersja pierwszej kolumny na string (jeśli to daty/serie, 
-            # to i tak w XbarR potrzebujemy głównie do wyświetlenia w legendzie/daty)
-            df["Serie/Czas"] = df["Serie/Czas"].astype(str)
+            # Konwersja pierwszej kolumny do string (na wszelki wypadek)
+            df["Czas/ID"] = df["Czas/ID"].astype(str)
 
-            # Druga kolumna to wartości
-            data_array = df["Wartość"].to_numpy()
+            # Druga kolumna to wartości liczbowe
+            # (jeśli ktoś wgra teksty tam, mogą być NaN)
+            df["Wartość"] = pd.to_numeric(df["Wartość"], errors='coerce')
+            df.dropna(subset=["Wartość"], inplace=True)
 
-            # Podział na podgrupy
-            # Np. jeśli subgroup_size=4, to co 4 wartości staje się jedną grupą.
-            # Obetniemy ewentualne nadwyżkowe wiersze, których nie da się dopasować do pełnych grup.
-            total_points = len(data_array)
-            full_groups_count = total_points // subgroup_size  # ile pełnych grup
-
-            if full_groups_count < 1:
-                st.error("Za mało danych, aby utworzyć choć jedną pełną podgrupę.")
-                return
-
-            # Przycinamy do pełnych podgrup
-            data_array = data_array[: full_groups_count * subgroup_size]
-
-            # Tworzymy macierz (liczba_podgrup) x (rozmiar_podgrupy)
-            reshaped_data = data_array.reshape(full_groups_count, subgroup_size)
-
-            st.write(f"Liczba pełnych podgrup: **{full_groups_count}** (po {subgroup_size} pomiarów w każdej).")
+            # Tworzymy tablicę n x 1 (n = liczba wierszy)
+            data_array = df["Wartość"].to_numpy().reshape(-1, 1)
 
             # Tworzymy obiekt XbarRControlChart
             chart = XbarRControlChart(
-                data=reshaped_data, 
-                xlabel="Podgrupa",
+                data=data_array,
+                xlabel="Obserwacja",
                 ylabel_top="X-bar (Średnia)",
                 ylabel_bottom="R (Rozstęp)"
             )
+
             # Dodajemy limity i reguły
             chart.limits = True
-            chart.append_rules([Rule01(), Rule02(), Rule03(), Rule04(), Rule05(), Rule06(), Rule07(), Rule08()])
+            chart.append_rules([
+                Rule01(), Rule02(), Rule03(), Rule04(),
+                Rule05(), Rule06(), Rule07(), Rule08()
+            ])
 
             # Sprawdzamy normalność (opcjonalnie)
             normally_distributed = chart.normally_distributed(
@@ -100,7 +97,7 @@ def show():
             st.write(f"Czy rozkład wartości X jest normalny (test α=0.05)? **{normally_distributed}**")
 
             # Rysujemy wykres (X-bar / R)
-            chart.plot()  # to prawdopodobnie wywołuje plt.show() wewnętrznie
+            chart.plot()  # to wywołuje plt.show() wewnętrznie
             fig = plt.gcf()
             st.pyplot(fig)
 
@@ -116,11 +113,6 @@ def show():
 
             st.write("---")
             st.write(f"Czy wykres jest stabilny wg reguł? **{chart.stable()}**")
-
-            # Informacja o ewentualnie pominiętych wierszach
-            leftover = len(df) - (full_groups_count * subgroup_size)
-            if leftover > 0:
-                st.info(f"Pominięto ostatnich {leftover} wierszy, aby zachować pełne podgrupy.")
 
         except Exception as e:
             st.error(f"Wystąpił błąd podczas analizy pliku: {e}")
