@@ -20,8 +20,12 @@ def show():
     if uploaded_file is not None:
         try:
             df = pd.read_excel(uploaded_file)
-            st.write("**Podgląd danych (pierwsze 5 wierszy):**")
-            st.dataframe(df.head())
+
+            # Podgląd danych z możliwością włączania i wyłączania
+            show_data = st.checkbox("Pokaż podgląd danych", value=True)
+            if show_data:
+                st.write("**Podgląd danych (pierwsze 5 wierszy):**")
+                st.dataframe(df.head())
 
             columns = df.columns.tolist()
             selected_columns = st.multiselect(
@@ -33,27 +37,28 @@ def show():
             if selected_columns:
                 st.subheader("Statystyki opisowe")
                 stats = calculate_descriptive_stats(df[selected_columns])
-                st.dataframe(stats)
 
-                # Ocena normalności rozkładu, skośność i kurtoza dla każdej kolumny
+                # Dodanie kolumn z wynikami testu normalności, skośności i kurtozy
+                normality_results = {}
                 for column in selected_columns:
-                    st.write(f"---")
-                    st.write(f"**Analiza kolumny:** {column}")
                     data = df[column].dropna()
-
-                    # Ocena normalności rozkładu (test Shapiro-Wilka)
                     stat, p_value = shapiro(data)
-                    st.write(f"**Test Shapiro-Wilka:** statystyka = {round(stat, 4)}, p-wartość = {round(p_value, 4)}")
-                    if p_value > 0.05:
-                        st.success("Brak podstaw do odrzucenia hipotezy o normalności rozkładu.")
-                    else:
-                        st.error("Dane nie pochodzą z rozkładu normalnego.")
-
-                    # Skośność i kurtoza
                     skewness = skew(data)
                     kurt = kurtosis(data)
-                    st.write(f"**Skośność:** {round(skewness, 2)}")
-                    st.write(f"**Kurtoza:** {round(kurt, 2)}")
+
+                    normality_results[column] = {
+                        "Shapiro-Wilk p-wartość": round(p_value, 4),
+                        "Skośność": round(skewness, 2),
+                        "Kurtoza": round(kurt, 2)
+                    }
+
+                # Konwersja wyników do DataFrame
+                normality_df = pd.DataFrame(normality_results).T
+
+                # Łączenie wyników statystyk opisowych z wynikami testu normalności
+                full_stats = pd.concat([stats, normality_df], axis=1)
+
+                st.dataframe(full_stats)
 
         except Exception as e:
             st.error(f"Wystąpił błąd podczas analizy pliku: {e}")
