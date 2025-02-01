@@ -4,7 +4,7 @@ import streamlit as st
 #st.set_page_config(page_title="Santo Pharmstat", layout="wide")
 
 # Menu boczne
-st.sidebar.title("Menu")
+#st.sidebar.title("Menu")
 page = st.sidebar.radio(
     "Wybierz podstronę:",
     [
@@ -17,9 +17,11 @@ page = st.sidebar.radio(
         "Wykresy BoxPlot",
         "Analiza zdolności procesowej",
         "Histogramy",
-        "Statystyki opisowe"  # Dodana nowa funkcjonalność
+        "Statystyki opisowe",
+        "Analiza stabilności"  # Dodana nowa funkcjonalność
     ]
 )
+
 
 
 # Routing podstron
@@ -68,3 +70,7 @@ elif page == "Histogramy":
 elif page == "Statystyki opisowe":
     from pages import descriptive_statistics
     descriptive_statistics.show()
+
+elif page == "Analiza stabilności":
+    from pages import stability_analysis
+    stability_analysis.show()
