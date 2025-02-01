@@ -1,41 +1,45 @@
 import streamlit as st
+from utils.translations import translations
 
-def show():
-    st.header("Wprowadzenie")
-    st.write("""
-    **Witaj w aplikacji Santo Pharmstat!**  
+
+def show(language):
+    t = translations[language]
+
+    st.header(t["intro"])
+    st.write(f"""
+    **{t["intro"]}**  
     Aplikacja umożliwia przeprowadzanie analizy danych statystycznych i jakościowych w prosty i intuicyjny sposób. W bocznym menu znajdziesz moduły, które pomogą Ci w analizie danych z różnych perspektyw.
 
-    **Moduły dostępne w aplikacji:**
+    **{t["menu_title"]}:**
 
-    1. **Wprowadzenie**  
-       Ogólny przegląd funkcji aplikacji oraz instrukcje obsługi.
+    1. **{t["intro"]}**  
+       {t["intro_desc"]}
 
-    2. **Statystyki opisowe**  
-       Umożliwia wczytanie pliku Excel i obliczenie podstawowych statystyk opisowych, takich jak średnia, mediana, odchylenie standardowe, skośność i kurtoza. Wyniki można szybko porównać dla wielu kolumn.
+    2. **{t["descriptive_stats"]}**  
+       {t["descriptive_stats_desc"]}
 
-    3. **Histogramy**  
-       Generowanie histogramów dla danych z pliku Excel. Moduł oferuje ocenę normalności rozkładu (test Shapiro-Wilka) oraz analizę skośności i kurtozy.
+    3. **{t["histograms"]}**  
+       {t["histograms_desc"]}
 
-    4. **Wykresy pudełkowe BoxPlot**  
-       Wizualizacja rozkładu danych za pomocą wykresów pudełkowych (BoxPlot). Umożliwia szybkie wykrycie wartości odstających i porównanie rozkładów dla różnych zmiennych.
+    4. **{t["boxplot"]}**  
+       {t["boxplot_desc"]}
 
-    5. **Karty kontrolne ImR**  
-       Tworzenie kart kontrolnych ImR (Individual & Moving Range), które pomagają monitorować stabilność procesów produkcyjnych. Moduł umożliwia identyfikację odchyleń i trendów w danych.
+    5. **{t["control_charts"]}**  
+       {t["control_charts_desc"]}
 
-    6. **Analiza zdolności procesowej**  
-       Ocena zdolności procesu na podstawie wskaźników Cp i Cpk. Pozwala określić, na ile proces spełnia wymagania specyfikacji i czy jest stabilny.
+    6. **{t["process_capability"]}**  
+       {t["process_capability_desc"]}
 
-    7. **Regresja dla stabilności**  
-       Analiza danych stabilnościowych z wykorzystaniem regresji liniowej. Moduł umożliwia ocenę zmian parametrów w czasie oraz wizualizację danych z uwzględnieniem limitów specyfikacji.
+    7. **{t["stability_regression"]}**  
+       {t["stability_regression_desc"]}
 
-    8. **Analiza temperatury i wilgotności**  
-       Analiza danych środowiskowych, takich jak temperatura i wilgotność. Umożliwia identyfikację przekroczeń limitów specyfikacji i wizualizację zmian w czasie.
+    8. **{t["temp_humidity"]}**  
+       {t["temp_humidity_desc"]}
 
     ---
-    **Jak korzystać z aplikacji?**  
-    - Wybierz interesującą Cię podstronę w bocznym panelu.
-    - Wczytaj dane do analizy przy pomocy wbudowanych formularzy.
-    - Wyniki analizy (wykresy, tabele, statystyki) pojawią się w głównym obszarze strony.
-    - Możesz ukrywać lub wyświetlać szczegóły analizy, dostosowując widok do swoich potrzeb.
+    **{t["how_to_use"]}**  
+    - {t["choose_page"]}
+    - {t["upload_data"]}
+    - {t["view_results"]}
+    - {t["customize_view"]}
     """)
