@@ -38,25 +38,23 @@ def show():
                 st.subheader("Statystyki opisowe")
                 stats = calculate_descriptive_stats(df[selected_columns])
 
-                # Dodanie kolumn z wynikami testu normalności, skośności i kurtozy
-                normality_results = {}
+                # Dodanie wyników testu normalności, skośności i kurtozy jako wierszy
+                additional_stats = {}
                 for column in selected_columns:
                     data = df[column].dropna()
                     stat, p_value = shapiro(data)
                     skewness = skew(data)
                     kurt = kurtosis(data)
 
-                    normality_results[column] = {
-                        "Shapiro-Wilk p-wartość": round(p_value, 4),
-                        "Skośność": round(skewness, 2),
-                        "Kurtoza": round(kurt, 2)
-                    }
+                    additional_stats.setdefault("Shapiro-Wilk p-wartość", []).append(round(p_value, 4))
+                    additional_stats.setdefault("Skośność", []).append(round(skewness, 2))
+                    additional_stats.setdefault("Kurtoza", []).append(round(kurt, 2))
 
-                # Konwersja wyników do DataFrame
-                normality_df = pd.DataFrame(normality_results).T
+                # Konwersja dodatkowych wyników do DataFrame
+                additional_stats_df = pd.DataFrame(additional_stats, index=selected_columns).T
 
-                # Łączenie wyników statystyk opisowych z wynikami testu normalności
-                full_stats = pd.concat([stats, normality_df], axis=1)
+                # Łączenie statystyk opisowych z dodatkowymi statystykami
+                full_stats = pd.concat([stats, additional_stats_df])
 
                 st.dataframe(full_stats)
 
