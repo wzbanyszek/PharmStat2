@@ -16,7 +16,8 @@ page = st.sidebar.radio(
         "Karta kontrolna Shewharta (X-bar / R)",
         "Wykresy BoxPlot",
         "Analiza zdolności procesowej",
-        "Histogramy"  
+        "Histogramy",
+        "Statystyki opisowe"  # Dodana nowa funkcjonalność
     ]
 )
 
@@ -63,3 +64,7 @@ elif page == "Analiza zdolności procesowej":
 elif page == "Histogramy":
     from pages import histogram_analysis
     histogram_analysis.show()
+
+elif page == "Statystyki opisowe":
+    from pages import descriptive_statistics
+    descriptive_statistics.show()
