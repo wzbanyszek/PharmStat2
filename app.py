@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Konfiguracja strony
-st.set_page_config(page_title="Santo Pharmstat", layout="wide")
+#st.set_page_config(page_title="Santo Pharmstat", layout="wide")
 
 # Menu boczne
 st.sidebar.title("Menu")
@@ -14,7 +14,7 @@ page = st.sidebar.radio(
         "Wczytanie pliku Excel",
         "Analiza temperatury i wilgotności",
         "Karta kontrolna Shewharta (X-bar / R)",
-        "Wykresy BoxPlot"  # Nowa opcja
+        "Wykresy BoxPlot"
     ]
 )
 
@@ -55,4 +55,4 @@ elif page == "Karta kontrolna Shewharta (X-bar / R)":
 
 elif page == "Wykresy BoxPlot":
     from pages import BoxPlot
-    BoxPlot.show
+    BoxPlot.show()
