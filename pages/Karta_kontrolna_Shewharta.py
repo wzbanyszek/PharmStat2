@@ -87,15 +87,21 @@ def show():
             fig = plt.gcf()
             st.pyplot(fig)
 
+            # Checkboxy do ukrywania/wyświetlania tabel z danymi
+            show_I_data = st.checkbox("Pokaż dane wykresu I (wartości indywidualne)", value=True)
+            show_MR_data = st.checkbox("Pokaż dane wykresu MR (ruchomy rozstęp)", value=True)
+
             # Dane wykresu I
-            df_I = chart.data(0)
-            st.write("**Dane wykresu I (wartości indywidualne)** (CL, UCL, LCL):")
-            st.dataframe(df_I[["CL", "UCL", "LCL"]].reset_index(drop=True))
+            if show_I_data:
+                df_I = chart.data(0)
+                st.write("**Dane wykresu I (wartości indywidualne)** (CL, UCL, LCL):")
+                st.dataframe(df_I[["CL", "UCL", "LCL"]].reset_index(drop=True))
 
             # Dane wykresu MR
-            df_MR = chart.data(1)
-            st.write("**Dane wykresu MR (ruchomy rozstęp)** (CL, UCL, LCL):")
-            st.dataframe(df_MR[["CL", "UCL", "LCL"]].reset_index(drop=True))
+            if show_MR_data:
+                df_MR = chart.data(1)
+                st.write("**Dane wykresu MR (ruchomy rozstęp)** (CL, UCL, LCL):")
+                st.dataframe(df_MR[["CL", "UCL", "LCL"]].reset_index(drop=True))
 
             st.write("---")
             st.write(f"Czy proces jest stabilny wg reguł? **{chart.stable()}**")
