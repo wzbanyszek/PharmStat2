@@ -341,5 +341,6 @@ translations = {
                     "normal_distribution": "No reason to reject the hypothesis of normal distribution.",
                     "non_normal_distribution": "The data does not follow a normal distribution."
                 }
-            }    
+            } 
+    }
 }
