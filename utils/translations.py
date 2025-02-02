@@ -137,6 +137,21 @@ translations = {
                 "I_chart_data": "Dane wykresu I (wartości indywidualne)",
                 "MR_chart_data": "Dane wykresu MR (ruchomy rozstęp)"
             }
+        },
+        "process_capability": {
+            "process_capability": "Analiza zdolności procesowej",
+            "process_capability_desc": "Ocena zdolności procesu na podstawie wskaźników Cp i Cpk.",
+            "title": "Analiza zdolności procesowej"
+        },
+        "stability_regression": {
+            "stability_regression": "Regresja dla stabilności",
+            "stability_regression_desc": "Analiza regresji dla danych stabilnościowych.",
+            "title": "Regresja dla stabilności"
+        },
+        "temp_humidity_analysis": {
+            "temp_humidity": "Analiza temperatury i wilgotności",
+            "temp_humidity_desc": "Analiza danych środowiskowych i identyfikacja przekroczeń limitów.",
+            "title": "Analiza temperatury i wilgotności"
         }
     }
 }
