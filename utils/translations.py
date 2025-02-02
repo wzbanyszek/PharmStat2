@@ -279,7 +279,7 @@ translations = {
             },
             "descriptive_statistics": {
                 "descriptive_stats": "Descriptive Statistics",
-                "descriptive_stats_desc": "Calculating basic statistics such as mean, median, and standard deviation.",
+                "descriptive_stats_desc": "Calculating basic statistics such as mean, median, and standard deviation. This module allows for quick and easy access to fundamental information about your data, which is crucial for further analysis. Descriptive statistics are the foundation of data analysis as they enable a quick understanding of data distribution and variability.",
                 "title": "Descriptive Statistics",
                 "instructions": {
                     "header": "Instructions",
@@ -304,7 +304,7 @@ translations = {
             },
             "histogram_analysis": {
                 "histograms": "Histograms",
-                "histograms_desc": "Creating histograms with normality assessment and skewness and kurtosis analysis.",
+                "histograms_desc": "Creating histograms with normality assessment and skewness and kurtosis analysis. This module allows you to visualize the distribution of your data and assess whether it exhibits characteristics of a normal distribution. Histograms are a useful tool for identifying the shape of data distribution and detecting any deviations or anomalies.",
                 "title": "Histogram Analysis",
                 "instructions": {
                     "header": "Instructions",
@@ -344,7 +344,7 @@ translations = {
             },
         "boxplot_charts": {
             "boxplot": "BoxPlot Charts",
-            "boxplot_desc": "Visualizing data distribution and identifying outliers.",
+            "boxplot_desc": "Visualizing data distribution and identifying outliers. BoxPlot charts provide a quick understanding of data distribution, showing the median, quartiles, and outliers. They are particularly useful for identifying potential measurement errors or unusual observations.",
             "title": "BoxPlot Charts",
             "instructions": {
                 "header": "Instructions",
@@ -370,7 +370,7 @@ translations = {
         },
         "control_charts": {
             "control_charts": "ImR Control Charts",
-            "control_charts_desc": "Monitoring process stability using ImR control charts.",
+            "control_charts_desc": "Monitoring process stability using ImR control charts. Control charts allow tracking of changes in production or research processes, detecting any deviations from the norm. They are an essential tool in quality management and continuous process improvement.",
             "title": "ImR Control Charts",
             "instructions": {
                 "header": "Instructions",
@@ -407,7 +407,7 @@ translations = {
         },
         "process_capability": {
             "process_capability": "Process Capability Analysis",
-            "process_capability_desc": "Assessing process capability based on Cp and Cpk indices.",
+            "process_capability_desc": "Assessing process capability based on Cp and Cpk indices. Process capability analysis allows evaluating whether a process can meet specified quality requirements. Cp and Cpk indices help identify potential issues and areas for improvement.",
             "title": "Process Capability Analysis",
             "instructions": {
                 "header": "Instructions",
@@ -449,7 +449,7 @@ translations = {
         },
         "stability_regression": {
             "stability_regression": "Stability Regression",
-            "stability_regression_desc": "Regression analysis for stability data.",
+            "stability_regression_desc": "Regression analysis for stability data. Stability regression enables predicting product shelf life based on long-term stability study results. This is crucial in the pharmaceutical and food industries, where product stability directly impacts safety and efficacy.",
             "title": "Stability Data Analysis",
             "instructions": {
                 "header": "Instructions",
@@ -484,7 +484,7 @@ translations = {
         },
         "temp_humidity_analysis": {
             "temp_humidity": "Temperature and Humidity Analysis",
-            "temp_humidity_desc": "Environmental data analysis and identification of limit exceedances.",
+            "temp_humidity_desc": "Environmental data analysis and identification of limit exceedances. This module allows monitoring environmental conditions, such as temperature and humidity, and detecting any exceedances of established limits. It is particularly important in production and storage processes where environmental conditions can affect product quality and durability.",
             "title": "Temperature and Humidity Analysis",
             "instructions": {
                 "header": "Instructions",
@@ -545,7 +545,7 @@ translations = {
             },
             "descriptive_statistics": {
                 "descriptive_stats": "Описательная статистика",
-                "descriptive_stats_desc": "Вычисление основных статистических показателей, таких как среднее значение, медиана, стандартное отклонение.",
+                "descriptive_stats_desc": "Вычисление основных статистических показателей, таких как среднее значение, медиана, стандартное отклонение. Этот модуль позволяет быстро и легко получить основную информацию о ваших данных, что является ключевым для дальнейшего анализа. Описательная статистика является основой анализа данных, так как позволяет быстро понять распределение и изменчивость данных.",
                 "title": "Описательная статистика",
                 "instructions": {
                     "header": "Инструкции",
@@ -570,7 +570,7 @@ translations = {
             },
             "histogram_analysis": {
                 "histograms": "Гистограммы",
-                "histograms_desc": "Создание гистограмм с оценкой нормальности распределения и анализом асимметрии и эксцесса.",
+                "histograms_desc": "Создание гистограмм с оценкой нормальности распределения и анализом асимметрии и эксцесса. Этот модуль позволяет визуализировать распределение ваших данных и оценить, имеют ли они характеристики нормального распределения. Гистограммы являются полезным инструментом для идентификации формы распределения данных и выявления любых отклонений или аномалий.",
                 "title": "Анализ гистограмм",
                 "instructions": {
                     "header": "Инструкции",
@@ -610,7 +610,7 @@ translations = {
             },
             "boxplot_charts": {
                 "boxplot": "Ящичные диаграммы (BoxPlot)",
-                "boxplot_desc": "Визуализация распределения данных и идентификация выбросов.",
+                "boxplot_desc": "Визуализация распределения данных и идентификация выбросов. Ящичные диаграммы обеспечивают быстрое понимание распределения данных, показывая медиану, квартили и выбросы. Они особенно полезны для выявления потенциальных ошибок измерения или необычных наблюдений.",
                 "title": "Ящичные диаграммы (BoxPlot)",
                 "instructions": {
                     "header": "Инструкции",
@@ -636,7 +636,7 @@ translations = {
             },
             "control_charts": {
                 "control_charts": "Контрольные карты ImR",
-                "control_charts_desc": "Мониторинг стабильности процессов с использованием контрольных карт ImR.",
+                "control_charts_desc": "Мониторинг стабильности процессов с использованием контрольных карт ImR. Контрольные карты позволяют отслеживать изменения в производственных или исследовательских процессах, выявляя любые отклонения от нормы. Они являются неотъемлемым инструментом в управлении качеством и непрерывном улучшении процессов.",
                 "title": "Контрольные карты ImR",
                 "instructions": {
                     "header": "Инструкции",
@@ -673,7 +673,7 @@ translations = {
             },
             "process_capability": {
                 "process_capability": "Анализ способности процесса",
-                "process_capability_desc": "Оценка способности процесса на основе показателей Cp и Cpk.",
+                "process_capability_desc": "Оценка способности процесса на основе показателей Cp и Cpk. Анализ способности процесса позволяет оценить, может ли процесс удовлетворять определенным требованиям качества. Показатели Cp и Cpk помогают выявить потенциальные проблемы и области для улучшения.",
                 "title": "Анализ способности процесса",
                 "instructions": {
                     "header": "Инструкции",
@@ -715,7 +715,7 @@ translations = {
             },
             "stability_regression": {
                         "stability_regression": "Регрессия для стабильности",
-                        "stability_regression_desc": "Анализ регрессии для данных стабильности.",
+                        "stability_regression_desc": "Анализ регрессии для данных стабильности. Регрессия стабильности позволяет прогнозировать срок годности продуктов на основе долгосрочных исследований стабильности. Это особенно важно в фармацевтической и пищевой промышленности, где стабильность продуктов напрямую влияет на их безопасность и эффективность.",
                         "title": "Анализ данных стабильности",
                         "instructions": {
                             "header": "Инструкции",
@@ -750,7 +750,7 @@ translations = {
                     },
                     "temp_humidity_analysis": {
                         "temp_humidity": "Анализ температуры и влажности",
-                        "temp_humidity_desc": "Анализ данных окружающей среды и идентификация превышений лимитов.",
+                        "temp_humidity_desc": "Анализ данных окружающей среды и идентификация превышений лимитов. Этот модуль позволяет мониторить условия окружающей среды, такие как температура и влажность, и выявлять любые превышения установленных лимитов. Это особенно важно в производственных и складских процессах, где условия окружающей среды могут влиять на качество и долговечность продуктов.",
                         "title": "Анализ температуры и влажности",
                         "instructions": {
                             "header": "Инструкции",
