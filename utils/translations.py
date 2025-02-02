@@ -1,9 +1,9 @@
 translations = {
     "Polski": {
-        "main": {
+        "general": {
             "menu_title": "Menu",
             "intro": "Witaj w aplikacji Santo Pharmstat!",
-            "intro_desc": "Aplikacja umożliwia przeprowadzanie analizy danych statystycznych i jakościowych w prosty i intuicyjny sposób. W bocznym menu znajdziesz moduły, które pomogą Ci w analizie danych z różnych perspektyw.",
+            "intro_desc": "Aplikacja umożliwa przeprowadzanie analizy danych statystycznych i jakościowych w prosty i intuicyjny sposób. W bocznym menu znajdziesz moduły, które pomogą Ci w analizie danych z różnych perspektyw.",
             "choose_page": "Wybierz podstronę:",
             "upload_data": "Wczytaj dane do analizy przy pomocy wbudowanych formularzy.",
             "view_results": "Wyniki analizy (wykresy, tabele, statystyki) pojawią się w głównym obszarze strony.",
@@ -20,8 +20,8 @@ translations = {
                 "temp_humidity": "Analiza temperatury i wilgotności"
             }
         },
-        "descriptive_stats": {
-            "title": "Statystyki opisowe",
+        "descriptive_statistics": {
+            "descriptive_stats": "Statystyki opisowe",
             "description": "Obliczanie podstawowych statystyk, takich jak średnia, mediana, odchylenie standardowe.",
             "choose_file": "Wybierz plik Excel (xlsx lub xls):",
             "select_columns": "Wybierz kolumny do analizy:",
@@ -38,10 +38,40 @@ translations = {
             "normality_skew_kurtosis_instruction": "Dodatkowo ocenisz normalność rozkładu oraz uzyskasz informacje o skośności i kurtozie.",
             "error_processing_file": "Wystąpił błąd podczas analizy pliku",
             "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+        },
+        "temp_humidity_analysis": {
+            "temp_humidity": "Analiza temperatury i wilgotności",
+            "description": "Analiza danych środowiskowych i identyfikacja przekroczeń limitów.",
+            "choose_file": "Wybierz plik z danymi dotyczącymi temperatury i wilgotności:",
+            "select_columns": "Wybierz kolumny do analizy:",
+            "show_data_preview": "Pokaż podgląd danych dotyczących temperatury i wilgotności",
+            "data_preview": "Podgląd danych (pierwsze 5 wierszy):",
+            "error_processing_file": "Wystąpił błąd podczas analizy danych dotyczących temperatury i wilgotności",
+            "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik z danymi powyżej."
+        },
+        "histogram_analysis": {
+            "histograms": "Histogramy",
+            "description": "Tworzenie histogramów z oceną normalności rozkładu i analizą skośności oraz kurtozy."
+        },
+        "boxplot_charts": {
+            "boxplot": "Wykresy pudełkowe BoxPlot",
+            "description": "Wizualizacja rozkładu danych i identyfikacja wartości odstających."
+        },
+        "control_charts": {
+            "control_charts": "Karty kontrolne ImR",
+            "description": "Monitorowanie stabilności procesów za pomocą kart kontrolnych ImR."
+        },
+        "process_capability": {
+            "process_capability": "Analiza zdolności procesowej",
+            "description": "Ocena zdolności procesu na podstawie wskaźników Cp i Cpk."
+        },
+        "stability_regression": {
+            "stability_regression": "Regresja dla stabilności",
+            "description": "Analiza regresji dla danych stabilnościowych."
         }
     },
     "English": {
-        "main": {
+        "general": {
             "menu_title": "Menu",
             "intro": "Welcome to Santo Pharmstat!",
             "intro_desc": "The application allows you to perform statistical and quality data analysis in a simple and intuitive way. In the sidebar, you will find modules that will help you analyze data from different perspectives.",
@@ -61,8 +91,8 @@ translations = {
                 "temp_humidity": "Temperature and Humidity Analysis"
             }
         },
-        "descriptive_stats": {
-            "title": "Descriptive Statistics",
+        "descriptive_statistics": {
+            "descriptive_stats": "Descriptive Statistics",
             "description": "Calculate basic statistics such as mean, median, and standard deviation.",
             "choose_file": "Select an Excel file (xlsx or xls):",
             "select_columns": "Select columns for analysis:",
@@ -79,10 +109,40 @@ translations = {
             "normality_skew_kurtosis_instruction": "Additionally, you will assess normality of distribution and obtain information on skewness and kurtosis.",
             "error_processing_file": "An error occurred while processing the file",
             "no_file_uploaded": "No file selected - please upload an Excel file above."
+        },
+        "temp_humidity_analysis": {
+            "temp_humidity": "Temperature and Humidity Analysis",
+            "description": "Analyze environmental data and detect specification limit violations.",
+            "choose_file": "Select a file containing temperature and humidity data:",
+            "select_columns": "Select columns for analysis:",
+            "show_data_preview": "Show preview of temperature and humidity data",
+            "data_preview": "Preview of data (first 5 rows):",
+            "error_processing_file": "An error occurred while processing temperature and humidity data",
+            "no_file_uploaded": "No file selected - please upload a data file above."
+        },
+        "histogram_analysis": {
+            "histograms": "Histograms",
+            "description": "Generate histograms with normality testing and skewness/kurtosis analysis."
+        },
+        "boxplot_charts": {
+            "boxplot": "BoxPlot Charts",
+            "description": "Visualize data distribution and detect outliers."
+        },
+        "control_charts": {
+            "control_charts": "ImR Control Charts",
+            "description": "Monitor process stability using ImR control charts."
+        },
+        "process_capability": {
+            "process_capability": "Process Capability Analysis",
+            "description": "Evaluate process capability using Cp and Cpk indices."
+        },
+        "stability_regression": {
+            "stability_regression": "Stability Regression",
+            "description": "Perform regression analysis for stability data."
         }
     },
     "Русский": {
-        "main": {
+        "general": {
             "menu_title": "Меню",
             "intro": "Добро пожаловать в Santo Pharmstat!",
             "intro_desc": "Приложение позволяет выполнять статистический и качественный анализ данных простым и интуитивно понятным способом. В боковом меню вы найдете модули, которые помогут вам проанализировать данные с разных точек зрения.",
@@ -102,8 +162,8 @@ translations = {
                 "temp_humidity": "Анализ температуры и влажности"
             }
         },
-        "descriptive_stats": {
-            "title": "Описательная статистика",
+        "descriptive_statistics": {
+            "descriptive_stats": "Описательная статистика",
             "description": "Вычисление основных статистических показателей, таких как среднее, медиана и стандартное отклонение.",
             "choose_file": "Выберите файл Excel (xlsx или xls):",
             "select_columns": "Выберите столбцы для анализа:",
@@ -120,6 +180,36 @@ translations = {
             "normality_skew_kurtosis_instruction": "Кроме того, вы оцените нормальность распределения и получите информацию об асимметрии и эксцессе.",
             "error_processing_file": "Произошла ошибка при обработке файла",
             "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel выше."
+        },
+        "temp_humidity_analysis": {
+            "temp_humidity": "Анализ температуры и влажности",
+            "description": "Анализ данных об окружающей среде и выявление превышений пределов.",
+            "choose_file": "Выберите файл с данными о температуре и влажности:",
+            "select_columns": "Выберите столбцы для анализа:",
+            "show_data_preview": "Показать предварительный просмотр данных о температуре и влажности",
+            "data_preview": "Предварительный просмотр данных (первые 5 строк):",
+            "error_processing_file": "Произошла ошибка при обработке данных о температуре и влажности",
+            "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл с данными выше."
+        },
+        "histogram_analysis": {
+            "histograms": "Гистограммы",
+            "description": "Создание гистограмм с тестом на нормальность и анализом асимметрии и эксцесса."
+        },
+        "boxplot_charts": {
+            "boxplot": "Диаграммы BoxPlot",
+            "description": "Визуализация распределения данных и выявление выбросов."
+        },
+        "control_charts": {
+            "control_charts": "Контрольные карты ImR",
+            "description": "Мониторинг стабильности процессов с помощью контрольных карт ImR."
+        },
+        "process_capability": {
+            "process_capability": "Анализ способности процесса",
+            "description": "Оценка способности процесса по индексам Cp и Cpk."
+        },
+        "stability_regression": {
+            "stability_regression": "Регрессия для стабильности",
+            "description": "Анализ регрессии для данных стабильности."
         }
     }
 }
