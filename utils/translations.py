@@ -342,5 +342,5 @@ translations = {
                     "non_normal_distribution": "The data does not follow a normal distribution."
                 }
             } 
-
+    }
 }
