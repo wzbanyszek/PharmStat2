@@ -530,6 +530,7 @@ translations = {
                 "y_label": "Value",
                 "title": "Temperature and Humidity"
             }
+        }
         },
         "Russian": {
             "general": {
