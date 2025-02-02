@@ -12,7 +12,7 @@ translations = {
         },
         "descriptive_statistics": {
             "descriptive_stats": "Statystyki opisowe",
-            "descriptive_stats_desc": "Obliczanie podstawowych statystyk, takich jak średnia, mediana, odchylenie standardowe.",
+            "descriptive_stats_desc": "Obliczanie podstawowych statystyk, takich jak średnia, mediana, odchylenie standardowe. Moduł ten pozwala na szybkie i łatwe uzyskanie podstawowych informacji o Twoich danych, co jest kluczowe dla dalszej analizy. Statystyki opisowe są fundamentem analizy danych, ponieważ umożliwiają szybkie zrozumienie rozkładu i zmienności danych.",
             "title": "Statystyki opisowe",
             "instructions": {
                 "header": "Instrukcje",
