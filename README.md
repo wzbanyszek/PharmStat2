@@ -6,20 +6,24 @@ Instrukcja Obsługi Użytkownika Aplikacji Santo Pharmstat
 **1. Wprowadzenie**
    
 1.1 Cel aplikacji
+
 Aplikacja Santo Pharmstat została zaprojektowana w celu ułatwienia analizy danych statystycznych i jakościowych w branży farmaceutycznej. Umożliwia szybkie i intuicyjne przetwarzanie informacji oraz generowanie czytelnych wyników w postaci wykresów, tabel i wskaźników statystycznych.
 
 1.2 Kluczowe funkcje
+
 Obsługa wielu języków: Polski, angielski i rosyjski interfejs użytkownika.
 Modułowa analiza danych: Statystyki opisowe, histogramy, wykresy BoxPlot, karty kontrolne ImR, analiza zdolności procesowej, regresja dla stabilności oraz analiza temperatury i wilgotności.
 Wygodne zarządzanie danymi: Łatwe wczytywanie plików Excel i przeglądanie wyników w czasie rzeczywistym.
 Bezpieczne przechowywanie danych: Brak potrzeby instalacji – dane przetwarzane są w chmurze.
 
 1.3 Wymagania systemowe
+
 Aplikacja Santo Pharmstat działa w całości przez przeglądarkę internetową i nie wymaga instalacji lokalnej. Użytkownicy muszą mieć dostęp do internetu oraz aktualnej wersji przeglądarki wspierającej nowoczesne technologie webowe (np. Google Chrome, Mozilla Firefox, Microsoft Edge).
 
 **2. Dostęp do aplikacji**
    
 2.1 Jak uruchomić aplikację
+
 Aplikacja Santo Pharmstat jest hostowana na platformie Streamlit i dostępna pod adresem:
 https://santo-pharmstat1.streamlit.app/
 Aby uruchomić aplikację:
@@ -29,6 +33,7 @@ Naciśnij Enter, aby załadować aplikację.
 Po załadowaniu aplikacji wybierz preferowany język z rozwijanego menu po lewej stronie.
 
 2.2 Wymagania dotyczące przeglądarki internetowej
+
 Aby zapewnić prawidłowe działanie aplikacji, zaleca się korzystanie z najnowszych wersji przeglądarek:
 Google Chrome (zalecane)
 Mozilla Firefox
@@ -43,6 +48,7 @@ Problemy z kompatybilnością: Starsze wersje przeglądarek mogą nie wspierać 
 **3. Nawigacja po interfejsie**
 
 3.1 Wybór języka
+
 Po uruchomieniu aplikacji Santo Pharmstat pierwszym krokiem jest wybór języka interfejsu. W lewym panelu bocznym znajduje się rozwijane menu umożliwiające wybór spośród trzech dostępnych języków:
 Polski
 English (Angielski)
@@ -50,6 +56,7 @@ English (Angielski)
 Wybór języka automatycznie dostosowuje cały interfejs aplikacji do wybranego tłumaczenia.
 
 3.2 Menu główne i podstrony
+
 Po wybraniu języka użytkownik może poruszać się po aplikacji za pomocą menu bocznego, które zawiera listę dostępnych modułów analizy danych:
 Statystyki opisowe
 Histogramy
@@ -61,6 +68,7 @@ Analiza temperatury i wilgotności
 Kliknięcie w nazwę modułu przekierowuje do odpowiedniej podstrony, gdzie można wczytać dane i przeprowadzić analizę.
 
 3.3 Wczytywanie danych
+
 Aplikacja umożliwia wczytywanie danych w formacie Excel (.xlsx, .xls). Proces wczytywania danych jest podobny w każdym z modułów:
 Wybierz plik: Kliknij przycisk „Wybierz plik Excel”, aby otworzyć okno dialogowe i wskazać plik z danymi.
 Podgląd danych: Po wczytaniu pliku aplikacja wyświetli podgląd pierwszych kilku wierszy danych, aby umożliwić szybkie sprawdzenie poprawności.
