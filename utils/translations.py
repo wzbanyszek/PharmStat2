@@ -341,6 +341,195 @@ translations = {
                     "normal_distribution": "No reason to reject the hypothesis of normal distribution.",
                     "non_normal_distribution": "The data does not follow a normal distribution."
                 }
-            } 
+            },
+        "boxplot_charts": {
+            "boxplot": "BoxPlot Charts",
+            "boxplot_desc": "Visualizing data distribution and identifying outliers.",
+            "title": "BoxPlot Charts",
+            "instructions": {
+                "header": "Instructions",
+                "upload_file": "Upload an Excel file containing measurement data.",
+                "select_columns": "Select columns for analysis to generate BoxPlot charts.",
+                "view_stats": "You will receive descriptive statistics for the selected columns."
+            },
+            "file_handling": {
+                "choose_file": "Choose an Excel file (xlsx, xls):",
+                "show_data_preview": "Show data preview",
+                "data_preview": "Data preview (first 5 rows):",
+                "select_columns": "Select columns for analysis:",
+                "error_processing_file": "An error occurred while processing the file",
+                "no_file_uploaded": "No file selected - please upload an Excel file above."
+            },
+            "plot": {
+                "title": "BoxPlot Charts for Selected Columns",
+                "y_label": "Values"
+            },
+            "statistics": {
+                "title": "Descriptive Statistics"
+            }
+        },
+        "control_charts": {
+            "control_charts": "ImR Control Charts",
+            "control_charts_desc": "Monitoring process stability using ImR control charts.",
+            "title": "ImR Control Charts",
+            "instructions": {
+                "header": "Instructions",
+                "upload_file": "Upload an Excel file containing measurement data.",
+                "data_format": "The file should contain two columns: sample dates or IDs and numerical data.",
+                "extra_columns": "If the file contains more than 2 columns, additional columns will be ignored.",
+                "chart_info": "ImR charts will be generated, including the Individual Values (I) chart and the Moving Range (MR) chart."
+            },
+            "file_handling": {
+                "choose_file": "Choose an Excel file (xlsx or xls):",
+                "show_data_preview": "Show data preview",
+                "data_preview": "Data preview (first 10 rows):",
+                "error_processing_file": "An error occurred while processing the file",
+                "no_file_uploaded": "No file selected - please upload an Excel file above.",
+                "error_two_columns": "The file must contain at least 2 columns (Time/ID, Value).",
+                "warning_extra_columns": "The file contains extra columns:",
+                "using_first_two": "Only the first two columns will be used."
+            },
+            "chart_labels": {
+                "time_series": "Time/ID",
+                "values": "Value",
+                "individual_values": "I (Individual Values)",
+                "moving_range": "MR (Moving Range)",
+                "observation": "Observation"
+            },
+            "analysis_results": {
+                "normal_distribution_check": "Is the distribution of I values normal (α=0.05 test)?",
+                "process_stable": "Is the process stable according to the rules?",
+                "show_I_chart": "Show I Chart Data (Individual Values)",
+                "show_MR_chart": "Show MR Chart Data (Moving Range)",
+                "I_chart_data": "I Chart Data (Individual Values)",
+                "MR_chart_data": "MR Chart Data (Moving Range)"
+            }
+        },
+        "process_capability": {
+            "process_capability": "Process Capability Analysis",
+            "process_capability_desc": "Assessing process capability based on Cp and Cpk indices.",
+            "title": "Process Capability Analysis",
+            "instructions": {
+                "header": "Instructions",
+                "upload_file": "Upload an Excel file containing measurement data.",
+                "set_spec_limits": "Set the lower (LSL) and upper (USL) specification limits and the target value.",
+                "view_results": "You will receive a process capability analysis chart and Cp and Cpk indices."
+            },
+            "file_handling": {
+                "choose_file": "Choose an Excel file (xlsx or xls):",
+                "show_data_preview": "Show data preview",
+                "data_preview": "Data preview (first 10 rows):",
+                "select_column": "Select a column for analysis:",
+                "error_processing_file": "An error occurred while processing the file",
+                "no_file_uploaded": "No file selected - please upload an Excel file above."
+            },
+            "spec_settings": {
+                "target": "Target Value",
+                "lsl": "Lower Specification Limit (LSL)",
+                "usl": "Upper Specification Limit (USL)"
+            },
+            "plot": {
+                "title": "Process Capability Analysis",
+                "x_label": "Values",
+                "y_label": ""
+            },
+            "results": {
+                "header": "Analysis Results",
+                "cp": "Cp",
+                "cpk": "Cpk",
+                "sample_size": "Sample Size",
+                "sample_mean": "Sample Mean",
+                "sample_std": "Standard Deviation",
+                "sample_max": "Maximum",
+                "sample_min": "Minimum",
+                "sample_median": "Median",
+                "pct_below_lsl": "Percentage of Samples Below LSL",
+                "pct_above_usl": "Percentage of Samples Above USL"
+            }
+        },
+        "stability_regression": {
+            "stability_regression": "Stability Regression",
+            "stability_regression_desc": "Regression analysis for stability data.",
+            "title": "Stability Data Analysis",
+            "instructions": {
+                "header": "Instructions",
+                "upload_file": "Upload an Excel file containing stability data.",
+                "display_series": "The selected series will be displayed on the chart along with regression lines.",
+                "view_regression_results": "Below the chart, you will find a table with regression parameters for the selected series."
+            },
+            "file_handling": {
+                "choose_file": "Choose an Excel file (xlsx or xls):",
+                "show_data_preview": "Show data preview",
+                "data_preview": "Data preview (first 12 rows):",
+                "select_series": "Select series for analysis:",
+                "error_processing_file": "An error occurred while processing the file",
+                "no_file_uploaded": "No file selected - please upload an Excel file above."
+            },
+            "plot": {
+                "data": "data",
+                "regression": "regression",
+                "spec_limit": "Specification Limit",
+                "x_label": "Time (months)",
+                "title": "Stability Analysis"
+            },
+            "regression_results": {
+                "header": "Regression Analysis Results for Selected Series",
+                "series": "Series",
+                "slope": "Slope",
+                "intercept": "Intercept",
+                "r_value": "Correlation Coefficient (r)",
+                "p_value": "p-value",
+                "std_err": "Standard Error"
+            }
+        },
+        "temp_humidity_analysis": {
+            "temp_humidity": "Temperature and Humidity Analysis",
+            "temp_humidity_desc": "Environmental data analysis and identification of limit exceedances.",
+            "title": "Temperature and Humidity Analysis",
+            "instructions": {
+                "header": "Instructions",
+                "upload_file": "Upload an Excel file containing temperature and humidity data.",
+                "set_limits": "Set temperature and humidity limits using sliders.",
+                "view_results": "Browse charts and the list of limit exceedances."
+            },
+            "settings": {
+                "temp_lower": "Lower Temperature Limit (°C)",
+                "temp_upper": "Upper Temperature Limit (°C)",
+                "hum_lower": "Lower Humidity Limit (%)",
+                "hum_upper": "Upper Humidity Limit (%)"
+            },
+            "file_handling": {
+                "choose_file": "Choose an Excel file (xlsx, xls):",
+                "data_preview": "Data preview (first 10 rows):",
+                "error_processing_file": "An error occurred while processing the file",
+                "no_file_uploaded": "No file selected - please upload an Excel file above."
+            },
+            "statistics": {
+                "temp_stats": "Temperature Statistics",
+                "hum_stats": "Humidity Statistics",
+                "mean": "Mean",
+                "min": "Minimum",
+                "max": "Maximum",
+                "rsd": "Relative Standard Deviation (RSD %)"
+            },
+            "thresholds": {
+                "crossings": "Limit Exceedances",
+                "no_crossings": "No temperature/humidity limit exceedances.",
+                "time": "Time",
+                "temperature": "Temperature",
+                "humidity": "Humidity"
+            },
+            "plot": {
+                "temp": "Temperature",
+                "hum": "Humidity",
+                "temp_lower_limit": "Lower Temperature Limit",
+                "temp_upper_limit": "Upper Temperature Limit",
+                "hum_lower_limit": "Lower Humidity Limit",
+                "hum_upper_limit": "Upper Humidity Limit",
+                "x_label": "Time",
+                "y_label": "Value",
+                "title": "Temperature and Humidity"
+            }
+        }
     }
 }
