@@ -3,37 +3,6 @@
 Instrukcja Obsługi Użytkownika Aplikacji Santo Pharmstat
 
 
-**Spis Treści**
-
-1. Wprowadzenie	1
-1.1 Cel aplikacji	1
-1.2 Kluczowe funkcje	2
-1.3 Wymagania systemowe	2
-2. Dostęp do aplikacji	2
-2.1 Jak uruchomić aplikację	2
-2.2 Wymagania dotyczące przeglądarki internetowej	2
-3. Nawigacja po interfejsie	3
-3.1 Wybór języka	3
-3.2 Menu główne i podstrony	3
-3.3 Wczytywanie danych	3
-4. Opis modułów aplikacji	4
-4.1 Statystyki opisowe	4
-4.2 Histogramy	4
-4.3 Wykresy BoxPlot	5
-4.4 Karty Kontrolne ImR	5
-4.5 Analiza Zdolności Procesowej	6
-4.6 Regresja dla Stabilności	6
-4.7 Analiza Temperatury i Wilgotności	6
-5 Najczęściej Zadawane Pytania (FAQ)	7
-5.1 Jakie formaty plików są obsługiwane przez aplikację?	7
-5.2 Co zrobić, jeśli pojawia się błąd podczas wczytywania pliku?	7
-5.3 Jak zmienić język aplikacji?	7
-5.4 Czy mogę eksportować wyniki analizy?	7
-5.5 Jakie są minimalne wymagania systemowe do korzystania z aplikacji?	8
-5.6 Co zrobić, jeśli aplikacja nie działa prawidłowo?	8
-
-
-
 **1. Wprowadzenie**
    
 1.1 Cel aplikacji
