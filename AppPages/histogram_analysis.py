@@ -3,73 +3,68 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from scipy.stats import norm, shapiro, skew, kurtosis
+from scipy.stats import shapiro, skew, kurtosis
+from utils.translations import translations
 
 def show(language):
-    st.header("Analiza histogramów")
+    t = translations[language]["histogram_analysis"]
 
-    st.write("""
-    **Instrukcje:**
-    - Wczytaj plik Excel zawierający dane pomiarowe.
-    - Wybierz kolumnę do analizy, aby wygenerować histogram i wyświetlić statystyki opisowe.
+    st.header(t["title"])
+
+    st.write(f"""
+    **{t["instructions"]["header"]}:**
+    - {t["instructions"]["upload_file"]}
+    - {t["instructions"]["select_column"]}
+    - {t["instructions"]["normality_test"]}
     """)
 
-    # Wczytywanie pliku
-    uploaded_file = st.file_uploader("Wybierz plik Excel (xlsx lub xls):", type=["xlsx", "xls"])
+    uploaded_file = st.file_uploader(t["file_handling"]["choose_file"], type=["xlsx", "xls"])
 
     if uploaded_file is not None:
         try:
             df = pd.read_excel(uploaded_file)
             columns = df.columns.tolist()
 
-            # Wybór kolumny z danymi
-            selected_column = st.selectbox("Wybierz kolumnę do analizy:", columns)
+            selected_column = st.selectbox(t["file_handling"]["select_column"], columns)
 
             data = df[selected_column].dropna()
 
-            # Podgląd danych z możliwością włączania i wyłączania
-            show_data = st.checkbox("Pokaż podgląd danych", value=True)
+            show_data = st.checkbox(t["file_handling"]["show_data_preview"], value=True)
             if show_data:
-                st.subheader("Podgląd danych (pierwsze 10 wierszy):")
+                st.subheader(t["file_handling"]["data_preview"])
                 st.dataframe(data.head(10))
 
-            # Generowanie histogramu
             plt.figure(figsize=(15, 10))
-            plt.hist(data, color="lightgrey", edgecolor="black", bins=20, density=True, label="Histogram danych")
+            plt.hist(data, color="lightgrey", edgecolor="black", bins=20, density=True, label="Histogram")
             sns.kdeplot(data, color="blue", label="Gęstość danych")
-            plt.title('Histogram danych')
-            plt.xlabel("Wartości")
-            plt.ylabel("Częstość")
+            plt.title(t["plot"]["histogram_title"])
+            plt.xlabel(t["plot"]["x_label"])
+            plt.ylabel(t["plot"]["y_label"])
             plt.legend()
             st.pyplot(plt.gcf())
 
-            # Statystyki opisowe
-            st.subheader("Statystyki opisowe")
-            st.write(f"**Liczba próbek:** {len(data)}")
-            st.write(f"**Średnia:** {round(data.mean(), 2)}")
-            st.write(f"**Odchylenie standardowe:** {round(data.std(), 2)}")
-            st.write(f"**Maksimum:** {data.max()}")
-            st.write(f"**Minimum:** {data.min()}")
-            st.write(f"**Mediana:** {np.median(data)}")
-            st.write(f"**Współczynnik zmienności (RSD %):** {round((data.std() / data.mean()) * 100, 2)}%")
+            st.subheader(t["statistics"]["sample_size"])
+            st.write(f"**{t['statistics']['sample_size']}:** {len(data)}")
+            st.write(f"**{t['statistics']['mean']}:** {round(data.mean(), 2)}")
+            st.write(f"**{t['statistics']['std_dev']}:** {round(data.std(), 2)}")
+            st.write(f"**{t['statistics']['max']}:** {data.max()}")
+            st.write(f"**{t['statistics']['min']}:** {data.min()}")
+            st.write(f"**{t['statistics']['median']}:** {np.median(data)}")
+            st.write(f"**{t['statistics']['rsd']}:** {round((data.std() / data.mean()) * 100, 2)}%")
 
-            # Ocena normalności rozkładu (test Shapiro-Wilka)
-            st.subheader("Ocena normalności rozkładu")
+            st.subheader(t["statistics"]["shapiro_test"])
             stat, p_value = shapiro(data)
-            st.write(f"**Test Shapiro-Wilka:** statystyka = {round(stat, 4)}, p-wartość = {round(p_value, 4)}")
+            st.write(f"**{t['statistics']['shapiro_test']}:** statystyka = {round(stat, 4)}, p-wartość = {round(p_value, 4)}")
             if p_value > 0.05:
-                st.success("Brak podstaw do odrzucenia hipotezy o normalności rozkładu.")
+                st.success(t["normality_results"]["normal_distribution"])
             else:
-                st.error("Dane nie pochodzą z rozkładu normalnego.")
+                st.error(t["normality_results"]["non_normal_distribution"])
 
-            # Skośność i kurtoza
-            st.subheader("Skośność i kurtoza")
-            skewness = skew(data)
-            kurt = kurtosis(data)
-            st.write(f"**Skośność:** {round(skewness, 2)}")
-            st.write(f"**Kurtoza:** {round(kurt, 2)}")
+            st.subheader(f"{t['statistics']['skewness']} i {t['statistics']['kurtosis']}")
+            st.write(f"**{t['statistics']['skewness']}:** {round(skew(data), 2)}")
+            st.write(f"**{t['statistics']['kurtosis']}:** {round(kurtosis(data), 2)}")
 
         except Exception as e:
-            st.error(f"Wystąpił błąd podczas analizy pliku: {e}")
+            st.error(f"{t['file_handling']['error_processing_file']}: {e}")
     else:
-        st.info("Nie wybrano pliku - proszę wgrać plik Excel powyżej.")
+        st.info(t["file_handling"]["no_file_uploaded"])
