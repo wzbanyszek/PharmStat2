@@ -37,7 +37,43 @@ translations = {
         },
         "histogram_analysis": {
             "histograms": "Histogramy",
-            "histograms_desc": "Tworzenie histogramów z oceną normalności rozkładu i analizą skośności oraz kurtozy."
+            "histograms_desc": "Tworzenie histogramów z oceną normalności rozkładu i analizą skośności oraz kurtozy.",
+            "title": "Analiza histogramów",
+            "instructions": {
+                "header": "Instrukcje",
+                "upload_file": "Wczytaj plik Excel zawierający dane pomiarowe.",
+                "select_column": "Wybierz kolumnę do analizy, aby wygenerować histogram i wyświetlić statystyki opisowe.",
+                "normality_test": "Ocenisz normalność rozkładu oraz uzyskasz informacje o skośności i kurtozie."
+            },
+            "file_handling": {
+                "choose_file": "Wybierz plik Excel (xlsx lub xls):",
+                "show_data_preview": "Pokaż podgląd danych",
+                "data_preview": "Podgląd danych (pierwsze 10 wierszy):",
+                "select_column": "Wybierz kolumnę do analizy:",
+                "error_processing_file": "Wystąpił błąd podczas analizy pliku",
+                "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+            },
+            "statistics": {
+                "sample_size": "Liczba próbek",
+                "mean": "Średnia",
+                "std_dev": "Odchylenie standardowe",
+                "max": "Maksimum",
+                "min": "Minimum",
+                "median": "Mediana",
+                "rsd": "Współczynnik zmienności (RSD %)",
+                "shapiro_test": "Test Shapiro-Wilka",
+                "skewness": "Skośność",
+                "kurtosis": "Kurtoza"
+            },
+            "plot": {
+                "histogram_title": "Histogram danych",
+                "x_label": "Wartości",
+                "y_label": "Częstość"
+            },
+            "normality_results": {
+                "normal_distribution": "Brak podstaw do odrzucenia hipotezy o normalności rozkładu.",
+                "non_normal_distribution": "Dane nie pochodzą z rozkładu normalnego."
+            }
         },
         "boxplot_charts": {
             "boxplot": "Wykresy pudełkowe BoxPlot",
@@ -93,4 +129,4 @@ translations = {
             "temp_humidity_desc": "Analiza danych środowiskowych i identyfikacja przekroczeń limitów."
         }
     }
-} 
+}
