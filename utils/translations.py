@@ -266,4 +266,80 @@ translations = {
         }
 
     }
+    "English": {
+            "general": {
+                "menu_title": "Menu",
+                "intro": "Welcome to the Santo Pharmstat application!",
+                "intro_desc": "The application allows for statistical and quality data analysis in a simple and intuitive way. In the side menu, you will find modules that help you analyze data from various perspectives.",
+                "choose_page": "Choose a page:",
+                "upload_data": "Upload data for analysis using the built-in forms.",
+                "view_results": "The analysis results (charts, tables, statistics) will appear in the main area of the page.",
+                "customize_view": "You can hide or display analysis details, adjusting the view to your needs.",
+                "how_to_use": "How to use the application?"
+            },
+            "descriptive_statistics": {
+                "descriptive_stats": "Descriptive Statistics",
+                "descriptive_stats_desc": "Calculating basic statistics such as mean, median, and standard deviation.",
+                "title": "Descriptive Statistics",
+                "instructions": {
+                    "header": "Instructions",
+                    "upload_file": "Upload an Excel file containing measurement data.",
+                    "select_columns": "Select the columns for which you want to calculate descriptive statistics.",
+                    "stats_summary": "You will receive a summary of the key statistics such as mean, median, standard deviation, and more.",
+                    "normality_skew_kurtosis": "Additionally, assess the normality of the distribution and obtain information on skewness and kurtosis."
+                },
+                "file_handling": {
+                    "choose_file": "Choose an Excel file (xlsx or xls):",
+                    "show_data_preview": "Show data preview",
+                    "data_preview": "Data preview (first 10 rows):",
+                    "select_columns": "Select columns for analysis:",
+                    "error_processing_file": "An error occurred while processing the file",
+                    "no_file_uploaded": "No file selected - please upload an Excel file above."
+                },
+                "statistics": {
+                    "shapiro_test": "Shapiro-Wilk p-value",
+                    "skewness": "Skewness",
+                    "kurtosis": "Kurtosis"
+                }
+            },
+            "histogram_analysis": {
+                "histograms": "Histograms",
+                "histograms_desc": "Creating histograms with normality assessment and skewness and kurtosis analysis.",
+                "title": "Histogram Analysis",
+                "instructions": {
+                    "header": "Instructions",
+                    "upload_file": "Upload an Excel file containing measurement data.",
+                    "select_column": "Select a column to analyze, generate a histogram, and display descriptive statistics.",
+                    "normality_test": "Assess the normality of the distribution and obtain information on skewness and kurtosis."
+                },
+                "file_handling": {
+                    "choose_file": "Choose an Excel file (xlsx or xls):",
+                    "show_data_preview": "Show data preview",
+                    "data_preview": "Data preview (first 10 rows):",
+                    "select_column": "Select a column for analysis:",
+                    "error_processing_file": "An error occurred while processing the file",
+                    "no_file_uploaded": "No file selected - please upload an Excel file above."
+                },
+                "statistics": {
+                    "sample_size": "Sample Size",
+                    "mean": "Mean",
+                    "std_dev": "Standard Deviation",
+                    "max": "Maximum",
+                    "min": "Minimum",
+                    "median": "Median",
+                    "rsd": "Relative Standard Deviation (RSD %)",
+                    "shapiro_test": "Shapiro-Wilk Test",
+                    "skewness": "Skewness",
+                    "kurtosis": "Kurtosis"
+                },
+                "plot": {
+                    "histogram_title": "Data Histogram",
+                    "x_label": "Values",
+                    "y_label": "Frequency"
+                },
+                "normality_results": {
+                    "normal_distribution": "No reason to reject the hypothesis of normal distribution.",
+                    "non_normal_distribution": "The data does not follow a normal distribution."
+                }
+            }    
 }
