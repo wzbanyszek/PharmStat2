@@ -5,7 +5,7 @@ from utils.data_processing import calculate_descriptive_stats
 from utils.translations import translations
 
 def show(language):
-    t = translations[language]["descriptive_stats"]
+    t = translations[language]["descriptive_statistics"]
 
     st.header(t["title"])
 
