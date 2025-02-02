@@ -37,7 +37,7 @@ translations = {
         },
         "histogram_analysis": {
             "histograms": "Histogramy",
-            "histograms_desc": "Tworzenie histogramów z oceną normalności rozkładu i analizą skośności oraz kurtozy.",
+            "histograms_desc": "Tworzenie histogramów z oceną normalności rozkładu i analizą skośności oraz kurtozy. Dzięki temu modułowi możesz wizualizować rozkład swoich danych i ocenić, czy mają one charakterystykę rozkładu normalnego. Histogramy są użytecznym narzędziem do identyfikacji kształtu rozkładu danych oraz do wykrywania ewentualnych odchyleń lub anomalii.",
             "title": "Analiza histogramów",
             "instructions": {
                 "header": "Instrukcje",
@@ -77,7 +77,7 @@ translations = {
         },
         "boxplot_charts": {
             "boxplot": "Wykresy pudełkowe BoxPlot",
-            "boxplot_desc": "Wizualizacja rozkładu danych i identyfikacja wartości odstających.",
+            "boxplot_desc": "Wizualizacja rozkładu danych i identyfikacja wartości odstających. Wykresy pudełkowe umożliwiają szybkie zrozumienie rozkładu danych, pokazując medianę, kwartyle oraz wartości odstające. Są one szczególnie przydatne w identyfikacji potencjalnych błędów pomiarowych lub nietypowych obserwacji.",
             "title": "Wykresy BoxPlot",
             "instructions": {
                 "header": "Instrukcje",
@@ -103,7 +103,7 @@ translations = {
         },
         "control_charts": {
             "control_charts": "Karty kontrolne ImR",
-            "control_charts_desc": "Monitorowanie stabilności procesów za pomocą kart kontrolnych ImR.",
+            "control_charts_desc": "Monitorowanie stabilności procesów za pomocą kart kontrolnych ImR. Karty kontrolne pozwalają na śledzenie zmian w procesach produkcyjnych lub badawczych, wykrywając ewentualne odchylenia od normy. Są niezbędnym narzędziem w zarządzaniu jakością i ciągłym doskonaleniu procesów.",
             "title": "Karty kontrolne ImR",
             "instructions": {
                 "header": "Instrukcje",
@@ -140,7 +140,7 @@ translations = {
         },
         "process_capability": {
             "process_capability": "Analiza zdolności procesowej",
-            "process_capability_desc": "Ocena zdolności procesu na podstawie wskaźników Cp i Cpk.",
+            "process_capability_desc": "Ocena zdolności procesu na podstawie wskaźników Cp i Cpk. Analiza zdolności procesowej pozwala ocenić, czy proces jest w stanie spełniać określone wymagania jakościowe. Wskaźniki Cp i Cpk pomagają w identyfikacji potencjalnych problemów i obszarów do poprawy.",
             "title": "Analiza zdolności procesowej",
             "instructions": {
                 "header": "Instrukcje",
@@ -182,7 +182,7 @@ translations = {
         },
         "stability_regression": {
             "stability_regression": "Regresja dla stabilności",
-            "stability_regression_desc": "Analiza regresji dla danych stabilnościowych.",
+            "stability_regression_desc": "Analiza regresji dla danych stabilnościowych. Regresja stabilnościowa umożliwia przewidywanie trwałości produktów na podstawie wyników długoterminowych badań stabilności. Jest to kluczowe w przemyśle farmaceutycznym i spożywczym, gdzie stabilność produktów ma bezpośredni wpływ na ich bezpieczeństwo i skuteczność.",
             "title": "Analiza danych ze stabilności",
             "instructions": {
                 "header": "Instrukcje",
@@ -217,7 +217,7 @@ translations = {
         },
         "temp_humidity_analysis": {
             "temp_humidity": "Analiza temperatury i wilgotności",
-            "temp_humidity_desc": "Analiza danych środowiskowych i identyfikacja przekroczeń limitów.",
+            "temp_humidity_desc": "Analiza danych środowiskowych i identyfikacja przekroczeń limitów. Moduł ten pozwala na monitorowanie warunków środowiskowych, takich jak temperatura i wilgotność, oraz wykrywanie ewentualnych przekroczeń ustalonych limitów. Jest to szczególnie ważne w procesach produkcyjnych i magazynowych, gdzie warunki środowiskowe mogą wpływać na jakość i trwałość produktów.",
             "title": "Analiza temperatury i wilgotności",
             "instructions": {
                 "header": "Instrukcje",
