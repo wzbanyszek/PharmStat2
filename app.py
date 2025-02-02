@@ -15,50 +15,50 @@ language = st.sidebar.selectbox(
 t = translations[language]
 
 # Menu boczne
-st.sidebar.title(t["menu_title"])
+st.sidebar.title(t["general"]["menu_title"])
 page = st.sidebar.radio(
-    t["choose_page"],
+    t["general"]["choose_page"],
     [
-        t["intro"],
-        t["descriptive_stats"],
-        t["histograms"],
-        t["boxplot"],
-        t["control_charts"],
-        t["process_capability"],
-        t["stability_regression"],
-        t["temp_humidity"]
+        t["general"]["intro"],
+        t["descriptive_statistics"]["descriptive_stats"],
+        t["histogram_analysis"]["histograms"],
+        t["boxplot_charts"]["boxplot"],
+        t["control_charts"]["control_charts"],
+        t["process_capability"]["process_capability"],
+        t["stability_regression"]["stability_regression"],
+        t["temp_humidity_analysis"]["temp_humidity"]
     ]
 )
 
 # Routing podstron
-if page == t["intro"]:
+if page == t["general"]["intro"]:
     from AppPages import Wprowadzenie
     Wprowadzenie.show(language)
 
-elif page == t["descriptive_stats"]:
+elif page == t["descriptive_statistics"]["descriptive_stats"]:
     from AppPages import descriptive_statistics
     descriptive_statistics.show(language)
 
-elif page == t["histograms"]:
+elif page == t["histogram_analysis"]["histograms"]:
     from AppPages import histogram_analysis
     histogram_analysis.show(language)
 
-elif page == t["boxplot"]:
+elif page == t["boxplot_charts"]["boxplot"]:
     from AppPages import BoxPlot
     BoxPlot.show(language)
 
-elif page == t["control_charts"]:
+elif page == t["control_charts"]["control_charts"]:
     from AppPages import control_charts
     control_charts.show(language)
 
-elif page == t["process_capability"]:
+elif page == t["process_capability"]["process_capability"]:
     from AppPages import process_capability
     process_capability.show(language)
 
-elif page == t["stability_regression"]:
+elif page == t["stability_regression"]["stability_regression"]:
     from AppPages import stability_analysis
     stability_analysis.show(language)
 
-elif page == t["temp_humidity"]:
+elif page == t["temp_humidity_analysis"]["temp_humidity"]:
     from AppPages import Analiza_temperatury_wilgotnosci
     Analiza_temperatury_wilgotnosci.show(language)
