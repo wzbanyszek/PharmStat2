@@ -33,9 +33,10 @@ def show(language):
                 st.error(t["file_handling"]["error_two_columns"])
                 return
 
-            value_column = st.selectbox(t["file_handling"]["choose_value_column"], df.columns[1:])
+            if col_count > 2:
+                st.warning(f"{t['file_handling']['warning_extra_columns']} {col_count}. {t['file_handling']['using_first_two']}")
 
-            df = df.iloc[:, [0, df.columns.get_loc(value_column)]]
+            df = df.iloc[:, :2]
             df.columns = [t["chart_labels"]["time_series"], t["chart_labels"]["values"]]
 
             show_data = st.checkbox(t["file_handling"]["show_data_preview"], value=True)
