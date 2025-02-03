@@ -15,7 +15,6 @@ def show(language):
     **{t["instructions"]["header"]}:**
     - {t["instructions"]["upload_file"]}
     - {t["instructions"]["data_format"]}
-    - {t["instructions"]["extra_columns"]}
     - {t["instructions"]["chart_info"]}
     """)
 
@@ -54,20 +53,15 @@ def show(language):
                 st.subheader(t["file_handling"]["data_preview"])
                 st.dataframe(df[[t["chart_labels"]["time_series"], t["chart_labels"]["values"]]].head(10))
 
-            # Konwersja identyfikatorów serii na typ string
             df[t["chart_labels"]["time_series"]] = df[t["chart_labels"]["time_series"]].astype(str)
-            # Konwersja wartości na typ numeryczny, z pominięciem błędów
             df[t["chart_labels"]["values"]] = pd.to_numeric(df[t["chart_labels"]["values"]], errors='coerce')
-            # Usunięcie wierszy z brakującymi wartościami
             df.dropna(subset=[t["chart_labels"]["values"]], inplace=True)
 
             if df.empty:
                 st.error(t["file_handling"]["error_no_numeric_data"])
                 return
 
-            # Przygotowanie danych do wykresu
             data_array = df[t["chart_labels"]["values"]].to_numpy().reshape(-1, 1)
-            series_ids = df[t["chart_labels"]["time_series"]].to_list()
 
             chart = ImRControlChart(
                 data=data_array,
@@ -87,14 +81,8 @@ def show(language):
             )
             st.write(f"{t['analysis_results']['normal_distribution_check']} **{normally_distributed}**")
 
-            # Tworzenie wykresu
-            fig, ax = plt.subplots(figsize=(12, 8))
-            ax.plot(series_ids, data_array, marker='o', linestyle='-')
-            ax.set_xlabel(t["chart_labels"]["time_series"])
-            ax.set_ylabel(t["chart_labels"]["values"])
-            ax.set_title(f"{t['chart_labels']['control_chart']} - {result_column}")
-            plt.xticks(rotation=45)
-            plt.grid(True)
+            chart.plot()
+            fig = plt.gcf()
             st.pyplot(fig)
 
             show_I_data = st.checkbox(t["analysis_results"]["show_I_chart"], value=True)
