@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from scipy.stats import linregress
 from utils.translations import translations
 
-
 def show(language):
     t = translations[language]["stability_regression"]
 
@@ -41,23 +40,26 @@ def show(language):
             regression_results = []
 
             for col in selected_series:
-                y = df[col].dropna()
-                x = time[:len(y)]
+                y = df[col]
+                valid_indices = y.dropna().index
+                x = time.loc[valid_indices]
+                y = y.loc[valid_indices]
 
-                slope, intercept, r_value, p_value, std_err = linregress(x, y)
-                y_pred = slope * x + intercept
+                if len(x) > 1:
+                    slope, intercept, r_value, p_value, std_err = linregress(x, y)
+                    y_pred = slope * x + intercept
 
-                ax.scatter(x, y, label=f"{col} ({t['plot']['data']})", alpha=0.7)
-                ax.plot(x, y_pred, label=f"{col} ({t['plot']['regression']})", linestyle='--')
+                    ax.scatter(x, y, label=f"{col} ({t['plot']['data']})", alpha=0.7)
+                    ax.plot(x, y_pred, label=f"{col} ({t['plot']['regression']})", linestyle='--')
 
-                regression_results.append({
-                    t["regression_results"]["series"]: col,
-                    t["regression_results"]["slope"]: round(slope, 3),
-                    t["regression_results"]["intercept"]: round(intercept, 3),
-                    t["regression_results"]["r_value"]: round(r_value, 3),
-                    t["regression_results"]["p_value"]: f"{p_value:.3e}",
-                    t["regression_results"]["std_err"]: round(std_err, 3)
-                })
+                    regression_results.append({
+                        t["regression_results"]["series"]: col,
+                        t["regression_results"]["slope"]: round(slope, 3),
+                        t["regression_results"]["intercept"]: round(intercept, 3),
+                        t["regression_results"]["r_value"]: round(r_value, 3),
+                        t["regression_results"]["p_value"]: f"{p_value:.3e}",
+                        t["regression_results"]["std_err"]: round(std_err, 3)
+                    })
 
             if min_spec is not None:
                 ax.axhline(min_spec, color='red', linestyle='-', label=t['plot']['spec_limit'])
