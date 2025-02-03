@@ -33,16 +33,26 @@ def show(language):
                 st.error(t["file_handling"]["error_two_columns"])
                 return
 
-            if col_count > 2:
-                st.warning(f"{t['file_handling']['warning_extra_columns']} {col_count}. {t['file_handling']['using_first_two']}")
+            # Nazwij pierwszą kolumnę jako identyfikatory serii
+            df.rename(columns={df.columns[0]: t["chart_labels"]["time_series"]}, inplace=True)
 
-            df = df.iloc[:, :2]
-            df.columns = [t["chart_labels"]["time_series"], t["chart_labels"]["values"]]
+            # Jeśli jest więcej niż 2 kolumny, pozwól użytkownikowi wybrać kolumnę z wynikami
+            if col_count > 2:
+                result_column = st.selectbox(
+                    t["file_handling"]["select_result_column"],
+                    df.columns[1:],
+                    help=t["file_handling"]["select_result_column_help"]
+                )
+            else:
+                result_column = df.columns[1]
+
+            # Przypisz wybraną kolumnę do zmiennej 'values'
+            df[t["chart_labels"]["values"]] = df[result_column]
 
             show_data = st.checkbox(t["file_handling"]["show_data_preview"], value=True)
             if show_data:
                 st.subheader(t["file_handling"]["data_preview"])
-                st.dataframe(df.head(10))
+                st.dataframe(df[[t["chart_labels"]["time_series"], t["chart_labels"]["values"]]].head(10))
 
             df[t["chart_labels"]["time_series"]] = df[t["chart_labels"]["time_series"]].astype(str)
             df[t["chart_labels"]["values"]] = pd.to_numeric(df[t["chart_labels"]["values"]], errors='coerce')
