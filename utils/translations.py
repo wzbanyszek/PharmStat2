@@ -742,7 +742,7 @@ translations = {
                             "header": "Результаты анализа регрессии для выбранных серий",
                             "series": "Серия",
                             "slope": "Наклон (slope)",
-                            "intercept": "Свободный член (intercept)",
+                            "intercept": "Перехват (intercept)",
                             "r_value": "Коэффициент корреляции (r)",
                             "p_value": "P-значение (p-value)",
                             "std_err": "Стандартная ошибка"
