@@ -15,7 +15,6 @@ def show(language):
     **{t["instructions"]["header"]}:**
     - {t["instructions"]["upload_file"]}
     - {t["instructions"]["data_format"]}
-    - {t["instructions"]["extra_columns"]}
     - {t["instructions"]["chart_info"]}
     """)
 
