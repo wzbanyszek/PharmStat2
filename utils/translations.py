@@ -389,6 +389,8 @@ translations = {
                 "no_file_uploaded": "No file selected - please upload an Excel file above.",
                 "error_two_columns": "The file must contain at least 2 columns (Time/ID, Value).",
                 "warning_extra_columns": "The file contains extra columns:",
+                "select_result_column": "Select the result column for analysis:",
+                "select_result_column_help": "Choose the column containing the data you want to analyze in the control chart.",
                 "using_first_two": "Only the first two columns will be used."
             },
             "chart_labels": {
@@ -655,6 +657,8 @@ translations = {
                     "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel.",
                     "error_two_columns": "Файл должен содержать как минимум 2 столбца (Время/ID, Значение).",
                     "warning_extra_columns": "Файл содержит дополнительные столбцы:",
+                    "select_result_column": "Выберите столбец с результатами для анализа:",
+                    "select_result_column_help": "Выберите столбец, содержащий данные, которые вы хотите проанализировать на контрольной карте.",
                     "using_first_two": "Будут использованы только первые два столбца."
                 },
                 "chart_labels": {
