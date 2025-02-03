@@ -120,6 +120,8 @@ translations = {
                 "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej.",
                 "error_two_columns": "Plik musi zawierać co najmniej 2 kolumny (Czas/ID, Wartość).",
                 "warning_extra_columns": "Plik zawiera dodatkowe kolumny:",
+                "select_result_column": "Wybierz kolumnę z wynikami do analizy:",
+                "select_result_column_help": "Wybierz kolumnę zawierającą dane, które chcesz przeanalizować na karcie kontrolnej.",
                 "using_first_two": "Wykorzystane zostaną tylko pierwsze dwie kolumny."
             },
             "chart_labels": {
