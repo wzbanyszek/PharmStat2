@@ -265,7 +265,7 @@ translations = {
                 "y_label": "Wartość",
                 "title": "Temperatura i Wilgotność"
             }
-        }
+        },
 
     "pqr_module": {
         "title": "Moduł PQR",
@@ -583,7 +583,7 @@ translations = {
                 "y_label": "Value",
                 "title": "Temperature and Humidity"
             }
-        }
+        },
 
     "pqr_module": {
         "title": "PQR Module",
@@ -902,7 +902,7 @@ translations = {
                             "title": "Температура и Влажность"
                         }
                                
-        }
+        },
     
             "pqr_module": {
         "title": "Модуль PQR",
