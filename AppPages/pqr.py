@@ -6,7 +6,7 @@ from scipy.stats import norm
 from SPC import ImRControlChart, Rule01, Rule02, Rule03, Rule04, Rule05, Rule06, Rule07, Rule08
 
 def show(language):
-    t = translations[language]["combined_module"]
+    t = translations[language]["pqr_module"]
 
     st.header(t["title"])
 
