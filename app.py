@@ -26,7 +26,8 @@ page = st.sidebar.radio(
         t["control_charts"]["control_charts"],
         t["process_capability"]["process_capability"],
         t["stability_regression"]["stability_regression"],
-        t["temp_humidity_analysis"]["temp_humidity"]
+        t["temp_humidity_analysis"]["temp_humidity"],
+        t["pqr_module"]["title"]  
     ]
 )
 
@@ -62,3 +63,7 @@ elif page == t["stability_regression"]["stability_regression"]:
 elif page == t["temp_humidity_analysis"]["temp_humidity"]:
     from AppPages import Analiza_temperatury_wilgotnosci
     Analiza_temperatury_wilgotnosci.show(language)
+
+elif page == t["pqr_module"]["title"]:  
+    from AppPages import pqr
+    pqr.show(language)
