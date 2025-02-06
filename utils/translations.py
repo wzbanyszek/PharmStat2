@@ -267,6 +267,55 @@ translations = {
             }
         }
 
+    "pqr_module": {
+        "title": "Moduł PQR",
+        "instructions": {
+            "header": "Instrukcje",
+            "upload_file": "Prześlij plik z danymi",
+            "select_series": "Wybierz serię do analizy",
+            "input_spec_limits": "Wprowadź górny i dolny limit specyfikacji",
+            "view_charts": "Wyświetl wykresy"
+        },
+        "file_handling": {
+            "choose_file": "Wybierz plik",
+            "error_two_columns": "Plik musi zawierać co najmniej dwie kolumny",
+            "select_result_column": "Wybierz kolumnę z wynikami",
+            "select_result_column_help": "Wybierz kolumnę zawierającą dane do analizy",
+            "show_data_preview": "Pokaż podgląd danych",
+            "data_preview": "Podgląd danych",
+            "error_no_numeric_data": "Brak danych numerycznych do analizy",
+            "error_processing_file": "Błąd podczas przetwarzania pliku",
+            "no_file_uploaded": "Nie przesłano pliku"
+        },
+        "chart_labels": {
+            "time_series": "Identyfikator serii",
+            "values": "Wartości",
+            "observation": "Obserwacja",
+            "individual_values": "Wartości indywidualne",
+            "moving_range": "Zakres ruchomy",
+            "frequency": "Częstotliwość",
+            "histogram_with_spec_limits": "Histogram z limitami specyfikacji",
+            "control_chart_with_spec_limits": "Karta kontrolna z limitami specyfikacji"
+        },
+        "subheaders": {
+            "imr_chart": "Karta kontrolna ImR",
+            "cpk_analysis": "Analiza zdolności procesowej Cpk",
+            "spec_limits_comparison": "Porównanie wyników z limitami specyfikacji"
+        },
+        "spec_limits": {
+            "usl": "Górny limit specyfikacji (USL)",
+            "lsl": "Dolny limit specyfikacji (LSL)"
+        },
+        "warnings": {
+            "spec_limits_equal": "Górny i dolny limit specyfikacji są równe. Wprowadź poprawne wartości."
+        },
+        "cpk_results": {
+            "mean": "Średnia",
+            "std_dev": "Odchylenie standardowe",
+            "cpk": "Wskaźnik Cpk"
+        }
+    }
+    
     },
     "English": {
             "general": {
@@ -535,6 +584,56 @@ translations = {
                 "title": "Temperature and Humidity"
             }
         }
+
+    "pqr_module": {
+        "title": "PQR Module",
+        "instructions": {
+            "header": "Instructions",
+            "upload_file": "Upload data file",
+            "select_series": "Select series for analysis",
+            "input_spec_limits": "Enter upper and lower specification limits",
+            "view_charts": "View charts"
+        },
+        "file_handling": {
+            "choose_file": "Choose file",
+            "error_two_columns": "The file must contain at least two columns",
+            "select_result_column": "Select result column",
+            "select_result_column_help": "Choose the column containing data for analysis",
+            "show_data_preview": "Show data preview",
+            "data_preview": "Data preview",
+            "error_no_numeric_data": "No numeric data available for analysis",
+            "error_processing_file": "Error processing file",
+            "no_file_uploaded": "No file uploaded"
+        },
+        "chart_labels": {
+            "time_series": "Series Identifier",
+            "values": "Values",
+            "observation": "Observation",
+            "individual_values": "Individual Values",
+            "moving_range": "Moving Range",
+            "frequency": "Frequency",
+            "histogram_with_spec_limits": "Histogram with Specification Limits",
+            "control_chart_with_spec_limits": "Control Chart with Specification Limits"
+        },
+        "subheaders": {
+            "imr_chart": "ImR Control Chart",
+            "cpk_analysis": "Process Capability Analysis Cpk",
+            "spec_limits_comparison": "Comparison of Results with Specification Limits"
+        },
+        "spec_limits": {
+            "usl": "Upper Specification Limit (USL)",
+            "lsl": "Lower Specification Limit (LSL)"
+        },
+        "warnings": {
+            "spec_limits_equal": "Upper and lower specification limits are equal. Please enter valid values."
+        },
+        "cpk_results": {
+            "mean": "Mean",
+            "std_dev": "Standard Deviation",
+            "cpk": "Cpk Index"
+        }
+    }
+        
         },
         "Russian": {
             "general": {
@@ -804,5 +903,55 @@ translations = {
                         }
                                
         }
+    
+            "pqr_module": {
+        "title": "Модуль PQR",
+        "instructions": {
+            "header": "Инструкции",
+            "upload_file": "Загрузите файл с данными",
+            "select_series": "Выберите серию для анализа",
+            "input_spec_limits": "Введите верхний и нижний пределы спецификации",
+            "view_charts": "Просмотр графиков"
+        },
+        "file_handling": {
+            "choose_file": "Выберите файл",
+            "error_two_columns": "Файл должен содержать не менее двух столбцов",
+            "select_result_column": "Выберите столбец с результатами",
+            "select_result_column_help": "Выберите столбец, содержащий данные для анализа",
+            "show_data_preview": "Показать предварительный просмотр данных",
+            "data_preview": "Предварительный просмотр данных",
+            "error_no_numeric_data": "Нет числовых данных для анализа",
+            "error_processing_file": "Ошибка при обработке файла: {e}",
+            "no_file_uploaded": "Файл не загружен"
+        },
+        "chart_labels": {
+            "time_series": "Идентификатор серии",
+            "values": "Значения",
+            "observation": "Наблюдение",
+            "individual_values": "Индивидуальные значения",
+            "moving_range": "Скользящий диапазон",
+            "frequency": "Частота",
+            "histogram_with_spec_limits": "Гистограмма с пределами спецификации",
+            "control_chart_with_spec_limits": "Контрольная карта с пределами спецификации"
+        },
+        "subheaders": {
+            "imr_chart": "Контрольная карта ImR",
+            "cpk_analysis": "Анализ способности процесса Cpk",
+            "spec_limits_comparison": "Сравнение результатов с пределами спецификации"
+        },
+        "spec_limits": {
+            "usl": "Верхний предел спецификации (USL)",
+            "lsl": "Нижний предел спецификации (LSL)"
+        },
+        "warnings": {
+            "spec_limits_equal": "Верхний и нижний пределы спецификации равны. Пожалуйста, введите корректные значения."
+        },
+        "cpk_results": {
+            "mean": "Среднее",
+            "std_dev": "Стандартное отклонение",
+            "cpk": "Индекс Cpk"
+        }
     }
+        
+        }
 }
