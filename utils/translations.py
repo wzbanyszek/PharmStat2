@@ -2,7 +2,7 @@ translations = {
     "Polski": {
         "general": {
             "menu_title": "Menu",
-            "intro": "Witaj w aplikacji Santo Pharmstat!",
+            "intro": "Witaj w aplikacji Pharmstat2!",
             "intro_desc": "Aplikacja umożliwia przeprowadzanie analizy danych statystycznych i jakościowych w prosty i intuicyjny sposób. W bocznym menu znajdziesz moduły, które pomogą Ci w analizie danych z różnych perspektyw.",
             "choose_page": "Wybierz podstronę:",
             "upload_data": "Wczytaj dane do analizy przy pomocy wbudowanych formularzy.",
@@ -320,7 +320,7 @@ translations = {
     "English": {
             "general": {
                 "menu_title": "Menu",
-                "intro": "Welcome to the Santo Pharmstat application!",
+                "intro": "Welcome to the Pharmstat2 application!",
                 "intro_desc": "The application allows for statistical and quality data analysis in a simple and intuitive way. In the side menu, you will find modules that help you analyze data from various perspectives.",
                 "choose_page": "Choose a page:",
                 "upload_data": "Upload data for analysis using the built-in forms.",
@@ -638,7 +638,7 @@ translations = {
         "Russian": {
             "general": {
                 "menu_title": "Меню",
-                "intro": "Добро пожаловать в приложение Santo Pharmstat!",
+                "intro": "Добро пожаловать в приложение Pharmstat2!",
                 "intro_desc": "Приложение позволяет просто и интуитивно проводить анализ статистических и качественных данных. В боковом меню вы найдёте модули, которые помогут вам анализировать данные с различных позиций.",
                 "choose_page": "Выберите страницу:",
                 "upload_data": "Загрузите данные для анализа с помощью встроенных форм.",
