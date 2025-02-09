@@ -2,7 +2,7 @@ translations = {
     "Polski": {
         "general": {
             "menu_title": "Menu",
-            "intro": "Witaj w aplikacji Pharmstat2!*",
+            "intro": "Witaj w aplikacji Pharmstat2!",
             "intro_desc": "Aplikacja umożliwia przeprowadzanie analizy danych statystycznych i jakościowych w prosty i intuicyjny sposób. W bocznym menu znajdziesz moduły, które pomogą Ci w analizie danych z różnych perspektyw.",
             "choose_page": "Wybierz podstronę:",
             "upload_data": "Wczytaj dane do analizy przy pomocy wbudowanych formularzy.",
