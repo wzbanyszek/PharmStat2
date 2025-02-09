@@ -1,13 +1,13 @@
-# PharmStat1
+# PharmStat2
 
-Instrukcja Obsługi Użytkownika Aplikacji Santo Pharmstat
+Instrukcja Obsługi Użytkownika Aplikacji Pharmstat2
 
 
 **1. Wprowadzenie**
    
 1.1 Cel aplikacji
 
-Aplikacja Santo Pharmstat została zaprojektowana w celu ułatwienia analizy danych statystycznych i jakościowych w branży farmaceutycznej. Umożliwia szybkie i intuicyjne przetwarzanie informacji oraz generowanie czytelnych wyników w postaci wykresów, tabel i wskaźników statystycznych.
+Aplikacja Pharmstat2 została zaprojektowana w celu ułatwienia analizy danych statystycznych i jakościowych w branży farmaceutycznej. Umożliwia szybkie i intuicyjne przetwarzanie informacji oraz generowanie czytelnych wyników w postaci wykresów, tabel i wskaźników statystycznych.
 
 1.2 Kluczowe funkcje
 
@@ -18,17 +18,17 @@ Bezpieczne przechowywanie danych: Brak potrzeby instalacji – dane przetwarzane
 
 1.3 Wymagania systemowe
 
-Aplikacja Santo Pharmstat działa w całości przez przeglądarkę internetową i nie wymaga instalacji lokalnej. Użytkownicy muszą mieć dostęp do internetu oraz aktualnej wersji przeglądarki wspierającej nowoczesne technologie webowe (np. Google Chrome, Mozilla Firefox, Microsoft Edge).
+Aplikacja Pharmstat2 działa w całości przez przeglądarkę internetową i nie wymaga instalacji lokalnej. Użytkownicy muszą mieć dostęp do internetu oraz aktualnej wersji przeglądarki wspierającej nowoczesne technologie webowe (np. Google Chrome, Mozilla Firefox, Microsoft Edge).
 
 **2. Dostęp do aplikacji**
    
 2.1 Jak uruchomić aplikację
 
-Aplikacja Santo Pharmstat jest hostowana na platformie Streamlit i dostępna pod adresem:
-https://santo-pharmstat1.streamlit.app/
+Aplikacja Pharmstat2 jest hostowana na platformie Streamlit i dostępna pod adresem:
+https://pharmstat2.streamlit.app/
 Aby uruchomić aplikację:
 Otwórz preferowaną przeglądarkę internetową.
-Wprowadź adres https://santo-pharmstat1.streamlit.app/ w pasku adresu.
+Wprowadź adres https://pharmstat2.streamlit.app/ w pasku adresu.
 Naciśnij Enter, aby załadować aplikację.
 Po załadowaniu aplikacji wybierz preferowany język z rozwijanego menu po lewej stronie.
 
@@ -49,7 +49,7 @@ Problemy z kompatybilnością: Starsze wersje przeglądarek mogą nie wspierać 
 
 3.1 Wybór języka
 
-Po uruchomieniu aplikacji Santo Pharmstat pierwszym krokiem jest wybór języka interfejsu. W lewym panelu bocznym znajduje się rozwijane menu umożliwiające wybór spośród trzech dostępnych języków:
+Po uruchomieniu aplikacji Pharmstat2 pierwszym krokiem jest wybór języka interfejsu. W lewym panelu bocznym znajduje się rozwijane menu umożliwiające wybór spośród trzech dostępnych języków:
 Polski
 English (Angielski)
 Русский (Rosyjski)
@@ -161,7 +161,7 @@ Możliwość dostosowania zakresów granicznych według potrzeb użytkownika.
 Moduł pozwala na bieżącą kontrolę warunków środowiskowych, co jest kluczowe w procesach wymagających utrzymania stałych parametrów otoczenia.
 
 **5 Najczęściej Zadawane Pytania (FAQ)**
-W tej sekcji znajdziesz odpowiedzi na najczęściej pojawiające się pytania dotyczące korzystania z aplikacji Santo Pharmstat.
+W tej sekcji znajdziesz odpowiedzi na najczęściej pojawiające się pytania dotyczące korzystania z aplikacji  Pharmstat2.
 
 5.1 Jakie formaty plików są obsługiwane przez aplikację?
 Aplikacja obsługuje pliki w formatach Excel: .xlsx oraz .xls. Upewnij się, że dane w plikach są prawidłowo sformatowane i zgodne z wymaganiami poszczególnych modułów.
