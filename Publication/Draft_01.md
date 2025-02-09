@@ -1,32 +1,21 @@
-Teraz ustalmy optymalny wartant artykułu:
+**Tytuł:**
+Nowoczesne podejście do analizy danych w farmacji – Jak Python, AI i zwinne metody zarządzania projektami obniżają koszty compliance
 
-Tytuł: Nowoczesne podejście do analizy danych w farmacji – Jak Python, AI i zwinne metody zarządzania projektami obniżają koszty compliance
-
-
-
-Podtytuł:
-
+**Podtytuł:**
 Oszczędność, elastyczność i skuteczność w analizie statystycznej danych farmaceutycznych – proste rozwiązania dla skomplikowanych wyzwań
 
-
-
-Streszczenie:
-
+**Streszczenie:**
 W dobie rosnących wymagań regulacyjnych i kosztów utrzymania compliance w farmacji, firmy szukają efektywnych rozwiązań umożliwiających optymalizację analizy statystycznej danych. Tradycyjne, kosztowne systemy są często niewystarczająco elastyczne, a ich wdrożenie długotrwałe i wymagające dużych nakładów. Python, sztuczna inteligencja oraz lekkie metody projektowania aplikacji pozwalają na szybkie tworzenie dostosowanych narzędzi analitycznych, eliminując konieczność kosztownych wdrożeń. W artykule omówimy, jak nowoczesne podejście do analizy danych pozwala zwiększyć efektywność w obszarze jakości farmaceutycznej i spełnić wymagania GMP oraz innych regulacji.
 
-
-
 Współczesna farmacja stoi przed wyzwaniem skutecznego wdrażania narzędzi analizy danych, które wspierają zapewnienie jakości i zgodności z regulacjami GMP. Tradycyjne systemy statystyczne bywają kosztowne, skomplikowane i trudne w implementacji. W artykule przedstawiamy nowoczesne podejście, oparte na języku Python, sztucznej inteligencji (AI) oraz zwinnych metodach zarządzania projektami, które umożliwia szybkie, efektywne i niskokosztowe wdrożenie narzędzi analizy statystycznej w farmacji.
-
-
 
 W dobie rosnących wymagań regulacyjnych oraz postępującej cyfryzacji przemysłu farmaceutycznego analiza statystyczna danych staje się kluczowym elementem zapewnienia jakości i zgodności z GMP. Tradycyjne, kosztowne systemy statystyczne często nie odpowiadają na rzeczywiste potrzeby firm farmaceutycznych. W artykule przedstawiamy alternatywne podejście – lekkie, elastyczne narzędzia analizy statystycznej oparte na języku Python, sztucznej inteligencji oraz zwinnym podejściu do projektowania. Dzięki temu firmy mogą obniżyć koszty, przyspieszyć wdrażanie rozwiązań i dostosować narzędzia do swoich specyficznych potrzeb.
 
 
+**Spis treści**
 
-Spis treści
 
-1. Wprowadzenie
+**1. Wprowadzenie**
 
 Rola analizy danych w systemach jakości farmaceutycznej
 
@@ -38,7 +27,7 @@ Continuous Process Verification jako nowy standard w GMP.
 
 
 
-2. Najczęściej stosowane metody analizy danych w farmacji
+**2. Najczęściej stosowane metody analizy danych w farmacji**
 
 Statystyki opisowe (średnia, odchylenie standardowe, mediana).
 
@@ -54,7 +43,7 @@ Porównanie profili uwalniania substancji czynnej
 
 
 
-3. Tradycyjne metody vs. nowoczesne rozwiązania
+**3. Tradycyjne metody vs. nowoczesne rozwiązania**
 
 Wysokie koszty i ograniczenia klasycznych systemów statystycznych
 
@@ -70,7 +59,7 @@ Korzyści płynące z zastosowania otwartego oprogramowania
 
 
 
-4. Python i AI – nowoczesne narzędzia dla farmacji
+**4. Python i AI – nowoczesne narzędzia dla farmacji**
 
 Ogólnodostępne narzędzia statystyczne (Python, R).
 
@@ -90,7 +79,7 @@ Przykłady zastosowania w kontroli jakości i badaniach stabilności.
 
 
 
-5.Projektowanie oprogramowania dla farmacji – kluczowe wyzwania
+**5.Projektowanie oprogramowania dla farmacji – kluczowe wyzwania**
 
 Jak zapewnić zgodność z zasadami data integrity?
 
@@ -100,7 +89,7 @@ Jak uczynić narzędzia bardziej intuicyjnymi dla użytkowników?
 
 
 
-6. Zwinne metody zarządzania projektami w rozwoju narzędzi analitycznych
+**6. Zwinne metody zarządzania projektami w rozwoju narzędzi analitycznych**
 
 Dlaczego klasyczne metody wdrażania oprogramowania są kosztowne i czasochłonne?
 
@@ -116,7 +105,7 @@ Streamlit jako interfejs użytkownika dla aplikacji analitycznych.
 
 
 
-7. Case study: Pharmstat – aplikacja wspierająca analizę jakościową w farmacji
+**7. Case study: Pharmstat – aplikacja wspierająca analizę jakościową w farmacji**
 
 Założenia projektu i potrzeby użytkowników
 
@@ -130,7 +119,7 @@ Efekty wdrożenia: oszczędność czasu i kosztów, lepsze dostosowanie do wymag
 
 
 
-8. Podsumowanie i perspektywy rozwoju
+**8. Podsumowanie i perspektywy rozwoju**
 
 Możliwości dalszego wykorzystania AI i języka Python w farmacji.
 
