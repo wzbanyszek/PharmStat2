@@ -27,8 +27,8 @@ page = st.sidebar.radio(
         t["process_capability"]["process_capability"],
         t["stability_regression"]["stability_regression"],
         t["temp_humidity_analysis"]["temp_humidity"],
-        t["pqr_module"]["title"],
-        t["anova_module"]["title"]
+        t["pqr_module"]["title"]#,
+        #t["anova_module"]["title"]
     ]
 )
 
