@@ -314,7 +314,46 @@ translations = {
             "std_dev": "Odchylenie standardowe",
             "cpk": "Wskaźnik Cpk"
         }
+    },
+
+    "anova_module": {
+    "title": "Analiza Wariancji (ANOVA)",
+    "instructions": {
+        "header": "Instrukcje",
+        "upload_file": "Wczytaj plik Excel zawierający dane dla różnych grup.",
+        "select_groups": "Wybierz grupy do analizy.",
+        "perform_anova": "Przeprowadź analizę wariancji (ANOVA) na wybranych grupach.",
+        "view_results": "Zobacz wyniki testu ANOVA oraz testu Tukeya."
+    },
+    "file_handling": {
+        "choose_file": "Wybierz plik Excel (xlsx lub xls):",
+        "show_data_preview": "Pokaż podgląd wczytanych danych",
+        "data_preview": "Podgląd danych (pierwsze 10 wierszy):",
+        "select_groups": "Wybierz grupy do analizy:",
+        "error_two_columns": "Plik musi zawierać co najmniej 2 kolumny z danymi.",
+        "error_processing_file": "Wystąpił błąd podczas analizy pliku",
+        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+    },
+    "warnings": {
+        "need_two_groups": "Wybierz co najmniej dwie grupy do analizy."
+    },
+    "anova_results": {
+        "header": "Wyniki analizy wariancji (ANOVA)",
+        "statistic": "Statystyka F",
+        "p_value": "Wartość p",
+        "significant_result": "Różnice między grupami są istotne statystycznie.",
+        "no_significant_result": "Brak istotnych różnic między grupami."
+    },
+    "subheaders": {
+        "boxplot": "Wykres pudełkowy (BoxPlot)",
+        "tukey_test": "Test Tukeya – porównanie parowe"
+    },
+    "boxplot": {
+        "x_label": "Grupa",
+        "y_label": "Wartości"
     }
+}
+
     
     },
     "English": {
@@ -632,7 +671,47 @@ translations = {
             "std_dev": "Standard Deviation",
             "cpk": "Cpk Index"
         }
+    },
+
+    "anova_module": {
+    "title": "Analysis of Variance (ANOVA)",
+    "instructions": {
+        "header": "Instructions",
+        "upload_file": "Upload an Excel file containing data for different groups.",
+        "select_groups": "Select groups for analysis.",
+        "perform_anova": "Perform an analysis of variance (ANOVA) on the selected groups.",
+        "view_results": "View the results of the ANOVA test and Tukey test."
+    },
+    "file_handling": {
+        "choose_file": "Select an Excel file (xlsx or xls):",
+        "show_data_preview": "Show preview of uploaded data",
+        "data_preview": "Data preview (first 10 rows):",
+        "select_groups": "Select groups for analysis:",
+        "error_two_columns": "The file must contain at least 2 columns with data.",
+        "error_processing_file": "An error occurred while processing the file",
+        "no_file_uploaded": "No file selected - please upload an Excel file above."
+    },
+    "warnings": {
+        "need_two_groups": "Select at least two groups for analysis."
+    },
+    "anova_results": {
+        "header": "ANOVA (Analysis of Variance) Results",
+        "statistic": "F-Statistic",
+        "p_value": "P-Value",
+        "significant_result": "There are statistically significant differences between groups.",
+        "no_significant_result": "No significant differences between groups."
+    },
+    "subheaders": {
+        "boxplot": "BoxPlot Chart",
+        "tukey_test": "Tukey Test – Pairwise Comparison"
+    },
+    "boxplot": {
+        "x_label": "Group",
+        "y_label": "Values"
     }
+}
+
+        
         
         },
         "Russian": {
@@ -951,7 +1030,46 @@ translations = {
             "std_dev": "Стандартное отклонение",
             "cpk": "Индекс Cpk"
         }
+    },
+
+    "anova_module": {
+    "title": "Дисперсионный анализ (ANOVA)",
+    "instructions": {
+        "header": "Инструкции",
+        "upload_file": "Загрузите файл Excel, содержащий данные для разных групп.",
+        "select_groups": "Выберите группы для анализа.",
+        "perform_anova": "Выполните дисперсионный анализ (ANOVA) для выбранных групп.",
+        "view_results": "Посмотрите результаты теста ANOVA и теста Тьюки."
+    },
+    "file_handling": {
+        "choose_file": "Выберите файл Excel (xlsx или xls):",
+        "show_data_preview": "Показать предварительный просмотр данных",
+        "data_preview": "Предварительный просмотр данных (первые 10 строк):",
+        "select_groups": "Выберите группы для анализа:",
+        "error_two_columns": "Файл должен содержать не менее 2 столбцов с данными.",
+        "error_processing_file": "Произошла ошибка при обработке файла",
+        "no_file_uploaded": "Файл не выбран - загрузите файл Excel выше."
+    },
+    "warnings": {
+        "need_two_groups": "Выберите как минимум две группы для анализа."
+    },
+    "anova_results": {
+        "header": "Результаты дисперсионного анализа (ANOVA)",
+        "statistic": "F-Статистика",
+        "p_value": "P-Значение",
+        "significant_result": "Между группами есть статистически значимые различия.",
+        "no_significant_result": "Статистически значимых различий между группами нет."
+    },
+    "subheaders": {
+        "boxplot": "Диаграмма BoxPlot",
+        "tukey_test": "Тест Тьюки – попарное сравнение"
+    },
+    "boxplot": {
+        "x_label": "Группа",
+        "y_label": "Значения"
     }
+}
+
         
         }
 }
