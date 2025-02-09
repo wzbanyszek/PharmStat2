@@ -17,7 +17,6 @@ def show(language):
     - {t["instructions"]["upload_file"]}
     - {t["instructions"]["select_groups"]}
     - {t["instructions"]["perform_anova"]}
-    - {t["instructions"]["view_results"]}
     """)
 
     uploaded_file = st.file_uploader(t["file_handling"]["choose_file"], type=["xlsx", "xls"])
@@ -69,20 +68,6 @@ def show(language):
             plt.xticks(rotation=45)
             plt.grid(True)
             st.pyplot(plt.gcf())
-
-            # Test Tukeya, jeśli ANOVA jest istotna
-            if p_value < 0.05:
-                st.subheader(t["subheaders"]["tukey_test"])
-                tukey_result = pairwise_tukeyhsd(
-                    endog=df_melted[t["boxplot"]["y_label"]],
-                    groups=df_melted[t["boxplot"]["x_label"]],
-                    alpha=0.05
-                )
-
-                st.write(tukey_result)
-                plt.figure(figsize=(10, 6))
-                tukey_result.plot_simultaneous()
-                st.pyplot(plt.gcf())
 
         except Exception as e:
             st.error(f"{t['file_handling']['error_processing_file']}: {e}")
