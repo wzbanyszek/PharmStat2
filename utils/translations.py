@@ -1140,10 +1140,9 @@ translations = {
         "x_label": "Группа",
         "y_label": "Значения"
     }
-}
+},
 
         
-        },
 "dissolution_testing": {
     "title": "Сравнение профилей высвобождения",
     "instructions": {
@@ -1178,5 +1177,6 @@ translations = {
     }
 }
 
+}
     
 }
