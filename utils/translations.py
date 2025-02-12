@@ -388,9 +388,10 @@ translations = {
     }
 }
 
-
     
     },
+
+    
     "English": {
             "general": {
                 "menu_title": "Menu",
@@ -744,7 +745,43 @@ translations = {
         "x_label": "Group",
         "y_label": "Values"
     }
+},
+
+
+"dissolution_testing": {
+    "title": "Dissolution Profile Comparison",
+    "instructions": {
+        "header": "Instructions",
+        "upload_file": "Upload an Excel file containing dissolution data.",
+        "select_groups": "Select groups for comparison:",
+        "perform_analysis": "Calculate f1 and f2 similarity factors.",
+        "view_results": "View charts and analysis results."
+    },
+    "file_handling": {
+        "choose_file": "Select an Excel file (xlsx or xls):",
+        "show_data_preview": "Show data preview",
+        "data_preview": "Data preview (first 10 rows):",
+        "select_groups": "Select series for analysis:",
+        "error_processing_file": "An error occurred while processing the file.",
+        "no_file_uploaded": "No file selected - please upload an Excel file above."
+    },
+    "warnings": {
+        "need_two_groups": "Select at least two series for comparison."
+    },
+    "plot": {
+        "title": "Dissolution Profile Chart",
+        "x_label": "Time (min)",
+        "y_label": "Percentage of drug released"
+    },
+    "analysis_results": {
+        "header": "Analysis Results",
+        "f1": "Difference Factor (f1)",
+        "f2": "Similarity Factor (f2)",
+        "significant_result": "Profile considered similar (f2 ≥ 50).",
+        "no_significant_result": "Profile considered different (f2 < 50)."
+    }
 }
+
 
         
         
@@ -1106,5 +1143,40 @@ translations = {
 }
 
         
-        }
+        },
+"dissolution_testing": {
+    "title": "Сравнение профилей высвобождения",
+    "instructions": {
+        "header": "Инструкции",
+        "upload_file": "Загрузите файл Excel, содержащий данные о высвобождении.",
+        "select_groups": "Выберите группы для сравнения:",
+        "perform_analysis": "Рассчитайте коэффициенты f1 и f2.",
+        "view_results": "Просмотр графиков и результатов анализа."
+    },
+    "file_handling": {
+        "choose_file": "Выберите файл Excel (xlsx или xls):",
+        "show_data_preview": "Показать предварительный просмотр данных",
+        "data_preview": "Предварительный просмотр данных (первые 10 строк):",
+        "select_groups": "Выберите серии для анализа:",
+        "error_processing_file": "Произошла ошибка при обработке файла.",
+        "no_file_uploaded": "Файл не выбран - загрузите файл Excel выше."
+    },
+    "warnings": {
+        "need_two_groups": "Выберите как минимум две серии для сравнения."
+    },
+    "plot": {
+        "title": "График профиля высвобождения",
+        "x_label": "Время (мин)",
+        "y_label": "Процент высвобожденного вещества"
+    },
+    "analysis_results": {
+        "header": "Результаты анализа",
+        "f1": "Фактор разницы (f1)",
+        "f2": "Фактор сходства (f2)",
+        "significant_result": "Профили считаются схожими (f2 ≥ 50).",
+        "no_significant_result": "Профили считаются различными (f2 < 50)."
+    }
+}
+
+    
 }
