@@ -354,33 +354,37 @@ translations = {
     }
 },
 
-        "dissolution_testing": {
+"dissolution_testing": {
     "title": "Porównanie profili uwalniania",
     "instructions": {
         "header": "Instrukcje",
-        "upload_file": "Wgraj plik Excel z danymi uwalniania substancji.",
-        "select_groups": "Wybierz kolumny reprezentujące serie testowe.",
-        "perform_analysis": "Oblicz współczynniki podobieństwa f1 i f2.",
-        "view_results": "Zobacz wykres profili uwalniania."
+        "upload_file": "Wczytaj plik Excel zawierający dane uwalniania.",
+        "select_groups": "Wybierz grupy do porównania:",
+        "perform_analysis": "Oblicz współczynniki f1 i f2.",
+        "view_results": "Zobacz wykresy i wyniki analizy."
     },
     "file_handling": {
-        "choose_file": "Wybierz plik Excel (xlsx, xls):",
+        "choose_file": "Wybierz plik Excel (xlsx lub xls):",
         "show_data_preview": "Pokaż podgląd danych",
         "data_preview": "Podgląd danych (pierwsze 10 wierszy):",
+        "select_groups": "Wybierz serie do analizy:",
         "error_processing_file": "Wystąpił błąd podczas analizy pliku.",
-        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel."
+        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+    },
+    "warnings": {
+        "need_two_groups": "Wybierz przynajmniej dwie serie do porównania."
+    },
+    "plot": {
+        "title": "Wykres profili uwalniania",
+        "x_label": "Czas (min)",
+        "y_label": "Procent uwolnionej substancji"
     },
     "analysis_results": {
         "header": "Wyniki analizy",
-        "f1": "Współczynnik różnicy f1",
-        "f2": "Współczynnik podobieństwa f2",
-        "significant_result": "Profil uwalniania jest statystycznie zgodny.",
-        "no_significant_result": "Profil uwalniania nie jest zgodny – możliwe istotne różnice."
-    },
-    "plot": {
-        "title": "Porównanie profili uwalniania",
-        "x_label": "Czas [min]",
-        "y_label": "Procent substancji uwolnionej"
+        "f1": "Współczynnik różnicy (f1)",
+        "f2": "Współczynnik podobieństwa (f2)",
+        "significant_result": "Profil uznany za podobny (f2 ≥ 50).",
+        "no_significant_result": "Profil uznany za różny (f2 < 50)."
     }
 }
 
