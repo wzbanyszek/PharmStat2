@@ -13,6 +13,7 @@ def calculate_f2(reference, test):
     n = len(reference)
     sum_sq_diff = np.sum((reference - test) ** 2)
     f2 = 50 * np.log10(1 + (1/n) * sum_sq_diff) * (-0.5)
+    f2 = abs(f2)
     return f2
 
 def calculate_f1(reference, test):
