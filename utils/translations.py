@@ -417,7 +417,7 @@ translations = {
                 "no_significant_result": "Profil uznany za różny (f2 < 50)."
             }
         }
-    },
+    }, 
     "English": {
         "general": {
             "menu_title": "Menu",
