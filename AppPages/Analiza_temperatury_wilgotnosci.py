@@ -10,9 +10,11 @@ def show(language):
 
     st.write(f"""
     **{t["instructions"]["header"]}:**
+    - {t["instructions"]["prepare_file"]}
     - {t["instructions"]["upload_file"]}
     - {t["instructions"]["set_limits"]}
     - {t["instructions"]["view_results"]}
+    - {t["instructions"]["interpretation"]}
     """)
 
     temp_lower = st.slider(t["settings"]["temp_lower"], min_value=0, max_value=100, value=23)
