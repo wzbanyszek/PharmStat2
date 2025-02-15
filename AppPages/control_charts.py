@@ -13,7 +13,7 @@ def show(language):
 
     show_instructions = st.checkbox(t["show_instructions"], value=True)
     if show_instructions:
-    st.write(f"""
+        st.write(f"""
         **{t["instructions"]["header"]}:**
         - {t["instructions"]["prepare_file"]}
         - {t["instructions"]["upload_file"]}
