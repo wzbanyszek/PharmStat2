@@ -18,7 +18,7 @@ def show(language):
     - {t["instructions"]["upload_file"]}
     - {t["instructions"]["select_groups"]}
     - {t["instructions"]["perform_anova"]}
-    - {t["instructions"]["interpretation"]}
+    #- {t["instructions"]["interpretation"]}
     """)
 
     uploaded_file = st.file_uploader(t["file_handling"]["choose_file"], type=["xlsx", "xls"])
