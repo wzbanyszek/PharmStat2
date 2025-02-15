@@ -20,7 +20,8 @@ translations = {
                 "upload_file": "Wczytaj plik Excel zawierający dane pomiarowe.",
                 "select_columns": "Wybierz kolumny, dla których chcesz obliczyć statystyki opisowe.",
                 "stats_summary": "Otrzymasz zestawienie najważniejszych statystyk, takich jak średnia, mediana, odchylenie standardowe i inne.",
-                "normality_skew_kurtosis": "Dodatkowo ocenisz normalność rozkładu oraz uzyskasz informacje o skośności i kurtozie."
+                "normality_skew_kurtosis": "Dodatkowo ocenisz normalność rozkładu oraz uzyskasz informacje o skośności i kurtozie.",
+                "interpretation": "Interpretacja wyników: Średnia określa wartość przeciętną, mediana wskazuje środek zbioru danych, a odchylenie standardowe informuje o zmienności wyników. Wysoka skośność może wskazywać na asymetrię rozkładu, a wysoka kurtoza na obecność wartości odstających."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -45,7 +46,8 @@ translations = {
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane pomiarowe.",
                 "select_column": "Wybierz kolumnę do analizy, aby wygenerować histogram i wyświetlić statystyki opisowe.",
-                "normality_test": "Ocenisz normalność rozkładu oraz uzyskasz informacje o skośności i kurtozie."
+                "normality_test": "Ocenisz normalność rozkładu oraz uzyskasz informacje o skośności i kurtozie.",
+                "interpretation": "Interpretacja wyników: Histogram pozwala ocenić kształt rozkładu danych. Jeśli histogram ma kształt dzwonowy, sugeruje to rozkład normalny. Skośność histogramu może wskazywać na asymetrię wyników, a szerokość rozkładu świadczy o rozrzucie wartości."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -86,7 +88,8 @@ translations = {
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane pomiarowe.",
                 "select_columns": "Wybierz kolumny do analizy, aby wygenerować wykresy BoxPlot.",
-                "view_stats": "Otrzymasz statystyki opisowe dla wybranych kolumn."
+                "view_stats": "Otrzymasz statystyki opisowe dla wybranych kolumn.",
+                "interpretation": "Interpretacja wyników: Wykres pudełkowy pozwala ocenić medianę, rozstęp międzykwartylowy oraz obecność wartości odstających. Długie wąsy mogą wskazywać na duże zróżnicowanie danych, a pojedyncze punkty poza wąsami sugerują obecność wartości odstających."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx, xls):",
@@ -114,7 +117,8 @@ translations = {
                 "upload_file": "Wczytaj plik Excel zawierający dane pomiarowe.",
                 "data_format": "Plik powinien zawierać dwie kolumny: daty lub ID próbek oraz dane liczbowe.",
                 "extra_columns": "Jeśli plik zawiera więcej niż 2 kolumny, dodatkowe kolumny zostaną pominięte.",
-                "chart_info": "Generowane będą wykresy ImR, w tym wykres wartości indywidualnych (I) oraz ruchomego rozstępu (MR)."
+                "chart_info": "Generowane będą wykresy ImR, w tym wykres wartości indywidualnych (I) oraz ruchomego rozstępu (MR).",
+                "interpretation": "Interpretacja wyników: Karty kontrolne pozwalają monitorować stabilność procesu. Punkty znajdujące się poza liniami kontrolnymi mogą wskazywać na nieprawidłowości w procesie. Wykrycie trendów lub serii wartości po jednej stronie średniej może sugerować systematyczne zmiany w procesie."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -153,7 +157,8 @@ translations = {
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane pomiarowe.",
                 "set_spec_limits": "Ustaw dolną (LSL) i górną (USL) granicę specyfikacji oraz wartość docelową (Target).",
-                "view_results": "Otrzymasz wykres analizy zdolności procesowej oraz wskaźniki Cp i Cpk."
+                "view_results": "Otrzymasz wykres analizy zdolności procesowej oraz wskaźniki Cp i Cpk.",
+                "interpretation": "Interpretacja wyników: Wskaźniki Cp i Cpk oceniają zdolność procesu do spełnienia wymagań specyfikacji. Wartość Cp > 1.33 sugeruje dobrą zdolność procesu, natomiast Cpk uwzględnia zarówno zmienność, jak i przesunięcie względem środka specyfikacji."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -196,7 +201,8 @@ translations = {
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane stabilności.",
                 "display_series": "Na wykresie zostaną wyświetlone wybrane serie wraz z liniami regresji.",
-                "view_regression_results": "Pod wykresem znajdziesz tabelę z parametrami regresji dla wybranych serii."
+                "view_regression_results": "Pod wykresem znajdziesz tabelę z parametrami regresji dla wybranych serii.",
+                "interpretation": "Interpretacja wyników: Regresja liniowa pomaga określić trend zmian wartości parametru w czasie. Współczynnik determinacji R² bliski 1 oznacza dobrą dopasowalność modelu do danych. Nachylenie linii regresji wskazuje, czy wartości parametru rosną, maleją lub pozostają stabilne."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -232,7 +238,8 @@ translations = {
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane temperatury i wilgotności.",
                 "set_limits": "Ustaw limity temperatury i wilgotności za pomocą suwaków.",
-                "view_results": "Przeglądaj wykresy oraz listę przekroczeń limitów."
+                "view_results": "Przeglądaj wykresy oraz listę przekroczeń limitów.",
+                "interpretation": "Interpretation of results: Temperature and humidity charts help monitor environmental conditions. Stable values indicate good control of storage conditions. Significant fluctuations may suggest issues with maintaining stability conditions."
             },
             "settings": {
                 "temp_lower": "Dolna granica temperatury (\u00b0C)",
@@ -281,7 +288,8 @@ translations = {
                 "upload_file": "Prześlij plik z danymi",
                 "select_series": "Wybierz serię do analizy",
                 "input_spec_limits": "Wprowadź górny i dolny limit specyfikacji",
-                "view_charts": "Wyświetl wykresy"
+                "view_charts": "Wyświetl wykresy",
+                "interpretation": ""
             },
             "file_handling": {
                 "choose_file": "Wybierz plik",
@@ -325,12 +333,13 @@ translations = {
         "anova_module": {
             "title": "Analiza Wariancji (ANOVA)",
             "instructions": {
-                "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nazwy grup porównawczych, np. \"Seria 1\", \"Seria 2\", \"Seria 3\". Każda kolumna powinna reprezentować inną grupę porównawczą, a kolejne wiersze zawierać wartości liczbowe. W przypadku brakujących danych komórki powinny pozostawać puste.",
+                "prepare_file": "Ustal wymagania dotyczące pliku Excel dla modułu.",
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane dla różnych grup.",
                 "select_groups": "Wybierz grupy do analizy.",
                 "perform_anova": "Przeprowadź analizę wariancji (ANOVA) na wybranych grupach.",
-                "view_results": "Zobacz wyniki testu ANOVA oraz testu Tukeya."
+                "view_results": "Zobacz wyniki testu ANOVA oraz testu Tukeya.",
+                "interpretation": ""
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -346,7 +355,7 @@ translations = {
             },
             "anova_results": {
                 "header": "Wyniki analizy wariancji (ANOVA)",
-                "statistic": "Statystyka F",
+                "statistic": "F-Statystyka",
                 "p_value": "Wartość p",
                 "significant_result": "Różnice między grupami są istotne statystycznie.",
                 "no_significant_result": "Brak istotnych różnic między grupami."
@@ -367,8 +376,9 @@ translations = {
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane uwalniania.",
                 "select_groups": "Wybierz grupy do porównania:",
-                "perform_analysis": "Oblicz współczynniki f1 i f2.",
-                "view_results": "Zobacz wykresy i wyniki analizy."
+                "perform_analysis": "Rassczkaj współczynniki f1 i f2.",
+                "view_results": "Zobacz wykresy i wyniki analizy.",
+                "interpretation": "Interpretacja wyników: Współczynniki f1 i f2 określają stopień podobieństwa profilu uwalniania produktu referencyjnego i badanego. Wartość f1 bliska 0 oraz f2 powyżej 50 oznaczają wysoki stopień podobieństwa."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -416,7 +426,8 @@ translations = {
                 "upload_file": "Upload an Excel file containing measurement data.",
                 "select_columns": "Select the columns for which you want to calculate descriptive statistics.",
                 "stats_summary": "You will receive a summary of the key statistics such as mean, median, standard deviation, and more.",
-                "normality_skew_kurtosis": "Additionally, assess the normality of the distribution and obtain information on skewness and kurtosis."
+                "normality_skew_kurtosis": "Additionally, assess the normality of the distribution and obtain information on skewness and kurtosis.",
+                "interpretation": "Interpretation of results: The mean represents the average value, the median indicates the center of the dataset, and the standard deviation reflects the variability of the results. High skewness may indicate asymmetry in the distribution, while high kurtosis suggests the presence of outliers."
             },
             "file_handling": {
                 "choose_file": "Choose an Excel file (xlsx or xls):",
@@ -441,7 +452,8 @@ translations = {
                 "header": "Instructions",
                 "upload_file": "Upload an Excel file containing measurement data.",
                 "select_column": "Select a column to analyze, generate a histogram, and display descriptive statistics.",
-                "normality_test": "Assess the normality of the distribution and obtain information on skewness and kurtosis."
+                "normality_test": "Assess the normality of the distribution and obtain information on skewness and kurtosis.",
+                "interpretation": "Interpretation of results: The histogram helps assess the shape of the data distribution. A bell-shaped histogram suggests a normal distribution. Skewness may indicate an asymmetric distribution, while the width of the distribution represents data dispersion."
             },
             "file_handling": {
                 "choose_file": "Choose an Excel file (xlsx or xls):",
@@ -482,7 +494,8 @@ translations = {
                 "header": "Instructions",
                 "upload_file": "Upload an Excel file containing measurement data.",
                 "select_columns": "Select columns for analysis to generate BoxPlot charts.",
-                "view_stats": "You will receive descriptive statistics for the selected columns."
+                "view_stats": "You will receive descriptive statistics for the selected columns.",
+                "interpretation": "Interpretation of results: The box plot helps assess the median, interquartile range, and the presence of outliers. Long whiskers indicate high variability in the data, while individual points outside the whiskers suggest outliers."
             },
             "file_handling": {
                 "choose_file": "Choose an Excel file (xlsx, xls):",
@@ -510,7 +523,8 @@ translations = {
                 "upload_file": "Upload an Excel file containing measurement data.",
                 "data_format": "The file should contain two columns: sample dates or IDs and numerical data.",
                 "extra_columns": "If the file contains more than 2 columns, additional columns will be ignored.",
-                "chart_info": "ImR charts will be generated, including the Individual Values (I) chart and the Moving Range (MR) chart."
+                "chart_info": "ImR charts will be generated, including the Individual Values (I) chart and the Moving Range (MR) chart.",
+                "interpretation": "Interpretation of results: Control charts help monitor process stability. Points outside the control limits may indicate irregularities. Detecting trends or a sequence of values on one side of the mean may suggest systematic changes in the process."
             },
             "file_handling": {
                 "choose_file": "Choose an Excel file (xlsx or xls):",
@@ -549,7 +563,8 @@ translations = {
                 "header": "Instructions",
                 "upload_file": "Upload an Excel file containing measurement data.",
                 "set_spec_limits": "Set the lower (LSL) and upper (USL) specification limits and the target value.",
-                "view_results": "You will receive a process capability analysis chart and Cp and Cpk indices."
+                "view_results": "You will receive a process capability analysis chart and Cp and Cpk indices.",
+                "interpretation": "Interpretation of results: Cp and Cpk indices evaluate the process capability to meet specification requirements. A Cp > 1.33 suggests good process capability, while Cpk considers both variability and shift relative to the specification target."
             },
             "file_handling": {
                 "choose_file": "Choose an Excel file (xlsx or xls):",
@@ -592,7 +607,8 @@ translations = {
                 "header": "Instructions",
                 "upload_file": "Upload an Excel file containing stability data.",
                 "display_series": "The selected series will be displayed on the chart along with regression lines.",
-                "view_regression_results": "Below the chart, you will find a table with regression parameters for the selected series."
+                "view_regression_results": "Below the chart, you will find a table with regression parameters for the selected series.",
+                "interpretation": "Interpretation of results: Linear regression helps determine the trend of parameter changes over time. An R² value close to 1 indicates a good model fit. The slope of the regression line shows whether the parameter values increase, decrease, or remain stable."
             },
             "file_handling": {
                 "choose_file": "Choose an Excel file (xlsx or xls):",
@@ -628,7 +644,8 @@ translations = {
                 "header": "Instructions",
                 "upload_file": "Upload an Excel file containing temperature and humidity data.",
                 "set_limits": "Set temperature and humidity limits using sliders.",
-                "view_results": "Browse charts and the list of limit exceedances."
+                "view_results": "Browse charts and the list of limit exceedances.",
+                "interpretation": "Interpretation of results: Temperature and humidity charts help monitor environmental conditions. Stable values indicate good control of storage conditions. Significant fluctuations may suggest issues with maintaining stability conditions."
             },
             "settings": {
                 "temp_lower": "Lower Temperature Limit (°C)",
@@ -637,7 +654,7 @@ translations = {
                 "hum_upper": "Upper Humidity Limit (%)"
             },
             "file_handling": {
-                "choose_file": "Choose an Excel file (xlsx, xls):",
+                "choose_file": "Choose an Excel file (xlsx or xls):",
                 "data_preview": "Data preview (first 10 rows):",
                 "error_processing_file": "An error occurred while processing the file",
                 "no_file_uploaded": "No file selected - please upload an Excel file above."
@@ -677,7 +694,8 @@ translations = {
                 "upload_file": "Upload data file",
                 "select_series": "Select series for analysis",
                 "input_spec_limits": "Enter upper and lower specification limits",
-                "view_charts": "View charts"
+                "view_charts": "View charts",
+                "interpretation": ""
             },
             "file_handling": {
                 "choose_file": "Choose file",
@@ -721,12 +739,13 @@ translations = {
         "anova_module": {
             "title": "Analysis of Variance (ANOVA)",
             "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain the names of the comparison groups, e.g., \"Series 1\", \"Series 2\", \"Series 3\". Each column should represent a different comparison group, and subsequent rows should contain numerical values. Cells should remain blank if data is missing.",
+                "prepare_file": "Provide an Excel file as required by the module.",
                 "header": "Instructions",
                 "upload_file": "Upload an Excel file containing data for different groups.",
                 "select_groups": "Select groups for analysis.",
                 "perform_anova": "Perform an analysis of variance (ANOVA) on the selected groups.",
-                "view_results": "View the results of the ANOVA test and Tukey test."
+                "view_results": "View the results of the ANOVA test and Tukey test.",
+                "interpretation": ""
             },
             "file_handling": {
                 "choose_file": "Select an Excel file (xlsx or xls):",
@@ -764,7 +783,8 @@ translations = {
                 "upload_file": "Upload an Excel file containing dissolution data.",
                 "select_groups": "Select groups for comparison:",
                 "perform_analysis": "Calculate f1 and f2 similarity factors.",
-                "view_results": "View charts and analysis results."
+                "view_results": "View charts and analysis results.",
+                "interpretation": "Interpretation of results: The f1 and f2 factors assess the similarity of dissolution profiles between the reference and test product. An f1 value close to 0 and f2 above 50 indicate a high degree of similarity."
             },
             "file_handling": {
                 "choose_file": "Select an Excel file (xlsx or xls):",
@@ -812,7 +832,8 @@ translations = {
                 "upload_file": "Загрузите файл Excel с данными измерений.",
                 "select_columns": "Выберите столбцы для расчета описательной статистики.",
                 "stats_summary": "Вы получите сводку основных статистических показателей, таких как среднее значение, медиана, стандартное отклонение и другие.",
-                "normality_skew_kurtosis": "Дополнительно вы сможете оценить нормальность распределения и получить информацию об асимметрии и эксцессе."
+                "normality_skew_kurtosis": "Дополнительно вы сможете оценить нормальность распределения и получить информацию об асимметрии и эксцессе.",
+                "interpretation": "Интерпретация результатов: Среднее значение показывает средний показатель, медиана указывает центр набора данных, а стандартное отклонение отражает изменчивость результатов. Высокая асимметрия может указывать на несбалансированность распределения, а высокая эксцессия – на наличие выбросов."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
@@ -837,7 +858,8 @@ translations = {
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл Excel с данными измерений.",
                 "select_column": "Выберите столбец для анализа, чтобы создать гистограмму и отобразить описательную статистику.",
-                "normality_test": "Оцените нормальность распределения и получите информацию об асимметрии и эксцессе."
+                "normality_test": "Оцените нормальность распределения и получите информацию об асимметрии и эксцессе.",
+                "interpretation": "Интерпретация результатов: Гистограмма помогает оценить форму распределения данных. Если гистограмма имеет колоколообразную форму, это указывает на нормальное распределение. Асимметрия может свидетельствовать о смещении распределения, а ширина – о разбросе данных."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
@@ -878,7 +900,8 @@ translations = {
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл Excel с данными измерений.",
                 "select_columns": "Выберите столбцы для анализа, чтобы создать ящичные диаграммы.",
-                "view_stats": "Вы получите описательную статистику для выбранных столбцов."
+                "view_stats": "Вы получите описательную статистику для выбранных столбцов.",
+                "interpretation": "Интерпретация результатов: Диаграмма BoxPlot позволяет оценить медиану, межквартильный размах и наличие выбросов. Длинные усы могут указывать на высокую изменчивость данных, а отдельные точки за пределами усов – на выбросы."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx, xls):",
@@ -906,7 +929,8 @@ translations = {
                 "upload_file": "Загрузите файл Excel с данными измерений.",
                 "data_format": "Файл должен содержать два столбца: даты или идентификаторы образцов и численные данные.",
                 "extra_columns": "Если файл содержит более двух столбцов, дополнительные столбцы будут проигнорированы.",
-                "chart_info": "Будут сгенерированы графики ImR, включая график индивидуальных значений (I) и скользящего диапазона (MR)."
+                "chart_info": "Будут сгенерированы графики ImR, включая график индивидуальных значений (I) и скользящего диапазона (MR).",
+                "interpretation": "Интерпретация результатов: Контрольные карты помогают отслеживать стабильность процесса. Точки за пределами контрольных границ могут свидетельствовать о нарушениях. Обнаружение трендов или последовательности значений с одной стороны от среднего может указывать на систематические изменения в процессе."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
@@ -945,7 +969,8 @@ translations = {
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл Excel с данными измерений.",
                 "set_spec_limits": "Установите нижний (LSL) и верхний (USL) пределы спецификации и целевое значение (Target).",
-                "view_results": "Вы получите график анализа способности процесса и показатели Cp и Cpk."
+                "view_results": "Вы получите график анализа способности процесса и показатели Cp и Cpk.",
+                "interpretation": "Интерпретация результатов: Индексы Cp и Cpk оценивают способность процесса соответствовать требованиям спецификации. Значение Cp > 1.33 свидетельствует о высокой способности процесса, а Cpk учитывает как изменчивость, так и смещение относительно целевой спецификации."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
@@ -988,7 +1013,8 @@ translations = {
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл Excel с данными стабильности.",
                 "display_series": "На графике будут отображены выбранные серии с линиями регрессии.",
-                "view_regression_results": "Под графиком вы найдете таблицу с параметрами регрессии для выбранных серий."
+                "view_regression_results": "Под графиком вы найдете таблицу с параметрами регрессии для выбранных серий.",
+                "interpretation": "Интерпретация результатов: Линейная регрессия помогает определить тренд изменений параметра во времени. Значение R², близкое к 1, указывает на хорошее соответствие модели данным. Наклон линии регрессии показывает, увеличиваются, уменьшаются или остаются стабильными значения параметра."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
@@ -1024,7 +1050,8 @@ translations = {
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл Excel с данными температуры и влажности.",
                 "set_limits": "Установите лимиты температуры и влажности с помощью ползунков.",
-                "view_results": "Просматривайте графики и список превышений лимитов."
+                "view_results": "Просматривайте графики и список превышений лимитов.",
+                "interpretation": "Интерпретация результатов: Графики температуры и влажности помогают отслеживать условия окружающей среды. Стабильные значения означают хорошее поддержание условий хранения. Значительные колебания могут свидетельствовать о проблемах с обеспечением стабильности."
             },
             "settings": {
                 "temp_lower": "Нижний предел температуры (°C)",
@@ -1073,7 +1100,8 @@ translations = {
                 "upload_file": "Загрузите файл с данными",
                 "select_series": "Выберите серию для анализа",
                 "input_spec_limits": "Введите верхний и нижний пределы спецификации",
-                "view_charts": "Просмотр графиков"
+                "view_charts": "Просмотр графиков",
+                "interpretation": ""
             },
             "file_handling": {
                 "choose_file": "Выберите файл",
@@ -1117,12 +1145,13 @@ translations = {
         "anova_module": {
             "title": "Дисперсионный анализ (ANOVA)",
             "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать названия сравнительных групп, например, \"Серия 1\", \"Серия 2\", \"Серия 3\". Каждый столбец должен представлять отдельную группу, а последующие строки — числовые значения. Если данные отсутствуют, ячейки должны оставаться пустыми.",
+                "prepare_file": "Укажите файл Excel в соответствии с требованиями модуля.",
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл Excel, содержащий данные для разных групп.",
                 "select_groups": "Выберите группы для анализа.",
                 "perform_anova": "Выполните дисперсионный анализ (ANOVA) для выбранных групп.",
-                "view_results": "Посмотрите результаты теста ANOVA и теста Тьюки."
+                "view_results": "Посмотрите результаты теста ANOVA и теста Тьюки.",
+                "interpretation": ""
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
@@ -1160,7 +1189,8 @@ translations = {
                 "upload_file": "Загрузите файл Excel, содержащий данные о высвобождении.",
                 "select_groups": "Выберите группы для сравнения:",
                 "perform_analysis": "Рассчитайте коэффициенты f1 и f2.",
-                "view_results": "Просмотр графиков и результатов анализа."
+                "view_results": "Просмотр графиков и результатов анализа.",
+                "interpretation": "Интерпретация результатов: Коэффициенты f1 и f2 оценивают степень сходства профилей растворения между референтным и тестируемым продуктом. Значение f1, близкое к 0, и f2 выше 50 свидетельствуют о высоком уровне сходства."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
