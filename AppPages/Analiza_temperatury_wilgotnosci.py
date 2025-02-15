@@ -8,14 +8,16 @@ def show(language):
 
     st.header(t["title"])
 
-    st.write(f"""
-    **{t["instructions"]["header"]}:**
-    - {t["instructions"]["prepare_file"]}
-    - {t["instructions"]["upload_file"]}
-    - {t["instructions"]["set_limits"]}
-    - {t["instructions"]["view_results"]}
-    - {t["instructions"]["interpretation"]}
-    """)
+    show_instructions = st.checkbox(t["show_instructions"], value=True)
+    if show_instructions:
+        st.write(f"""
+        **{t["instructions"]["header"]}:**
+        - {t["instructions"]["prepare_file"]}
+        - {t["instructions"]["upload_file"]}
+        - {t["instructions"]["set_limits"]}
+        - {t["instructions"]["view_results"]}
+        - {t["instructions"]["interpretation"]}
+        """)
 
     temp_lower = st.slider(t["settings"]["temp_lower"], min_value=0, max_value=100, value=23)
     temp_upper = st.slider(t["settings"]["temp_upper"], min_value=0, max_value=100, value=27)
