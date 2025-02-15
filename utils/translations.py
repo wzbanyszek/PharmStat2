@@ -8,7 +8,8 @@ translations = {
             "upload_data": "Wczytaj dane do analizy przy pomocy wbudowanych formularzy.",
             "view_results": "Wyniki analizy (wykresy, tabele, statystyki) pojawią się w głównym obszarze strony.",
             "customize_view": "Możesz ukrywać lub wyświetlać szczegóły analizy, dostosowując widok do swoich potrzeb.",
-            "how_to_use": "Jak korzystać z aplikacji?"
+            "how_to_use": "Jak korzystać z aplikacji?",
+            "show_instructions": "Pokaż instrukcje"
         },
         "descriptive_statistics": {
             "descriptive_stats": "Statystyki opisowe",
@@ -239,11 +240,11 @@ translations = {
                 "upload_file": "Wczytaj plik Excel zawierający dane temperatury i wilgotności.",
                 "set_limits": "Ustaw limity temperatury i wilgotności za pomocą suwaków.",
                 "view_results": "Przeglądaj wykresy oraz listę przekroczeń limitów.",
-                "interpretation": "Interpretation of results: Temperature and humidity charts help monitor environmental conditions. Stable values indicate good control of storage conditions. Significant fluctuations may suggest issues with maintaining stability conditions."
+                "interpretation": "Interpretacja wyników: Wykresy temperatury i wilgotności pomagają monitorować warunki środowiskowe. Stabilne wartości oznaczają dobrą kontrolę warunków przechowywania. Znaczne wahania mogą sugerować problemy z utrzymaniem warunków stabilności."
             },
             "settings": {
-                "temp_lower": "Dolna granica temperatury (\u00b0C)",
-                "temp_upper": "Górna granica temperatury (\u00b0C)",
+                "temp_lower": "Dolna granica temperatury (°C)",
+                "temp_upper": "Górna granica temperatury (°C)",
                 "hum_lower": "Dolna granica wilgotności (%)",
                 "hum_upper": "Górna granica wilgotności (%)"
             },
@@ -414,7 +415,8 @@ translations = {
             "upload_data": "Upload data for analysis using the built-in forms.",
             "view_results": "The analysis results (charts, tables, statistics) will appear in the main area of the page.",
             "customize_view": "You can hide or display analysis details, adjusting the view to your needs.",
-            "how_to_use": "How to use the application?"
+            "how_to_use": "How to use the application?",
+            "show_instructions": "Show instructions"
         },
         "descriptive_statistics": {
             "descriptive_stats": "Descriptive Statistics",
@@ -820,7 +822,8 @@ translations = {
             "upload_data": "Загрузите данные для анализа с помощью встроенных форм.",
             "view_results": "Результаты анализа (графики, таблицы, статистика) появятся в главной области страницы.",
             "customize_view": "Вы можете скрывать или отображать детали анализа, настраивая вид согласно вашим потребностям.",
-            "how_to_use": "Как использовать приложение?"
+            "how_to_use": "Как использовать приложение?",
+            "show_instructions": "Показать инструкции"
         },
         "descriptive_statistics": {
             "descriptive_stats": "Описательная статистика",
@@ -900,7 +903,7 @@ translations = {
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл Excel с данными измерений.",
                 "select_columns": "Выберите столбцы для анализа, чтобы создать ящичные диаграммы.",
-                "view_stats": "Вы получите описательную статистику для выбранных столбцов.",
+                "view_stats": "Вы получите описательную статистику для выбранных столбców.",
                 "interpretation": "Интерпретация результатов: Диаграмма BoxPlot позволяет оценить медиану, межквартильный размах и наличие выбросов. Длинные усы могут указывать на высокую изменчивость данных, а отдельные точки за пределами усов – на выбросы."
             },
             "file_handling": {
@@ -1028,7 +1031,7 @@ translations = {
                 "data": "данные",
                 "regression": "регрессия",
                 "spec_limit": "Предел спецификации",
-                "x_label": "Время (месяцы)",
+                "x_label": "Время (мес.)",
                 "title": "Анализ стабильности"
             },
             "regression_results": {
@@ -1195,7 +1198,7 @@ translations = {
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
                 "show_data_preview": "Показать предварительный просмотр данных",
-                "data_preview": "Предварительный просмотр данных (первые 10 строк):",
+                "data_preview": "Подгoляд danych (pierwsze 10 строк):",
                 "select_groups": "Выберите серии для анализа:",
                 "error_processing_file": "Произошла ошибка при обработке файла.",
                 "no_file_uploaded": "Файл не выбран - загрузите файл Excel выше."
