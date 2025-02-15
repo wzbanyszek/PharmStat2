@@ -11,14 +11,16 @@ def show(language):
 
     st.header(t["title"])
 
+    show_instructions = st.checkbox(t["show_instructions"], value=True)
+    if show_instructions:
     st.write(f"""
-    **{t["instructions"]["header"]}:**
-    - {t["instructions"]["prepare_file"]}
-    - {t["instructions"]["upload_file"]}
-    - {t["instructions"]["data_format"]}
-    - {t["instructions"]["chart_info"]}
-    - {t["instructions"]["interpretation"]}
-    """)
+        **{t["instructions"]["header"]}:**
+        - {t["instructions"]["prepare_file"]}
+        - {t["instructions"]["upload_file"]}
+        - {t["instructions"]["data_format"]}
+        - {t["instructions"]["chart_info"]}
+        - {t["instructions"]["interpretation"]}
+        """)
 
     uploaded_file = st.file_uploader(
         t["file_handling"]["choose_file"],
