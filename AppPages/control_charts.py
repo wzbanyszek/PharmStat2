@@ -13,9 +13,11 @@ def show(language):
 
     st.write(f"""
     **{t["instructions"]["header"]}:**
+    - {t["instructions"]["prepare_file"]}
     - {t["instructions"]["upload_file"]}
     - {t["instructions"]["data_format"]}
     - {t["instructions"]["chart_info"]}
+    - {t["instructions"]["interpretation"]}
     """)
 
     uploaded_file = st.file_uploader(

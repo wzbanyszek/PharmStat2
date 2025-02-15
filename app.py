@@ -28,7 +28,8 @@ page = st.sidebar.radio(
         t["stability_regression"]["stability_regression"],
         t["temp_humidity_analysis"]["temp_humidity"],
         t["pqr_module"]["title"],
-        t["anova_module"]["title"]
+        t["anova_module"]["title"],
+        t["dissolution_testing"]["title"]
     ]
 )
 
@@ -72,3 +73,7 @@ elif page == t["pqr_module"]["title"]:
 elif page == t["anova_module"]["title"]:
     from AppPages import anova
     anova.show(language)
+
+elif page == t["dissolution_testing"]["title"]:
+    from AppPages import dissolution_testing
+    dissolution_testing.show(language)
