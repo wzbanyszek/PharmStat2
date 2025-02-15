@@ -770,7 +770,7 @@ translations = {
                 "select_groups": "Select groups for analysis.",
                 "perform_anova": "Perform an analysis of variance (ANOVA) on the selected groups.",
                 "view_results": "View the results of the ANOVA test and Tukey test.",
-                "interpretation": ""
+                "interpretation": "Interpretacja wyników: Jeśli p-wartość (p-value) jest większa niż 0,05, nie ma istotnych różnic między grupami, co oznacza, że zmiany między badanymi zbiorami mogą wynikać z przypadkowej zmienności. Jeśli p-wartość jest mniejsza niż 0,05, istnieją istotne różnice między co najmniej dwiema grupami – zaleca się wykonanie testu Tukeya, aby określić, które grupy się różnią. Wykres pudełkowy (boxplot) pozwala ocenić rozkład danych w poszczególnych grupach i zidentyfikować ewentualne wartości odstające."
             },
             "file_handling": {
                 "choose_file": "Select an Excel file (xlsx or xls):",
