@@ -298,7 +298,7 @@ translations = {
                 "select_series": "Wybierz serię do analizy",
                 "input_spec_limits": "Wprowadź górny i dolny limit specyfikacji",
                 "view_charts": "Wyświetl wykresy",
-                "interpretation": ""
+                "interpretation": "Interpretacja wyników: Karta kontrolna ImR umożliwia ocenę stabilności procesu – jeśli punkty znajdują się w granicach kontrolnych, proces jest stabilny. Wartości wykraczające poza granice mogą wskazywać na niepożądane zmiany w procesie. Analiza zdolności procesowej (Cp, Cpk) określa, czy proces jest zdolny do wytwarzania zgodnych produktów – wartość Cpk powyżej 1,33 wskazuje na dobrze kontrolowany proces, natomiast wartości poniżej 1,00 mogą świadczyć o konieczności jego optymalizacji. Histogram pozwala ocenić rozkład wyników w stosunku do specyfikacji, a wykres specyfikacji pokazuje zgodność wyników z granicami specyfikacji, ułatwiając identyfikację trendów i anomalii."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik",
@@ -350,7 +350,7 @@ translations = {
                 "select_groups": "Wybierz grupy do analizy.",
                 "perform_anova": "Przeprowadź analizę wariancji (ANOVA) dla wybranych grup.",
                 "view_results": "Zobacz wyniki testu ANOVA oraz testu Tukeya.",
-                "interpretation": ""
+                "interpretation": "Interpretacja wyników: Jeśli p-wartość (p-value) jest większa niż 0,05, nie ma istotnych różnic między grupami, co oznacza, że zmiany między badanymi zbiorami mogą wynikać z przypadkowej zmienności. Jeśli p-wartość jest mniejsza niż 0,05, istnieją istotne różnice między co najmniej dwiema grupami – zaleca się wykonanie testu Tukeya, aby określić, które grupy się różnią. Wykres pudełkowy (boxplot) pozwala ocenić rozkład danych w poszczególnych grupach i zidentyfikować ewentualne wartości odstające."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -718,7 +718,7 @@ translations = {
                 "select_series": "Select series for analysis",
                 "input_spec_limits": "Enter upper and lower specification limits",
                 "view_charts": "View charts",
-                "interpretation": ""
+                "interpretation": "Interpretation of results: The ImR control chart allows for assessing process stability – if the points remain within the control limits, the process is stable. Values outside the limits may indicate undesirable changes in the process. Process capability analysis (Cp, Cpk) determines whether the process is capable of producing compliant products – a Cpk value above 1.33 indicates a well-controlled process, whereas values below 1.00 may suggest the need for optimization. The histogram helps evaluate the distribution of results relative to the specification, and the specification limit chart illustrates compliance with limits, making it easier to identify trends and anomalies."
             },
             "file_handling": {
                 "choose_file": "Choose file",
@@ -770,7 +770,7 @@ translations = {
                 "select_groups": "Select groups for analysis.",
                 "perform_anova": "Perform an analysis of variance (ANOVA) on the selected groups.",
                 "view_results": "View the results of the ANOVA test and Tukey test.",
-                "interpretation": "Interpretacja wyników: Jeśli p-wartość (p-value) jest większa niż 0,05, nie ma istotnych różnic między grupami, co oznacza, że zmiany między badanymi zbiorami mogą wynikać z przypadkowej zmienności. Jeśli p-wartość jest mniejsza niż 0,05, istnieją istotne różnice między co najmniej dwiema grupami – zaleca się wykonanie testu Tukeya, aby określić, które grupy się różnią. Wykres pudełkowy (boxplot) pozwala ocenić rozkład danych w poszczególnych grupach i zidentyfikować ewentualne wartości odstające."
+                "interpretation": "Interpretation of results: If the p-value is greater than 0.05, there are no significant differences between the groups, meaning that variations between the tested datasets may be due to random variability. If the p-value is less than 0.05, there are significant differences between at least two groups – it is recommended to perform Tukey's test to determine which groups differ. The boxplot allows assessing data distribution within each group and identifying potential outliers."                
             },
             "file_handling": {
                 "choose_file": "Select an Excel file (xlsx or xls):",
@@ -1138,7 +1138,7 @@ translations = {
                 "select_series": "Выберите серию для анализа",
                 "input_spec_limits": "Введите верхний и нижний предел спецификации",
                 "view_charts": "Просмотр графиков",
-                "interpretation": ""
+                "interpretation": "Интерпретация результатов: Контрольная карта ImR позволяет оценить стабильность процесса – если точки находятся в пределах контрольных границ, процесс считается стабильным. Значения за пределами границ могут указывать на нежелательные изменения в процессе. Анализ способности процесса (Cp, Cpk) определяет, способен ли процесс производить соответствующую продукцию – значение Cpk выше 1,33 указывает на хорошо контролируемый процесс, тогда как значения ниже 1,00 могут свидетельствовать о необходимости его оптимизации. Гистограмма помогает оценить распределение результатов относительно спецификации, а график пределов спецификации показывает соответствие границам, облегчая выявление тенденций и аномалий."
             },
             "file_handling": {
                 "choose_file": "Выберите файл",
@@ -1190,7 +1190,7 @@ translations = {
                 "select_groups": "Выберите группы для анализа.",
                 "perform_anova": "Выполните дисперсионный анализ (ANOVA) для выбранных групп.",
                 "view_results": "Посмотрите результаты теста ANOVA и теста Тьюки.",
-                "interpretation": ""
+                "interpretation": "Интерпретация результатов: Если p-значение больше 0,05, значимых различий между группами нет, что означает, что различия между анализируемыми наборами данных могут быть связаны со случайной изменчивостью. Если p-значение меньше 0,05, это означает, что как минимум две группы имеют значимые различия – рекомендуется выполнить тест Тьюки, чтобы определить, какие группы различаются. Ящик с усами (boxplot) позволяет оценить распределение данных в каждой группе и выявить возможные выбросы."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
