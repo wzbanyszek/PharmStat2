@@ -11,6 +11,7 @@ def show(language):
 
     st.write(f"""
     **{t["instructions"]["header"]}:**
+    - {t["instructions"]["prepare_file"]}
     - {t["instructions"]["upload_file"]}
     - {t["instructions"]["select_columns"]}
     - {t["instructions"]["stats_summary"]}
