@@ -11,9 +11,10 @@ translations = {
             "how_to_use": "Jak korzystać z aplikacji?"
         },
         "descriptive_statistics": {
+            "title": "Statystyki opisowe",
+            "show_instructions": "Pokaż instrukcje",
             "descriptive_stats": "Statystyki opisowe",
             "descriptive_stats_desc": "Obliczanie podstawowych statystyk, takich jak średnia, mediana, odchylenie standardowe. Moduł ten pozwala na szybkie i łatwe uzyskanie podstawowych informacji o Twoich danych, co jest kluczowe dla dalszej analizy. Statystyki opisowe są fundamentem analizy danych, ponieważ umożliwiają szybkie zrozumienie rozkładu i zmienności danych.",
-            "title": "Statystyki opisowe",
             "instructions": {
                 "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nagłówki kolumn określające nazwy zmiennych, np. \"Zawartość substancji czynnej\" lub \"Wilgotność\". Kolejne wiersze powinny zawierać wartości liczbowe odpowiadające tym zmiennym. Każda kolumna reprezentuje inną zmienną do analizy.",
                 "header": "Instrukcje",
@@ -38,9 +39,10 @@ translations = {
             }
         },
         "histogram_analysis": {
+            "title": "Analiza histogramów",
+            "show_instructions": "Pokaż instrukcje",
             "histograms": "Histogramy",
             "histograms_desc": "Tworzenie histogramów z oceną normalności rozkładu i analizą skośności oraz kurtozy. Dzięki temu modułowi możesz wizualizować rozkład swoich danych i ocenić, czy mają one charakterystykę rozkładu normalnego. Histogramy są użytecznym narzędziem do identyfikacji kształtu rozkładu danych oraz do wykrywania ewentualnych odchyleń lub anomalii.",
-            "title": "Analiza histogramów",
             "instructions": {
                 "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nazwy zmiennych opisujące typ danych, np. \"Wyniki badania stężenia\". Każda kolumna powinna reprezentować jedną serię pomiarową. Kolejne wiersze powinny zawierać wartości liczbowe bez pustych komórek.",
                 "header": "Instrukcje",
@@ -80,9 +82,10 @@ translations = {
             }
         },
         "boxplot_charts": {
+            "title": "Wykresy BoxPlot",
+            "show_instructions": "Pokaż instrukcje",
             "boxplot": "Wykresy pudełkowe BoxPlot",
             "boxplot_desc": "Wizualizacja rozkładu danych i identyfikacja wartości odstających. Wykresy pudełkowe umożliwiają szybkie zrozumienie rozkładu danych, pokazując medianę, kwartyle oraz wartości odstające. Są one szczególnie przydatne w identyfikacji potencjalnych błędów pomiarowych lub nietypowych obserwacji.",
-            "title": "Wykresy BoxPlot",
             "instructions": {
                 "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nazwy grup danych, np. \"Seria 1\", \"Seria 2\", \"Seria 3\". Każda kolumna reprezentuje inną grupę porównawczą. Kolejne wiersze powinny zawierać wartości liczbowe przypisane do danej grupy.",
                 "header": "Instrukcje",
@@ -108,11 +111,12 @@ translations = {
             }
         },
         "control_charts": {
+            "title": "Karty kontrolne ImR",
+            "show_instructions": "Pokaż instrukcje",
             "control_charts": "Karty kontrolne ImR",
             "control_charts_desc": "Monitorowanie stabilności procesów za pomocą kart kontrolnych ImR. Karty kontrolne pozwalają na śledzenie zmian w procesach produkcyjnych lub badawczych, wykrywając ewentualne odchylenia od normy. Są niezbędnym narzędziem w zarządzaniu jakością i ciągłym doskonaleniu procesów.",
-            "title": "Karty kontrolne ImR",
             "instructions": {
-                "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nagłówki kolumn, gdzie pierwsza kolumna to identyfikatory próbek lub numery serii, a kolejne kolumny zawierają wartości pomiarowe. Jeśli plik zawiera więcej niż jedną kolumnę z wynikami, użytkownik będzie mógł wybrać, którą analizować.",
+                "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nagłówki kolumn, gdzie pierwszy kolumna to identyfikatory próbek lub numery serii, a kolejne kolumny zawierają wartości pomiarowe. Jeśli plik zawiera więcej niż jedną kolumnę z wynikami, użytkownik będzie mógł wybrać, którą analizować.",
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane pomiarowe.",
                 "data_format": "Plik powinien zawierać dwie kolumny: daty lub ID próbek oraz dane liczbowe.",
@@ -122,8 +126,8 @@ translations = {
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
-                "show_data_preview": "Pokaż podgląd wczytanych danych",
-                "data_preview": "Podgląd wczytanych danych (pierwsze 10 wierszy):",
+                "show_data_preview": "Pokaż podgląd danych",
+                "data_preview": "Podgląd danych (pierwsze 10 wierszy):",
                 "error_processing_file": "Wystąpił błąd podczas analizy pliku",
                 "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej.",
                 "error_two_columns": "Plik musi zawierać co najmniej 2 kolumny (Czas/ID, Wartość).",
@@ -136,7 +140,7 @@ translations = {
                 "time_series": "Czas/ID",
                 "values": "Wartość",
                 "individual_values": "I (Wartości indywidualne)",
-                "moving_range": "MR (Ruchomy rozstęp)",
+                "moving_range": "MR (ruchomy rozstęp)",
                 "observation": "Obserwacja"
             },
             "analysis_results": {
@@ -149,9 +153,10 @@ translations = {
             }
         },
         "process_capability": {
+            "title": "Analiza zdolności procesowej",
+            "show_instructions": "Pokaż instrukcje",
             "process_capability": "Analiza zdolności procesowej",
             "process_capability_desc": "Ocena zdolności procesu na podstawie wskaźników Cp i Cpk. Analiza zdolności procesowej pozwala ocenić, czy proces jest w stanie spełniać określone wymagania jakościowe. Wskaźniki Cp i Cpk pomagają w identyfikacji potencjalnych problemów i obszarów do poprawy.",
-            "title": "Analiza zdolności procesowej",
             "instructions": {
                 "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nazwy zmiennych, np. \"Średnica tabletki\" lub \"Wilgotność proszku\". Kolejne wiersze powinny zawierać wartości liczbowe odpowiadające danej zmiennej. Każda kolumna reprezentuje oddzielną analizowaną cechę produktu.",
                 "header": "Instrukcje",
@@ -193,16 +198,17 @@ translations = {
             }
         },
         "stability_regression": {
+            "title": "Analiza danych ze stabilności",
+            "show_instructions": "Pokaż instrukcje",
             "stability_regression": "Regresja dla stabilności",
             "stability_regression_desc": "Analiza regresji dla danych stabilnościowych. Regresja stabilnościowa umożliwia przewidywanie trwałości produktów na podstawie wyników długoterminowych badań stabilności. Jest to kluczowe w przemyśle farmaceutycznym i spożywczym, gdzie stabilność produktów ma bezpośredni wpływ na ich bezpieczeństwo i skuteczność.",
-            "title": "Analiza danych ze stabilności",
             "instructions": {
                 "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nagłówki kolumn, gdzie pierwsza kolumna to nazwa badanego parametru (np. \"Zawartość API\", \"Wilgotność\"), druga kolumna to wartości czasu (np. \"Czas [miesiące]\"), trzecia kolumna to dolna specyfikacja (\"LSL\"), czwarta kolumna to górna specyfikacja (\"USL\"), a kolejne kolumny zawierają wyniki pomiarów dla poszczególnych serii produktów. Wartości muszą być liczbowe, a w przypadku brakujących danych komórki powinny pozostawać puste.",
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane stabilności.",
                 "display_series": "Na wykresie zostaną wyświetlone wybrane serie wraz z liniami regresji.",
                 "view_regression_results": "Pod wykresem znajdziesz tabelę z parametrami regresji dla wybranych serii.",
-                "interpretation": "Interpretacja wyników: Regresja liniowa pomaga określić trend zmian wartości parametru w czasie. Współczynnik determinacji R² bliski 1 oznacza dobrą dopasowalność modelu do danych. Nachylenie linii regresji wskazuje, czy wartości parametru rosną, maleją lub pozostają stabilne."
+                "interpretation": "Interpretacja wyników: Regresja liniowa pomaga określić trend zmian wartości parametru w czasie. Współczynnik determinacji R² bliski 1 wskazuje na dobrą dopasowalność modelu do danych. Nachylenie linii regresji pokazuje, czy wartości parametru rosną, maleją czy pozostają stabilne."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -216,7 +222,7 @@ translations = {
                 "data": "dane",
                 "regression": "regresja",
                 "spec_limit": "Limit specyfikacji",
-                "x_label": "Czas (miesiące)",
+                "x_label": "Czas (mies.)",
                 "title": "Analiza stabilności"
             },
             "regression_results": {
@@ -225,25 +231,26 @@ translations = {
                 "slope": "Nachylenie (slope)",
                 "intercept": "Wyraz wolny (intercept)",
                 "r_value": "Współczynnik korelacji (r)",
-                "p_value": "Wartość p (p-value)",
-                "std_err": "Odchylenie standardowe"
+                "p_value": "P-значenie (p-value)",
+                "std_err": "Стандартная ошибка"
             }
         },
         "temp_humidity_analysis": {
+            "title": "Analiza temperatury i wilgotności",
+            "show_instructions": "Pokaż instrukcje",
             "temp_humidity": "Analiza temperatury i wilgotności",
             "temp_humidity_desc": "Analiza danych środowiskowych i identyfikacja przekroczeń limitów. Moduł ten pozwala na monitorowanie warunków środowiskowych, takich jak temperatura i wilgotność, oraz wykrywanie ewentualnych przekroczeń ustalonych limitów. Jest to szczególnie ważne w procesach produkcyjnych i magazynowych, gdzie warunki środowiskowe mogą wpływać na jakość i trwałość produktów.",
-            "title": "Analiza temperatury i wilgotności",
             "instructions": {
                 "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nagłówki kolumn, gdzie pierwsza kolumna to data lub znacznik czasu (\"Data\"), druga kolumna to wartości temperatury (\"Temperatura [°C]\"), trzecia kolumna to wartości wilgotności (\"Wilgotność [%]\"). Wszystkie wartości muszą być liczbowe, a format dat musi być jednolity w całym pliku.",
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane temperatury i wilgotności.",
                 "set_limits": "Ustaw limity temperatury i wilgotności za pomocą suwaków.",
                 "view_results": "Przeglądaj wykresy oraz listę przekroczeń limitów.",
-                "interpretation": "Interpretation of results: Temperature and humidity charts help monitor environmental conditions. Stable values indicate good control of storage conditions. Significant fluctuations may suggest issues with maintaining stability conditions."
+                "interpretation": "Interpretacja wyników: Wykresy temperatury i wilgotności pomagają monitorować warunki środowiskowe. Stabilne wartości oznaczają dobrą kontrolę warunków przechowywania. Znaczne wahania mogą sugerować problemy z utrzymaniem warunków stabilności."
             },
             "settings": {
-                "temp_lower": "Dolna granica temperatury (\u00b0C)",
-                "temp_upper": "Górna granica temperatury (\u00b0C)",
+                "temp_lower": "Dolna granica temperatury (°C)",
+                "temp_upper": "Górna granica temperatury (°C)",
                 "hum_lower": "Dolna granica wilgotności (%)",
                 "hum_upper": "Górna granica wilgotności (%)"
             },
@@ -282,6 +289,8 @@ translations = {
         },
         "pqr_module": {
             "title": "Moduł PQR",
+            "show_instructions": "Pokaż instrukcje",
+            "pqr_module": "Moduł PQR",
             "instructions": {
                 "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nagłówki kolumn, gdzie pierwsza kolumna to identyfikatory próbek lub numery serii (\"Seria\"), a kolejne kolumny to wartości pomiarowe dla różnych parametrów jakościowych (\"Zawartość API\", \"Wilgotność\"). Jeśli plik zawiera więcej niż jedną kolumnę z danymi, użytkownik będzie mógł wybrać, którą analizować. Użytkownik będzie mógł także podać dolną i górną granicę specyfikacji.",
                 "header": "Instrukcje",
@@ -289,7 +298,7 @@ translations = {
                 "select_series": "Wybierz serię do analizy",
                 "input_spec_limits": "Wprowadź górny i dolny limit specyfikacji",
                 "view_charts": "Wyświetl wykresy",
-                "interpretation": ""
+                "interpretation": "Interpretacja wyników: Karta kontrolna ImR umożliwia ocenę stabilności procesu – jeśli punkty znajdują się w granicach kontrolnych, proces jest stabilny. Wartości wykraczające poza granice mogą wskazywać na niepożądane zmiany w procesie. Analiza zdolności procesowej (Cp, Cpk) określa, czy proces jest zdolny do wytwarzania zgodnych produktów – wartość Cpk powyżej 1,33 wskazuje na dobrze kontrolowany proces, natomiast wartości poniżej 1,00 mogą świadczyć o konieczności jego optymalizacji. Histogram pozwala ocenić rozkład wyników w stosunku do specyfikacji, a wykres specyfikacji pokazuje zgodność wyników z granicami specyfikacji, ułatwiając identyfikację trendów i anomalii."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik",
@@ -300,7 +309,7 @@ translations = {
                 "data_preview": "Podgląd danych",
                 "error_no_numeric_data": "Brak danych numerycznych do analizy",
                 "error_processing_file": "Błąd podczas przetwarzania pliku",
-                "no_file_uploaded": "Nie przesłano pliku"
+                "no_file_uploaded": "Plik nie przesłano"
             },
             "chart_labels": {
                 "time_series": "Identyfikator serii",
@@ -332,14 +341,16 @@ translations = {
         },
         "anova_module": {
             "title": "Analiza Wariancji (ANOVA)",
+            "show_instructions": "Pokaż instrukcje",
+            "anova_module": "Analiza Wariancji (ANOVA)",
             "instructions": {
-                "prepare_file": "Ustal wymagania dotyczące pliku Excel dla modułu.",
+                "prepare_file": "Podaj plik Excel zgodnie z wymaganiami modułu.",
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane dla różnych grup.",
                 "select_groups": "Wybierz grupy do analizy.",
-                "perform_anova": "Przeprowadź analizę wariancji (ANOVA) na wybranych grupach.",
+                "perform_anova": "Przeprowadź analizę wariancji (ANOVA) dla wybranych grup.",
                 "view_results": "Zobacz wyniki testu ANOVA oraz testu Tukeya.",
-                "interpretation": ""
+                "interpretation": "Interpretacja wyników: Jeśli p-wartość (p-value) jest większa niż 0,05, nie ma istotnych różnic między grupami, co oznacza, że zmiany między badanymi zbiorami mogą wynikać z przypadkowej zmienności. Jeśli p-wartość jest mniejsza niż 0,05, istnieją istotne różnice między co najmniej dwiema grupami – zaleca się wykonanie testu Tukeya, aby określić, które grupy się różnią. Wykres pudełkowy (boxplot) pozwala ocenić rozkład danych w poszczególnych grupach i zidentyfikować ewentualne wartości odstające."
             },
             "file_handling": {
                 "choose_file": "Wybierz plik Excel (xlsx lub xls):",
@@ -356,8 +367,8 @@ translations = {
             "anova_results": {
                 "header": "Wyniki analizy wariancji (ANOVA)",
                 "statistic": "F-Statystyka",
-                "p_value": "Wartość p",
-                "significant_result": "Różnice między grupami są istotne statystycznie.",
+                "p_value": "P-Wartość",
+                "significant_result": "Między grupami są istotne statystycznie różnice.",
                 "no_significant_result": "Brak istotnych różnic między grupami."
             },
             "subheaders": {
@@ -371,12 +382,14 @@ translations = {
         },
         "dissolution_testing": {
             "title": "Porównanie profili uwalniania",
+            "show_instructions": "Pokaż instrukcje",
+            "dissolution_testing": "Porównanie profili uwalniania",
             "instructions": {
-                "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nagłówki kolumn, gdzie pierwsza kolumna to czas pomiaru (\"Czas [min]\"), druga kolumna to wyniki dla produktu referencyjnego (\"Oryginał [%]\"), a kolejne kolumny to wyniki dla poszczególnych serii produktu generycznego (\"Seria 1 [%]\", \"Seria 2 [%]\"). Wartości muszą być liczbowe, a czas pomiaru powinien być taki sam dla wszystkich serii.",
+                "prepare_file": "Przygotuj plik Excel: pierwszy wiersz powinien zawierać nagłówki kolumn, gdzie pierwszy kolumna to czas pomiaru (\"Czas [min]\"), druga kolumna to wyniki dla produktu referencyjnego (\"Oryginał [%]\"), a kolejne kolumny to wyniki dla poszczególnych serii produktu generycznego (\"Seria 1 [%]\", \"Seria 2 [%]\"). Wartości muszą być liczbowe, a czas pomiaru powinien być taki sam dla wszystkich serii.",
                 "header": "Instrukcje",
                 "upload_file": "Wczytaj plik Excel zawierający dane uwalniania.",
                 "select_groups": "Wybierz grupy do porównania:",
-                "perform_analysis": "Rassczkaj współczynniki f1 i f2.",
+                "perform_analysis": "Oblicz współczynniki f1 i f2.",
                 "view_results": "Zobacz wykresy i wyniki analizy.",
                 "interpretation": "Interpretacja wyników: Współczynniki f1 i f2 określają stopień podobieństwa profilu uwalniania produktu referencyjnego i badanego. Wartość f1 bliska 0 oraz f2 powyżej 50 oznaczają wysoki stopień podobieństwa."
             },
@@ -405,6 +418,7 @@ translations = {
             }
         }
     },
+
     "English": {
         "general": {
             "menu_title": "Menu",
@@ -417,9 +431,10 @@ translations = {
             "how_to_use": "How to use the application?"
         },
         "descriptive_statistics": {
+            "title": "Descriptive Statistics",
+            "show_instructions": "Show instructions",
             "descriptive_stats": "Descriptive Statistics",
             "descriptive_stats_desc": "Calculating basic statistics such as mean, median, and standard deviation. This module allows for quick and easy access to fundamental information about your data, which is crucial for further analysis. Descriptive statistics are the foundation of data analysis as they enable a quick understanding of data distribution and variability.",
-            "title": "Descriptive Statistics",
             "instructions": {
                 "prepare_file": "Prepare an Excel file: the first row should contain column headers specifying the variable names, e.g., \"Active substance content\" or \"Humidity\". Subsequent rows should contain numerical values corresponding to these variables. Each column represents a different variable for analysis.",
                 "header": "Instructions",
@@ -444,9 +459,10 @@ translations = {
             }
         },
         "histogram_analysis": {
+            "title": "Histogram Analysis",
+            "show_instructions": "Show instructions",
             "histograms": "Histograms",
             "histograms_desc": "Creating histograms with normality assessment and skewness and kurtosis analysis. This module allows you to visualize the distribution of your data and assess whether it exhibits characteristics of a normal distribution. Histograms are a useful tool for identifying the shape of data distribution and detecting any deviations or anomalies.",
-            "title": "Histogram Analysis",
             "instructions": {
                 "prepare_file": "Prepare an Excel file: the first row should contain column headers describing the data type, e.g., \"Concentration test results\". Each column should represent a single measurement series. Subsequent rows should contain numerical values without empty cells.",
                 "header": "Instructions",
@@ -486,9 +502,10 @@ translations = {
             }
         },
         "boxplot_charts": {
+            "title": "BoxPlot Charts",
+            "show_instructions": "Show instructions",
             "boxplot": "BoxPlot Charts",
             "boxplot_desc": "Visualizing data distribution and identifying outliers. BoxPlot charts provide a quick understanding of data distribution, showing the median, quartiles, and outliers. They are particularly useful for identifying potential measurement errors or unusual observations.",
-            "title": "BoxPlot Charts",
             "instructions": {
                 "prepare_file": "Prepare an Excel file: the first row should contain the names of the data groups, e.g., \"Series 1\", \"Series 2\", \"Series 3\". Each column represents a different comparison group. Subsequent rows should contain numerical values assigned to the respective group.",
                 "header": "Instructions",
@@ -514,9 +531,10 @@ translations = {
             }
         },
         "control_charts": {
+            "title": "ImR Control Charts",
+            "show_instructions": "Show instructions",
             "control_charts": "ImR Control Charts",
             "control_charts_desc": "Monitoring process stability using ImR control charts. Control charts allow tracking of changes in production or research processes, detecting any deviations from the norm. They are an essential tool in quality management and continuous process improvement.",
-            "title": "ImR Control Charts",
             "instructions": {
                 "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is sample identifiers or series numbers, and the subsequent columns contain measurement values. If the file contains more than one column of results, the user will be able to choose which one to analyze.",
                 "header": "Instructions",
@@ -555,9 +573,10 @@ translations = {
             }
         },
         "process_capability": {
+            "title": "Process Capability Analysis",
+            "show_instructions": "Show instructions",
             "process_capability": "Process Capability Analysis",
             "process_capability_desc": "Assessing process capability based on Cp and Cpk indices. Process capability analysis allows evaluating whether a process can meet specified quality requirements. Cp and Cpk indices help identify potential issues and areas for improvement.",
-            "title": "Process Capability Analysis",
             "instructions": {
                 "prepare_file": "Prepare an Excel file: the first row should contain the variable names, e.g., \"Tablet diameter\" or \"Powder humidity\". Subsequent rows should contain numerical values corresponding to the variable. Each column represents a separate product attribute to be analyzed.",
                 "header": "Instructions",
@@ -599,9 +618,10 @@ translations = {
             }
         },
         "stability_regression": {
+            "title": "Stability Data Analysis",
+            "show_instructions": "Show instructions",
             "stability_regression": "Stability Regression",
             "stability_regression_desc": "Regression analysis for stability data. Stability regression enables predicting product shelf life based on long-term stability study results. This is crucial in the pharmaceutical and food industries, where product stability directly impacts safety and efficacy.",
-            "title": "Stability Data Analysis",
             "instructions": {
                 "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is the name of the parameter under study (e.g., \"API content\", \"Humidity\"), the second column is the time values (e.g., \"Time [months]\"), the third column is the lower specification limit (\"LSL\"), the fourth column is the upper specification limit (\"USL\"), and the subsequent columns contain the measurement results for individual product series. Values must be numerical, and cells should remain blank if data is missing.",
                 "header": "Instructions",
@@ -613,7 +633,7 @@ translations = {
             "file_handling": {
                 "choose_file": "Choose an Excel file (xlsx or xls):",
                 "show_data_preview": "Show data preview",
-                "data_preview": "Data preview (first 12 rows):",
+                "data_preview": "Data preview (first 10 rows):",
                 "select_series": "Select series for analysis:",
                 "error_processing_file": "An error occurred while processing the file",
                 "no_file_uploaded": "No file selected - please upload an Excel file above."
@@ -632,13 +652,14 @@ translations = {
                 "intercept": "Intercept",
                 "r_value": "Correlation Coefficient (r)",
                 "p_value": "p-value",
-                "std_err": "Standard Error"
+                "std_err": "Standard Deviation"
             }
         },
         "temp_humidity_analysis": {
+            "title": "Temperature and Humidity Analysis",
+            "show_instructions": "Show instructions",
             "temp_humidity": "Temperature and Humidity Analysis",
             "temp_humidity_desc": "Environmental data analysis and identification of limit exceedances. This module allows monitoring environmental conditions, such as temperature and humidity, and detecting any exceedances of established limits. It is particularly important in production and storage processes where environmental conditions can affect product quality and durability.",
-            "title": "Temperature and Humidity Analysis",
             "instructions": {
                 "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is the date or timestamp (\"Data\"), the second column is temperature values (\"Temperature [°C]\"), and the third column is humidity values (\"Humidity [%]\"). All values must be numerical, and the date format must be consistent throughout the file.",
                 "header": "Instructions",
@@ -654,7 +675,7 @@ translations = {
                 "hum_upper": "Upper Humidity Limit (%)"
             },
             "file_handling": {
-                "choose_file": "Choose an Excel file (xlsx or xls):",
+                "choose_file": "Choose an Excel file (xlsx, xls):",
                 "data_preview": "Data preview (first 10 rows):",
                 "error_processing_file": "An error occurred while processing the file",
                 "no_file_uploaded": "No file selected - please upload an Excel file above."
@@ -688,6 +709,8 @@ translations = {
         },
         "pqr_module": {
             "title": "PQR Module",
+            "show_instructions": "Show instructions",
+            "pqr_module": "PQR Module",
             "instructions": {
                 "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is sample identifiers or series numbers (\"Series\"), and the subsequent columns are measurement values for various quality parameters (\"API content\", \"Humidity\"). If the file contains more than one data column, the user will be able to choose which one to analyze. The user can also provide lower and upper specification limits.",
                 "header": "Instructions",
@@ -695,7 +718,7 @@ translations = {
                 "select_series": "Select series for analysis",
                 "input_spec_limits": "Enter upper and lower specification limits",
                 "view_charts": "View charts",
-                "interpretation": ""
+                "interpretation": "Interpretation of results: The ImR control chart allows for assessing process stability – if the points remain within the control limits, the process is stable. Values outside the limits may indicate undesirable changes in the process. Process capability analysis (Cp, Cpk) determines whether the process is capable of producing compliant products – a Cpk value above 1.33 indicates a well-controlled process, whereas values below 1.00 may suggest the need for optimization. The histogram helps evaluate the distribution of results relative to the specification, and the specification limit chart illustrates compliance with limits, making it easier to identify trends and anomalies."
             },
             "file_handling": {
                 "choose_file": "Choose file",
@@ -738,6 +761,8 @@ translations = {
         },
         "anova_module": {
             "title": "Analysis of Variance (ANOVA)",
+            "show_instructions": "Show instructions",
+            "anova_module": "Analysis of Variance (ANOVA)",
             "instructions": {
                 "prepare_file": "Provide an Excel file as required by the module.",
                 "header": "Instructions",
@@ -745,7 +770,7 @@ translations = {
                 "select_groups": "Select groups for analysis.",
                 "perform_anova": "Perform an analysis of variance (ANOVA) on the selected groups.",
                 "view_results": "View the results of the ANOVA test and Tukey test.",
-                "interpretation": ""
+                "interpretation": "Interpretation of results: If the p-value is greater than 0.05, there are no significant differences between the groups, meaning that variations between the tested datasets may be due to random variability. If the p-value is less than 0.05, there are significant differences between at least two groups – it is recommended to perform Tukey's test to determine which groups differ. The boxplot allows assessing data distribution within each group and identifying potential outliers."                
             },
             "file_handling": {
                 "choose_file": "Select an Excel file (xlsx or xls):",
@@ -777,6 +802,8 @@ translations = {
         },
         "dissolution_testing": {
             "title": "Dissolution Profile Comparison",
+            "show_instructions": "Show instructions",
+            "dissolution_testing": "Dissolution Profile Comparison",
             "instructions": {
                 "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is the measurement time (\"Time [min]\"), the second column is the results for the reference product (\"Original [%]\"), and the subsequent columns are the results for individual series of the generic product (\"Series 1 [%]\", \"Series 2 [%]\"). Values must be numerical, and the measurement time should be the same for all series.",
                 "header": "Instructions",
@@ -811,6 +838,7 @@ translations = {
             }
         }
     },
+
     "Russian": {
         "general": {
             "menu_title": "Меню",
@@ -823,9 +851,10 @@ translations = {
             "how_to_use": "Как использовать приложение?"
         },
         "descriptive_statistics": {
+            "title": "Описательная статистика",
+            "show_instructions": "Показать инструкции",
             "descriptive_stats": "Описательная статистика",
             "descriptive_stats_desc": "Вычисление основных статистических показателей, таких как среднее значение, медиана, стандартное отклонение. Этот модуль позволяет быстро и легко получить основную информацию о ваших данных, что является ключевым для дальнейшего анализа. Описательная статистика является основой анализа данных, так как позволяет быстро понять распределение и изменчивость данных.",
-            "title": "Описательная статистика",
             "instructions": {
                 "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, определяющие названия переменных, например, \"Содержание действующего вещества\" или \"Влажность\". Последующие строки должны содержать числовые значения, соответствующие этим переменным. Каждый столбец представляет собой отдельную переменную для анализа.",
                 "header": "Инструкции",
@@ -850,9 +879,10 @@ translations = {
             }
         },
         "histogram_analysis": {
+            "title": "Анализ гистограмм",
+            "show_instructions": "Показать инструкции",
             "histograms": "Гистограммы",
             "histograms_desc": "Создание гистограмм с оценкой нормальности распределения и анализом асимметрии и эксцесса. Этот модуль позволяет визуализировать распределение ваших данных и оценить, имеют ли они характеристики нормального распределения. Гистограммы являются полезным инструментом для идентификации формы распределения данных и выявления любых отклонений или аномалий.",
-            "title": "Анализ гистограмм",
             "instructions": {
                 "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, описывающие тип данных, например, \"Результаты измерения концентрации\". Каждый столбец должен представлять отдельную серию измерений. Последующие строки должны содержать числовые значения без пустых ячеек.",
                 "header": "Инструкции",
@@ -892,16 +922,17 @@ translations = {
             }
         },
         "boxplot_charts": {
+            "title": "Ящичные диаграммы (BoxPlot)",
+            "show_instructions": "Показать инструкции",
             "boxplot": "Ящичные диаграммы (BoxPlot)",
             "boxplot_desc": "Визуализация распределения данных и идентификация выбросов. Ящичные диаграммы обеспечивают быстрое понимание распределения данных, показывая медиану, квартили и выбросы. Они особенно полезны для выявления потенциальных ошибок измерения или необычных наблюдений.",
-            "title": "Ящичные диаграммы (BoxPlot)",
             "instructions": {
                 "prepare_file": "Подготовьте файл Excel: первая строка должна содержать названия групп данных, например, \"Серия 1\", \"Серия 2\", \"Серия 3\". Каждый столбец представляет собой отдельную группу для сравнения. Последующие строки должны содержать числовые значения, соответствующие каждой группе.",
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл Excel с данными измерений.",
                 "select_columns": "Выберите столбцы для анализа, чтобы создать ящичные диаграммы.",
                 "view_stats": "Вы получите описательную статистику для выбранных столбцов.",
-                "interpretation": "Интерпретация результатов: Диаграмма BoxPlot позволяет оценить медиану, межквартильный размах и наличие выбросов. Длинные усы могут указывать на высокую изменчивость данных, а отдельные точки за пределами усов – на выбросы."
+                "interpretation": "Интерпретация результатов: Ящичная диаграмма позволяет оценить медиану, межквартильный размах и наличие выбросов. Длинные «усы» могут указывать на высокую изменчивость данных, а отдельные точки за пределами усов – на выбросы."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx, xls):",
@@ -920,9 +951,10 @@ translations = {
             }
         },
         "control_charts": {
+            "title": "Контрольные карты ImR",
+            "show_instructions": "Показать инструкции",
             "control_charts": "Контрольные карты ImR",
             "control_charts_desc": "Мониторинг стабильности процессов с использованием контрольных карт ImR. Контрольные карты позволяют отслеживать изменения в производственных или исследовательских процессах, выявляя любые отклонения от нормы. Они являются неотъемлемым инструментом в управлении качеством и непрерывном улучшении процессов.",
-            "title": "Контрольные карты ImR",
             "instructions": {
                 "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это идентификаторы образцов или номера серий, а последующие столбцы содержат измеренные значения. Если файл содержит более одного столбца с результатами, пользователь сможет выбрать, какой анализировать.",
                 "header": "Инструкции",
@@ -961,16 +993,17 @@ translations = {
             }
         },
         "process_capability": {
-            "process_capability": "Анализ способности процесса",
-            "process_capability_desc": "Оценка способности процесса на основе показателей Cp и Cpk. Анализ способности процесса позволяет оценить, может ли процесс удовлетворять определенным требованиям качества. Показатели Cp и Cpk помогают выявить потенциальные проблемы и области для улучшения.",
             "title": "Анализ способности процесса",
+            "show_instructions": "Показать инструкции",
+            "process_capability": "Анализ способности процесса",
+            "process_capability_desc": "Оценка способности процесса на основе показателей Cp и Cpk. Анализ способности процесса позволяет оценить, может ли процесс удовлетворять определённым требованиям качества. Показатели Cp и Cpk помогают выявить потенциальные проблемы и области для улучшения.",
             "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать названия переменных, например, \"Диаметр таблетки\" или \"Влажность порошка\". Последующие строки должны содержать числовые значения, соответствующие каждой переменной. Каждый столбец представляет отдельный анализируемый параметр продукта.",
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать названия переменных, например, \"Диаметр таблетки\" или \"Влажность порошка\". Последующие строки должны содержать числовые значения, соответствующие переменной. Каждый столбец представляет отдельную характеристику продукта для анализа.",
                 "header": "Инструкции",
-                "upload_file": "Загрузите файл Excel с данными измерений.",
-                "set_spec_limits": "Установите нижний (LSL) и верхний (USL) пределы спецификации и целевое значение (Target).",
+                "upload_file": "Загрузите файл Excel с измерительными данными.",
+                "set_spec_limits": "Установите нижний (LSL) и верхний (USL) предел спецификации, а также целевое значение (Target).",
                 "view_results": "Вы получите график анализа способности процесса и показатели Cp и Cpk.",
-                "interpretation": "Интерпретация результатов: Индексы Cp и Cpk оценивают способность процесса соответствовать требованиям спецификации. Значение Cp > 1.33 свидетельствует о высокой способности процесса, а Cpk учитывает как изменчивость, так и смещение относительно целевой спецификации."
+                "interpretation": "Интерпретация результатов: Показатели Cp и Cpk оценивают способность процесса соответствовать требованиям спецификации. Значение Cp > 1.33 свидетельствует о высокой способности процесса, а Cpk учитывает как изменчивость, так и смещение относительно центрального значения спецификации."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
@@ -1005,16 +1038,17 @@ translations = {
             }
         },
         "stability_regression": {
+            "title": "Регрессия для стабильности",
+            "show_instructions": "Показать инструкции",
             "stability_regression": "Регрессия для стабильности",
-            "stability_regression_desc": "Анализ регрессии для данных стабильности. Регрессия стабильности позволяет прогнозировать срок годности продуктов на основе долгосрочных исследований стабильности. Это особенно важно в фармацевтической и пищевой промышленности, где стабильность продуктов напрямую влияет на их безопасность и эффективность.",
-            "title": "Анализ данных стабильности",
+            "stability_regression_desc": "Анализ регрессии для данных стабильности. Регрессия стабильности позволяет прогнозировать срок годности продуктов на основе результатов долгосрочных исследований стабильности. Это особенно важно в фармацевтической и пищевой промышленности, где стабильность продуктов напрямую влияет на их безопасность и эффективность.",
             "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это название исследуемого параметра (например, \"Содержание API\", \"Влажность\"), второй столбец — значения времени (например, \"Время [месяцы]\"), третий столбец — нижняя спецификация (\"LSL\"), четвертый столбец — верхняя спецификация (\"USL\"), а последующие столбцы содержат результаты измерений для отдельных серий продукта. Значения должны быть числовыми, а пустые ячейки оставляйте пустыми.",
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец – это название исследуемого параметра (например, \"Содержание API\", \"Влажность\"), второй столбец – это значения времени (например, \"Время [месяцы]\"), третий – нижний предел спецификации (\"LSL\"), четвёртый – верхний предел спецификации (\"USL\"), а последующие столбцы содержат результаты измерений для отдельных серий продуктов. Значения должны быть числовыми, а при отсутствии данных ячейки оставьте пустыми.",
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл Excel с данными стабильности.",
-                "display_series": "На графике будут отображены выбранные серии с линиями регрессии.",
-                "view_regression_results": "Под графиком вы найдете таблицу с параметрами регрессии для выбранных серий.",
-                "interpretation": "Интерпретация результатов: Линейная регрессия помогает определить тренд изменений параметра во времени. Значение R², близкое к 1, указывает на хорошее соответствие модели данным. Наклон линии регрессии показывает, увеличиваются, уменьшаются или остаются стабильными значения параметра."
+                "display_series": "На графике будут показаны выбранные серии с линиями регрессии.",
+                "view_regression_results": "Под графиком вы найдёте таблицу с параметрами регрессии для выбранных серий.",
+                "interpretation": "Интерпретация результатов: Линейная регрессия помогает определить тенденцию изменения параметра во времени. Значение R², близкое к 1, указывает на хорошее соответствие модели данным. Наклон линии регрессии показывает, увеличиваются ли, уменьшаются или остаются стабильными значения параметра."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
@@ -1037,21 +1071,22 @@ translations = {
                 "slope": "Наклон (slope)",
                 "intercept": "Перехват (intercept)",
                 "r_value": "Коэффициент корреляции (r)",
-                "p_value": "P-значение (p-value)",
+                "p_value": "p-значение",
                 "std_err": "Стандартная ошибка"
             }
         },
         "temp_humidity_analysis": {
-            "temp_humidity": "Анализ температуры и влажности",
-            "temp_humidity_desc": "Анализ данных окружающей среды и идентификация превышений лимитов. Этот модуль позволяет мониторить условия окружающей среды, такие как температура и влажность, и выявлять любые превышения установленных лимитов. Это особенно важно в производственных и складских процессах, где условия окружающей среды могут влиять на качество и долговечность продуктов.",
             "title": "Анализ температуры и влажности",
+            "show_instructions": "Показать инструкции",
+            "temp_humidity": "Анализ температуры и влажности",
+            "temp_humidity_desc": "Анализ данных окружающей среды и идентификация превышений установленных лимитов. Этот модуль позволяет отслеживать условия окружающей среды, такие как температура и влажность, и выявлять любые случаи превышения заданных пределов. Это особенно важно в производственных и складских процессах, где условия окружающей среды могут влиять на качество и долговечность продуктов.",
             "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это дата или метка времени (\"Дата\"), второй столбец — значения температуры (\"Температура [°C]\"), третий столбец — значения влажности (\"Влажность [%]\"). Все значения должны быть числовыми, а формат даты должен быть единообразным во всем файле.",
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это дата или метка времени (\"Дата\"), второй столбец — значения температуры (\"Температура [°C]\"), а третий столбец — значения влажности (\"Влажность [%]\"). Все значения должны быть числовыми, а формат даты должен быть единообразным во всем файле.",
                 "header": "Инструкции",
-                "upload_file": "Загрузите файл Excel с данными температуры и влажности.",
-                "set_limits": "Установите лимиты температуры и влажности с помощью ползунков.",
-                "view_results": "Просматривайте графики и список превышений лимитов.",
-                "interpretation": "Интерпретация результатов: Графики температуры и влажности помогают отслеживать условия окружающей среды. Стабильные значения означают хорошее поддержание условий хранения. Значительные колебания могут свидетельствовать о проблемах с обеспечением стабильности."
+                "upload_file": "Загрузите файл Excel, содержащий данные о температуре и влажности.",
+                "set_limits": "Установите пределы температуры и влажности, используя ползунки.",
+                "view_results": "Просмотрите графики и список превышений лимитов.",
+                "interpretation": "Интерпретация результатов: Графики температуры и влажности помогают отслеживать условия окружающей среды. Стабильные значения означают хорошее поддержание условий хранения. Значительные колебания могут указывать на проблемы с обеспечением стабильности."
             },
             "settings": {
                 "temp_lower": "Нижний предел температуры (°C)",
@@ -1075,7 +1110,7 @@ translations = {
             },
             "thresholds": {
                 "crossings": "Превышения лимитов",
-                "no_crossings": "Превышений температурных/влажностных лимитов не обнаружено.",
+                "no_crossings": "Превышений заданных пределов температуры/влажности не обнаружено.",
                 "time": "Время",
                 "temperature": "Температура",
                 "humidity": "Влажность"
@@ -1094,14 +1129,16 @@ translations = {
         },
         "pqr_module": {
             "title": "Модуль PQR",
+            "show_instructions": "Показать инструкции",
+            "pqr_module": "Модуль PQR",
             "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это идентификаторы образцов или номера серий (\"Серия\"), а последующие столбцы — измеренные значения для различных качественных параметров (\"Содержание API\", \"Влажность\"). Если файл содержит более одного столбца с данными, пользователь сможет выбрать, какой анализировать. Пользователь также сможет указать нижний и верхний пределы спецификации.",
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это идентификаторы образцов или номера серий (\"Серия\"), а последующие столбцы — значения измерений для различных параметров качества (\"Содержание API\", \"Влажность\"). Если файл содержит более одного столбца с данными, пользователь сможет выбрать, какой анализировать. Также пользователь может указать нижний и верхний пределы спецификации.",
                 "header": "Инструкции",
                 "upload_file": "Загрузите файл с данными",
                 "select_series": "Выберите серию для анализа",
-                "input_spec_limits": "Введите верхний и нижний пределы спецификации",
+                "input_spec_limits": "Введите верхний и нижний предел спецификации",
                 "view_charts": "Просмотр графиков",
-                "interpretation": ""
+                "interpretation": "Интерпретация результатов: Контрольная карта ImR позволяет оценить стабильность процесса – если точки находятся в пределах контрольных границ, процесс считается стабильным. Значения за пределами границ могут указывать на нежелательные изменения в процессе. Анализ способности процесса (Cp, Cpk) определяет, способен ли процесс производить соответствующую продукцию – значение Cpk выше 1,33 указывает на хорошо контролируемый процесс, тогда как значения ниже 1,00 могут свидетельствовать о необходимости его оптимизации. Гистограмма помогает оценить распределение результатов относительно спецификации, а график пределов спецификации показывает соответствие границам, облегчая выявление тенденций и аномалий."
             },
             "file_handling": {
                 "choose_file": "Выберите файл",
@@ -1111,7 +1148,7 @@ translations = {
                 "show_data_preview": "Показать предварительный просмотр данных",
                 "data_preview": "Предварительный просмотр данных",
                 "error_no_numeric_data": "Нет числовых данных для анализа",
-                "error_processing_file": "Ошибка при обработке файла: {e}",
+                "error_processing_file": "Ошибка при обработке файла",
                 "no_file_uploaded": "Файл не загружен"
             },
             "chart_labels": {
@@ -1144,6 +1181,8 @@ translations = {
         },
         "anova_module": {
             "title": "Дисперсионный анализ (ANOVA)",
+            "show_instructions": "Показать инструкции",
+            "anova_module": "Дисперсионный анализ (ANOVA)",
             "instructions": {
                 "prepare_file": "Укажите файл Excel в соответствии с требованиями модуля.",
                 "header": "Инструкции",
@@ -1151,7 +1190,7 @@ translations = {
                 "select_groups": "Выберите группы для анализа.",
                 "perform_anova": "Выполните дисперсионный анализ (ANOVA) для выбранных групп.",
                 "view_results": "Посмотрите результаты теста ANOVA и теста Тьюки.",
-                "interpretation": ""
+                "interpretation": "Интерпретация результатов: Если p-значение больше 0,05, значимых различий между группами нет, что означает, что различия между анализируемыми наборами данных могут быть связаны со случайной изменчивостью. Если p-значение меньше 0,05, это означает, что как минимум две группы имеют значимые различия – рекомендуется выполнить тест Тьюки, чтобы определить, какие группы различаются. Ящик с усами (boxplot) позволяет оценить распределение данных в каждой группе и выявить возможные выбросы."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",
@@ -1168,7 +1207,7 @@ translations = {
             "anova_results": {
                 "header": "Результаты дисперсионного анализа (ANOVA)",
                 "statistic": "F-Статистика",
-                "p_value": "P-Значение",
+                "p_value": "P-значение",
                 "significant_result": "Между группами есть статистически значимые различия.",
                 "no_significant_result": "Статистически значимых различий между группами нет."
             },
@@ -1183,14 +1222,16 @@ translations = {
         },
         "dissolution_testing": {
             "title": "Сравнение профилей высвобождения",
+            "show_instructions": "Показать инструкции",
+            "dissolution_testing": "Сравнение профилей высвобождения",
             "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это время измерения (\"Время [мин]\"), второй столбец — результаты для эталонного продукта (\"Оригинал [%]\"), а последующие столбцы — результаты для отдельных серий дженерического продукта (\"Серия 1 [%]\", \"Серия 2 [%]\"). Значения должны быть числовыми, и время измерения должно быть одинаковым для всех серий.",
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это время измерения (\"Время [мин]\"), второй столбец — результаты для референтного продукта (\"Оригинал [%]\"), а последующие столбцы — результаты для отдельных серий дженерического продукта (\"Серия 1 [%]\", \"Серия 2 [%]\"). Все значения должны быть числовыми, а время измерения должно быть одинаковым для всех серий.",
                 "header": "Инструкции",
-                "upload_file": "Загрузите файл Excel, содержащий данные о высвобождении.",
+                "upload_file": "Загрузите файл Excel, содержащий данные по высвобождению.",
                 "select_groups": "Выберите группы для сравнения:",
                 "perform_analysis": "Рассчитайте коэффициенты f1 и f2.",
-                "view_results": "Просмотр графиков и результатов анализа.",
-                "interpretation": "Интерпретация результатов: Коэффициенты f1 и f2 оценивают степень сходства профилей растворения между референтным и тестируемым продуктом. Значение f1, близкое к 0, и f2 выше 50 свидетельствуют о высоком уровне сходства."
+                "view_results": "Просмотрите графики и результаты анализа.",
+                "interpretation": "Интерпретация результатов: Коэффициенты f1 и f2 оценивают степень сходства профилей высвобождения референтного и тестируемого продукта. Значение f1, близкое к 0, и значение f2 выше 50 указывают на высокий уровень сходства."
             },
             "file_handling": {
                 "choose_file": "Выберите файл Excel (xlsx или xls):",

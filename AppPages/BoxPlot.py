@@ -8,14 +8,17 @@ def show(language):
     t = translations[language]["boxplot_charts"]
 
     st.header(t["title"])
-    st.write(f"""
-    **{t["instructions"]["header"]}:**
-    - {t["instructions"]["prepare_file"]}
-    - {t["instructions"]["upload_file"]}
-    - {t["instructions"]["select_columns"]}
-    - {t["instructions"]["view_stats"]}
-    - {t["instructions"]["interpretation"]}
-    """)
+
+    show_instructions = st.checkbox(t["show_instructions"], value=True)
+    if show_instructions:
+        st.write(f"""
+        **{t["instructions"]["header"]}:**
+        - {t["instructions"]["prepare_file"]}
+        - {t["instructions"]["upload_file"]}
+        - {t["instructions"]["select_columns"]}
+        - {t["instructions"]["view_stats"]}
+        - {t["instructions"]["interpretation"]}
+        """)
 
     uploaded_file = st.file_uploader(
         t["file_handling"]["choose_file"],
