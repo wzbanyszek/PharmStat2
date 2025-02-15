@@ -12,9 +12,11 @@ def show(language):
 
     st.write(f"""
     **{t["instructions"]["header"]}:**
+    - {t["instructions"]["prepare_file"]}
     - {t["instructions"]["upload_file"]}
     - {t["instructions"]["display_series"]}
     - {t["instructions"]["view_regression_results"]}
+    - {t["instructions"]["interpretation"]}
     """)
 
     uploaded_file = st.file_uploader(t["file_handling"]["choose_file"], type=["xlsx", "xls"])
