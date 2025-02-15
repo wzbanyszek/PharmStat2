@@ -9,7 +9,7 @@ def show(language):
 
     st.header(t["title"])
 
-    show_instructions = st.checkbox(t["file_handling"]["show_instructions"], value=True)
+    show_instructions = st.checkbox(t["general"]["show_instructions"], value=True)
     if show_instructions:
         st.write(f"""
         **{t["instructions"]["header"]}:**
