@@ -16,6 +16,7 @@ def show(language):
     - {t["instructions"]["select_columns"]}
     - {t["instructions"]["stats_summary"]}
     - {t["instructions"]["normality_skew_kurtosis"]}
+    - {t["instructions"]["interpretation"]}
     """)
 
     # Wczytywanie pliku
