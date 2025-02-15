@@ -20,7 +20,7 @@ def show(language):
         - {t["instructions"]["select_series"]}
         - {t["instructions"]["input_spec_limits"]}
         - {t["instructions"]["view_charts"]}
-        #- {t["instructions"]["interpretation"]}
+        - {t["instructions"]["interpretation"]}
         """)
 
     uploaded_file = st.file_uploader(t["file_handling"]["choose_file"], type=["xlsx", "xls"])
