@@ -1,5 +1,5 @@
 translations = {
-"Polski": {
+    "Polski": {
         "general": {
             "menu_title": "Menu",
             "intro": "Witaj w aplikacji Pharmstat2!",
@@ -417,7 +417,8 @@ translations = {
                 "no_significant_result": "Profil uznany za różny (f2 < 50)."
             }
         }
-    }, 
+    },
+
     "English": {
         "general": {
             "menu_title": "Menu",
@@ -674,7 +675,7 @@ translations = {
                 "hum_upper": "Upper Humidity Limit (%)"
             },
             "file_handling": {
-                "choose_file": "Choose an Excel file (xlsx or xls):",
+                "choose_file": "Choose an Excel file (xlsx, xls):",
                 "data_preview": "Data preview (first 10 rows):",
                 "error_processing_file": "An error occurred while processing the file",
                 "no_file_uploaded": "No file selected - please upload an Excel file above."
@@ -810,7 +811,7 @@ translations = {
                 "select_groups": "Select groups for comparison:",
                 "perform_analysis": "Calculate f1 and f2 similarity factors.",
                 "view_results": "View charts and analysis results.",
-                "interpretation": "Interpretation of results: The f1 and f2 factors assess the similarity of dissolution profiles between the reference and test product. An f1 value close to 0 and an f2 value above 50 indicate a high degree of similarity."
+                "interpretation": "Interpretation of results: The f1 and f2 factors assess the similarity of dissolution profiles between the reference and test product. An f1 value close to 0 and f2 above 50 indicate a high degree of similarity."
             },
             "file_handling": {
                 "choose_file": "Select an Excel file (xlsx or xls):",
@@ -837,6 +838,7 @@ translations = {
             }
         }
     },
+
     "Russian": {
         "general": {
             "menu_title": "Меню",
@@ -930,425 +932,6 @@ translations = {
                 "upload_file": "Загрузите файл Excel с данными измерений.",
                 "select_columns": "Выберите столбцы для анализа, чтобы создать ящичные диаграммы.",
                 "view_stats": "Вы получите описательную статистику для выбранных столбцов.",
-                "interpretation": "Интерпретация результатов: Ящичная диаграмма позволяет оценить медиану, межквартильный размах и наличие выбросов. Длинные «усы» могут указывать на высокую изменчивость данных, a отдельные точки за пределами усов – на выбросы."
-            },
-            "file_handling": {
-                "choose_file": "Выберите файл Excel (xlsx, xls):",
-                "show_data_preview": "Показать предварительный просмотр данных",
-                "data_preview": "Предварительный просмотр данных (первые 5 строк):",
-                "select_columns": "Выберите столбцы для анализа:",
-                "error_processing_file": "Произошла ошибка при анализе файла",
-                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel выше."
-            },
-            "plot": {
-                "title": "Ящичные диаграммы для выбранных столбцов",
-                "y_label": "Значения"
-            },
-            "statistics": {
-                "title": "Описательная статистика"
-            }
-        },
-        "control_charts": {
-            "title": "Контрольные карты ImR",
-            "show_instructions": "Показать инструкции",
-            "control_charts": "Контрольные карты ImR",
-            "control_charts_desc": "Мониторинг стабильности процессов с использованием контрольных карт ImR. Контрольные карты позволяют отслеживать изменения в производственных или исследовательских процессах, выявляя любые отклонения от нормы. Они являются неотъемлемым инструментом в управлении качеством и непрерывном улучшении процессов.",
-            "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец – это идентификаторы образцов или номера серий, а последующие столбцы содержат измеренные значения. Если файл содержит более одного столбца с результатами, пользователь сможет выбрать, какой анализировать.",
-                "header": "Инструкции",
-                "upload_file": "Загрузите файл Excel с данными измерений.",
-                "data_format": "Файл должен содержать два столбца: даты или идентификаторы образцов и численные данные.",
-                "extra_columns": "Если файл содержит более двух столбцов, дополнительные столбцы будут проигнорированы.",
-                "chart_info": "Будут сгенерированы графики ImR, включая график индивидуальных значений (I) и скользящего диапазона (MR).",
-                "interpretation": "Интерпретация результатов: Контрольные карты помогают отслеживать стабильность процесса. Точки за пределами контрольных границ могут свидетельствовать о нарушениях. Обнаружение трендов или последовательности значений с одной стороны от среднего может указывать на систематические изменения в процессе."
-            },
-            "file_handling": {
-                "choose_file": "Выберите файл Excel (xlsx или xls):",
-                "show_data_preview": "Показать предварительный просмотр данных",
-                "data_preview": "Предварительный просмотр данных (первые 10 строк):",
-                "error_processing_file": "Ошибка при обработке файла",
-                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel.",
-                "error_two_columns": "Файл должен содержать как минимум 2 столбца (Время/ID, Значение).",
-                "warning_extra_columns": "Файл содержит дополнительные столбцы:",
-                "select_result_column": "Выберите столбец с результатами для анализа:",
-                "select_result_column_help": "Выберите столбец, содержащий данные, которые вы хотите проанализировать на контрольной карте.",
-                "using_first_two": "Будут использованы только первые два столбца."
-            },
-            "chart_labels": {
-                "time_series": "Время/ID",
-                "values": "Значение",
-                "individual_values": "I (Индивидуальные значения)",
-                "moving_range": "MR (Скользящий диапазон)",
-                "observation": "Наблюдение"
-            },
-            "analysis_results": {
-                "normal_distribution_check": "Распределение значений I является нормальным (тест α=0.05)?",
-                "process_stable": "Процесс стабилен в соответствии с правилами?",
-                "show_I_chart": "Показать данные графика I (индивидуальные значения)",
-                "show_MR_chart": "Показать данные графика MR (скользящий диапазон)",
-                "I_chart_data": "Данные графика I (индивидуальные значения)",
-                "MR_chart_data": "Данные графика MR (скользящий диапазон)"
-            }
-        },
-        "process_capability": {
-            "title": "Process Capability Analysis",
-            "show_instructions": "Show instructions",
-            "process_capability": "Process Capability Analysis",
-            "process_capability_desc": "Assessing process capability based on Cp and Cpk indices. Process capability analysis allows evaluating whether a process can meet specified quality requirements. Cp and Cpk indices help identify potential issues and areas for improvement.",
-            "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain the variable names, e.g., \"Tablet diameter\" or \"Powder humidity\". Subsequent rows should contain numerical values corresponding to the variable. Each column represents a separate product attribute to be analyzed.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing measurement data.",
-                "set_spec_limits": "Set the lower (LSL) and upper (USL) specification limits and the target value.",
-                "view_results": "You will receive a process capability analysis chart and Cp and Cpk indices.",
-                "interpretation": "Interpretation of results: Cp and Cpk indices evaluate the process capability to meet specification requirements. A Cp > 1.33 suggests good process capability, while Cpk considers both variability and shift relative to the specification target."
-            },
-            "file_handling": {
-                "choose_file": "Choose an Excel file (xlsx or xls):",
-                "show_data_preview": "Show data preview",
-                "data_preview": "Data preview (first 10 rows):",
-                "select_column": "Select a column for analysis:",
-                "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
-            },
-            "spec_settings": {
-                "target": "Target Value",
-                "lsl": "Lower Specification Limit (LSL)",
-                "usl": "Upper Specification Limit (USL)"
-            },
-            "plot": {
-                "title": "Process Capability Analysis",
-                "x_label": "Values",
-                "y_label": ""
-            },
-            "results": {
-                "header": "Analysis Results",
-                "cp": "Cp",
-                "cpk": "Cpk",
-                "sample_size": "Sample Size",
-                "sample_mean": "Sample Mean",
-                "sample_std": "Standard Deviation",
-                "sample_max": "Maximum",
-                "sample_min": "Minimum",
-                "sample_median": "Median",
-                "pct_below_lsl": "Percentage of Samples Below LSL",
-                "pct_above_usl": "Percentage of Samples Above USL"
-            }
-        },
-        "stability_regression": {
-            "title": "Stability Data Analysis",
-            "show_instructions": "Show instructions",
-            "stability_regression": "Stability Regression",
-            "stability_regression_desc": "Regression analysis for stability data. Stability regression enables predicting product shelf life based on long-term stability study results. This is crucial in the pharmaceutical and food industries, where product stability directly impacts safety and efficacy.",
-            "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is the name of the parameter under study (e.g., \"API content\", \"Humidity\"), the second column is the time values (e.g., \"Time [months]\"), the third column is the lower specification limit (\"LSL\"), the fourth column is the upper specification limit (\"USL\"), and the subsequent columns contain the measurement results for individual product series. Values must be numerical, and cells should remain blank if data is missing.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing stability data.",
-                "display_series": "The selected series will be displayed on the chart along with regression lines.",
-                "view_regression_results": "Below the chart, you will find a table with regression parameters for the selected series.",
-                "interpretation": "Interpretation of results: Linear regression helps determine the trend of parameter changes over time. An R² value close to 1 indicates a good model fit. The slope of the regression line shows whether the parameter values increase, decrease, or remain stable."
-            },
-            "file_handling": {
-                "choose_file": "Choose an Excel file (xlsx or xls):",
-                "show_data_preview": "Show data preview",
-                "data_preview": "Data preview (first 10 rows):",
-                "select_series": "Select series for analysis:",
-                "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
-            },
-            "plot": {
-                "data": "data",
-                "regression": "regression",
-                "spec_limit": "Specification Limit",
-                "x_label": "Time (months)",
-                "title": "Stability Analysis"
-            },
-            "regression_results": {
-                "header": "Regression Analysis Results for Selected Series",
-                "series": "Series",
-                "slope": "Slope",
-                "intercept": "Intercept",
-                "r_value": "Correlation Coefficient (r)",
-                "p_value": "p-value",
-                "std_err": "Standard Deviation"
-            }
-        },
-        "temp_humidity_analysis": {
-            "title": "Temperature and Humidity Analysis",
-            "show_instructions": "Show instructions",
-            "temp_humidity": "Temperature and Humidity Analysis",
-            "temp_humidity_desc": "Environmental data analysis and identification of limit exceedances. This module allows monitoring environmental conditions, such as temperature and humidity, and detecting any exceedances of established limits. It is particularly important in production and storage processes where environmental conditions can affect product quality and durability.",
-            "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is the date or timestamp (\"Data\"), the second column is temperature values (\"Temperature [°C]\"), and the third column is humidity values (\"Humidity [%]\"). All values must be numerical, and the date format must be consistent throughout the file.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing temperature and humidity data.",
-                "set_limits": "Set temperature and humidity limits using sliders.",
-                "view_results": "Browse charts and the list of limit exceedances.",
-                "interpretation": "Interpretation of results: Temperature and humidity charts help monitor environmental conditions. Stable values indicate good control of storage conditions. Significant fluctuations may suggest issues with maintaining stability conditions."
-            },
-            "settings": {
-                "temp_lower": "Lower Temperature Limit (°C)",
-                "temp_upper": "Upper Temperature Limit (°C)",
-                "hum_lower": "Lower Humidity Limit (%)",
-                "hum_upper": "Upper Humidity Limit (%)"
-            },
-            "file_handling": {
-                "choose_file": "Choose an Excel file (xlsx or xls):",
-                "data_preview": "Data preview (first 10 rows):",
-                "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
-            },
-            "statistics": {
-                "temp_stats": "Temperature Statistics",
-                "hum_stats": "Humidity Statistics",
-                "mean": "Mean",
-                "min": "Minimum",
-                "max": "Maximum",
-                "rsd": "Relative Standard Deviation (RSD %)"
-            },
-            "thresholds": {
-                "crossings": "Limit Exceedances",
-                "no_crossings": "No temperature/humidity limit exceedances.",
-                "time": "Time",
-                "temperature": "Temperature",
-                "humidity": "Humidity"
-            },
-            "plot": {
-                "temp": "Temperature",
-                "hum": "Humidity",
-                "temp_lower_limit": "Lower Temperature Limit",
-                "temp_upper_limit": "Upper Temperature Limit",
-                "hum_lower_limit": "Lower Humidity Limit",
-                "hum_upper_limit": "Upper Humidity Limit",
-                "x_label": "Time",
-                "y_label": "Value",
-                "title": "Temperature and Humidity"
-            }
-        },
-        "pqr_module": {
-            "title": "PQR Module",
-            "show_instructions": "Show instructions",
-            "pqr_module": "PQR Module",
-            "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is sample identifiers or series numbers (\"Series\"), and the subsequent columns are measurement values for various quality parameters (\"API content\", \"Humidity\"). If the file contains more than one data column, the user will be able to choose which one to analyze. The user can also provide lower and upper specification limits.",
-                "header": "Instructions",
-                "upload_file": "Upload data file",
-                "select_series": "Select series for analysis",
-                "input_spec_limits": "Enter upper and lower specification limits",
-                "view_charts": "View charts",
-                "interpretation": ""
-            },
-            "file_handling": {
-                "choose_file": "Choose file",
-                "error_two_columns": "The file must contain at least two columns",
-                "select_result_column": "Select result column",
-                "select_result_column_help": "Choose the column containing data for analysis",
-                "show_data_preview": "Show data preview",
-                "data_preview": "Data preview",
-                "error_no_numeric_data": "No numeric data available for analysis",
-                "error_processing_file": "Error processing file",
-                "no_file_uploaded": "No file uploaded"
-            },
-            "chart_labels": {
-                "time_series": "Series Identifier",
-                "values": "Values",
-                "observation": "Observation",
-                "individual_values": "Individual Values",
-                "moving_range": "Moving Range",
-                "frequency": "Frequency",
-                "histogram_with_spec_limits": "Histogram with Specification Limits",
-                "control_chart_with_spec_limits": "Control Chart with Specification Limits"
-            },
-            "subheaders": {
-                "imr_chart": "ImR Control Chart",
-                "cpk_analysis": "Process Capability Analysis Cpk",
-                "spec_limits_comparison": "Comparison of Results with Specification Limits"
-            },
-            "spec_limits": {
-                "usl": "Upper Specification Limit (USL)",
-                "lsl": "Lower Specification Limit (LSL)"
-            },
-            "warnings": {
-                "spec_limits_equal": "Upper and lower specification limits are equal. Please enter valid values."
-            },
-            "cpk_results": {
-                "mean": "Mean",
-                "std_dev": "Standard Deviation",
-                "cpk": "Cpk Index"
-            }
-        },
-        "anova_module": {
-            "title": "Analysis of Variance (ANOVA)",
-            "show_instructions": "Show instructions",
-            "anova_module": "Analysis of Variance (ANOVA)",
-            "instructions": {
-                "prepare_file": "Provide an Excel file as required by the module.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing data for different groups.",
-                "select_groups": "Select groups for analysis.",
-                "perform_anova": "Perform an analysis of variance (ANOVA) on the selected groups.",
-                "view_results": "View the results of the ANOVA test and Tukey test.",
-                "interpretation": ""
-            },
-            "file_handling": {
-                "choose_file": "Select an Excel file (xlsx or xls):",
-                "show_data_preview": "Show preview of uploaded data",
-                "data_preview": "Data preview (first 10 rows):",
-                "select_groups": "Select groups for analysis:",
-                "error_two_columns": "The file must contain at least 2 columns with data.",
-                "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
-            },
-            "warnings": {
-                "need_two_groups": "Select at least two groups for analysis."
-            },
-            "anova_results": {
-                "header": "ANOVA (Analysis of Variance) Results",
-                "statistic": "F-Statistic",
-                "p_value": "P-Value",
-                "significant_result": "There are statistically significant differences between groups.",
-                "no_significant_result": "No significant differences between groups."
-            },
-            "subheaders": {
-                "boxplot": "BoxPlot Chart",
-                "tukey_test": "Tukey Test – Pairwise Comparison"
-            },
-            "boxplot": {
-                "x_label": "Group",
-                "y_label": "Values"
-            }
-        },
-        "dissolution_testing": {
-            "title": "Dissolution Profile Comparison",
-            "show_instructions": "Show instructions",
-            "dissolution_testing": "Dissolution Profile Comparison",
-            "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is the measurement time (\"Time [min]\"), the second column is the results for the reference product (\"Original [%]\"), and the subsequent columns are the results for individual series of the generic product (\"Series 1 [%]\", \"Series 2 [%]\"). Values must be numerical, and the measurement time should be the same for all series.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing dissolution data.",
-                "select_groups": "Select groups for comparison:",
-                "perform_analysis": "Calculate f1 and f2 similarity factors.",
-                "view_results": "View charts and analysis results.",
-                "interpretation": "Interpretation of results: The f1 and f2 factors assess the similarity of dissolution profiles between the reference and test product. An f1 value close to 0 and f2 above 50 indicate a high degree of similarity."
-            },
-            "file_handling": {
-                "choose_file": "Select an Excel file (xlsx or xls):",
-                "show_data_preview": "Show data preview",
-                "data_preview": "Data preview (first 10 rows):",
-                "select_groups": "Select series for analysis:",
-                "error_processing_file": "An error occurred while processing the file.",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
-            },
-            "warnings": {
-                "need_two_groups": "Select at least two series for comparison."
-            },
-            "plot": {
-                "title": "Dissolution Profile Chart",
-                "x_label": "Time (min)",
-                "y_label": "Percentage of drug released"
-            },
-            "analysis_results": {
-                "header": "Analysis Results",
-                "f1": "Difference Factor (f1)",
-                "f2": "Similarity Factor (f2)",
-                "significant_result": "Profile considered similar (f2 ≥ 50).",
-                "no_significant_result": "Profile considered different (f2 < 50)."
-            }
-        }
-    },
-    "Russian": {
-        "general": {
-            "menu_title": "Меню",
-            "intro": "Добро пожаловать в приложение Pharmstat2!",
-            "intro_desc": "Приложение позволяет просто и интуитивно проводить анализ статистических и качественных данных. В боковом меню вы найдёте модули, которые помогут вам анализировать данные с различных позиций.",
-            "choose_page": "Выберите страницу:",
-            "upload_data": "Загрузите данные для анализа с помощью встроенных форм.",
-            "view_results": "Результаты анализа (графики, таблицы, статистика) появятся в главной области страницы.",
-            "customize_view": "Вы можете скрывать или отображать детали анализа, настраивая вид согласно вашим потребностям.",
-            "how_to_use": "Как использовать приложение?"
-        },
-        "descriptive_statistics": {
-            "title": "Описательная статистика",
-            "show_instructions": "Показать инструкции",
-            "descriptive_stats": "Описательная статистика",
-            "descriptive_stats_desc": "Вычисление основных статистических показателей, таких как среднее значение, медиана, стандартное отклонение. Этот модуль позволяет быстро и легко получить основную информацию о ваших данных, что является ключевым для дальнейшего анализа. Описательная статистика является основой анализа данных, так как позволяет быстро понять распределение и изменчивость данных.",
-            "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, определяющие названия переменных, например, \"Содержание действующего вещества\" или \"Влажность\". Последующие строки должны содержать числовые значения, соответствующие этим переменным. Каждый столбец представляет собой отдельную переменную для анализа.",
-                "header": "Инструкции",
-                "upload_file": "Загрузите файл Excel с данными измерений.",
-                "select_columns": "Выберите столбцы для расчета описательной статистики.",
-                "stats_summary": "Вы получите сводку основных статистических показателей, таких как среднее значение, медиана, стандартное отклонение и другие.",
-                "normality_skew_kurtosis": "Дополнительно вы сможете оценить нормальность распределения и получить информацию об асимметрии и эксцессе.",
-                "interpretation": "Интерпретация результатов: Среднее значение показывает средний показатель, медиана указывает центр набора данных, а стандартное отклонение отражает изменчивость результатов. Высокая асимметрия может указывать на несбалансированность распределения, а высокая эксцессия – на наличие выбросов."
-            },
-            "file_handling": {
-                "choose_file": "Выберите файл Excel (xlsx или xls):",
-                "show_data_preview": "Показать предварительный просмотр загруженных данных",
-                "data_preview": "Предварительный просмотр загруженных данных (первые 10 строк):",
-                "select_columns": "Выберите столбцы для анализа:",
-                "error_processing_file": "Произошла ошибка при анализе файла",
-                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel выше."
-            },
-            "statistics": {
-                "shapiro_test": "Шапиро-Уилка p-значение",
-                "skewness": "Асимметрия",
-                "kurtosis": "Эксцесс"
-            }
-        },
-        "histogram_analysis": {
-            "title": "Анализ гистограмм",
-            "show_instructions": "Показать инструкции",
-            "histograms": "Гистограммы",
-            "histograms_desc": "Создание гистограмм с оценкой нормальности распределения и анализом асимметрии и эксцесса. Этот модуль позволяет визуализировать распределение ваших данных и оценить, имеют ли они характеристики нормального распределения. Гистограммы являются полезным инструментом для идентификации формы распределения данных и выявления любых отклонений или аномалий.",
-            "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, описывающие тип данных, например, \"Результаты измерения концентрации\". Каждый столбец должен представлять отдельную серию измерений. Последующие строки должны содержать числовые значения без пустых ячеек.",
-                "header": "Инструкции",
-                "upload_file": "Загрузите файл Excel с данными измерений.",
-                "select_column": "Выберите столбец для анализа, чтобы создать гистограмму и отобразить описательную статистику.",
-                "normality_test": "Оцените нормальность распределения и получите информацию об асимметрии и эксцессе.",
-                "interpretation": "Интерпретация результатов: Гистограмма помогает оценить форму распределения данных. Если гистограмма имеет колоколообразную форму, это указывает на нормальное распределение. Асимметрия может свидетельствовать о смещении распределения, а ширина – о разбросе данных."
-            },
-            "file_handling": {
-                "choose_file": "Выберите файл Excel (xlsx или xls):",
-                "show_data_preview": "Показать предварительный просмотр данных",
-                "data_preview": "Предварительный просмотр данных (первые 10 строк):",
-                "select_column": "Выберите столбец для анализа:",
-                "error_processing_file": "Произошла ошибка при анализе файла",
-                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel выше."
-            },
-            "statistics": {
-                "sample_size": "Количество образцов",
-                "mean": "Среднее значение",
-                "std_dev": "Стандартное отклонение",
-                "max": "Максимум",
-                "min": "Минимум",
-                "median": "Медиана",
-                "rsd": "Коэффициент вариации (RSD %)",
-                "shapiro_test": "Тест Шапиро-Уилка",
-                "skewness": "Асимметрия",
-                "kurtosis": "Эксцесс"
-            },
-            "plot": {
-                "histogram_title": "Гистограмма данных",
-                "x_label": "Значения",
-                "y_label": "Частота"
-            },
-            "normality_results": {
-                "normal_distribution": "Нет оснований для отклонения гипотезы о нормальности распределения.",
-                "non_normal_distribution": "Данные не соответствуют нормальному распределению."
-            }
-        },
-        "boxplot_charts": {
-            "title": "Ящичные диаграммы (BoxPlot)",
-            "show_instructions": "Показать инструкции",
-            "boxplot": "Ящичные диаграммы (BoxPlot)",
-            "boxplot_desc": "Визуализация распределения данных и идентификация выбросов. Ящичные диаграммы обеспечивают быстрое понимание распределения данных, показывая медиану, квартели и выбросы. Они особенно полезны для выявления потенциальных ошибок измерения или необычных наблюдений.",
-            "instructions": {
-                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать названия групп данных, например, \"Серия 1\", \"Серия 2\", \"Серия 3\". Каждый столбец представляет собой отдельную группу для сравнения. Последующие строки должны содержать числовые значения, соответствующие каждой группе.",
-                "header": "Инструкции",
-                "upload_file": "Загрузите файл Excel с данными измерений.",
-                "select_columns": "Выберите столбцы для анализа, чтобы создать ящичные диаграммы.",
-                "view_stats": "Вы получите описательную статистику для выбранных столбцов.",
                 "interpretation": "Интерпретация результатов: Ящичная диаграмма позволяет оценить медиану, межквартильный размах и наличие выбросов. Длинные «усы» могут указывать на высокую изменчивость данных, а отдельные точки за пределами усов – на выбросы."
             },
             "file_handling": {
@@ -1410,268 +993,268 @@ translations = {
             }
         },
         "process_capability": {
-            "title": "Process Capability Analysis",
-            "show_instructions": "Show instructions",
-            "process_capability": "Process Capability Analysis",
-            "process_capability_desc": "Assessing process capability based on Cp and Cpk indices. Process capability analysis allows evaluating whether a process can meet specified quality requirements. Cp and Cpk indices help identify potential issues and areas for improvement.",
+            "title": "Анализ способности процесса",
+            "show_instructions": "Показать инструкции",
+            "process_capability": "Анализ способности процесса",
+            "process_capability_desc": "Оценка способности процесса на основе показателей Cp и Cpk. Анализ способности процесса позволяет оценить, может ли процесс удовлетворять определённым требованиям качества. Показатели Cp и Cpk помогают выявить потенциальные проблемы и области для улучшения.",
             "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain the variable names, e.g., \"Tablet diameter\" or \"Powder humidity\". Subsequent rows should contain numerical values corresponding to the variable. Each column represents a separate product attribute to be analyzed.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing measurement data.",
-                "set_spec_limits": "Set the lower (LSL) and upper (USL) specification limits and the target value.",
-                "view_results": "You will receive a process capability analysis chart and Cp and Cpk indices.",
-                "interpretation": "Interpretation of results: Cp and Cpk indices evaluate the process capability to meet specification requirements. A Cp > 1.33 suggests good process capability, while Cpk considers both variability and shift relative to the specification target."
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать названия переменных, например, \"Диаметр таблетки\" или \"Влажность порошка\". Последующие строки должны содержать числовые значения, соответствующие переменной. Каждый столбец представляет отдельную характеристику продукта для анализа.",
+                "header": "Инструкции",
+                "upload_file": "Загрузите файл Excel с измерительными данными.",
+                "set_spec_limits": "Установите нижний (LSL) и верхний (USL) предел спецификации, а также целевое значение (Target).",
+                "view_results": "Вы получите график анализа способности процесса и показатели Cp и Cpk.",
+                "interpretation": "Интерпретация результатов: Показатели Cp и Cpk оценивают способность процесса соответствовать требованиям спецификации. Значение Cp > 1.33 свидетельствует о высокой способности процесса, а Cpk учитывает как изменчивость, так и смещение относительно центрального значения спецификации."
             },
             "file_handling": {
-                "choose_file": "Choose an Excel file (xlsx or xls):",
-                "show_data_preview": "Show data preview",
-                "data_preview": "Data preview (first 10 rows):",
-                "select_column": "Select a column for analysis:",
-                "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
+                "choose_file": "Выберите файл Excel (xlsx или xls):",
+                "show_data_preview": "Показать предварительный просмотр данных",
+                "data_preview": "Предварительный просмотр данных (первые 10 строк):",
+                "select_column": "Выберите столбец для анализа:",
+                "error_processing_file": "Ошибка при обработке файла",
+                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel."
             },
             "spec_settings": {
-                "target": "Target Value",
-                "lsl": "Lower Specification Limit (LSL)",
-                "usl": "Upper Specification Limit (USL)"
+                "target": "Целевое значение (Target)",
+                "lsl": "Нижний предел спецификации (LSL)",
+                "usl": "Верхний предел спецификации (USL)"
             },
             "plot": {
-                "title": "Process Capability Analysis",
-                "x_label": "Values",
+                "title": "Анализ способности процесса",
+                "x_label": "Значения",
                 "y_label": ""
             },
             "results": {
-                "header": "Analysis Results",
+                "header": "Результаты анализа",
                 "cp": "Cp",
                 "cpk": "Cpk",
-                "sample_size": "Sample Size",
-                "sample_mean": "Sample Mean",
-                "sample_std": "Standard Deviation",
-                "sample_max": "Maximum",
-                "sample_min": "Minimum",
-                "sample_median": "Median",
-                "pct_below_lsl": "Percentage of Samples Below LSL",
-                "pct_above_usl": "Percentage of Samples Above USL"
+                "sample_size": "Количество образцов",
+                "sample_mean": "Среднее значение образцов",
+                "sample_std": "Стандартное отклонение",
+                "sample_max": "Максимум",
+                "sample_min": "Минимум",
+                "sample_median": "Медиана",
+                "pct_below_lsl": "Процент образцов ниже LSL",
+                "pct_above_usl": "Процент образцов выше USL"
             }
         },
         "stability_regression": {
-            "title": "Stability Data Analysis",
-            "show_instructions": "Show instructions",
-            "stability_regression": "Stability Regression",
-            "stability_regression_desc": "Regression analysis for stability data. Stability regression enables predicting product shelf life based on long-term stability study results. This is crucial in the pharmaceutical and food industries, where product stability directly impacts safety and efficacy.",
+            "title": "Регрессия для стабильности",
+            "show_instructions": "Показать инструкции",
+            "stability_regression": "Регрессия для стабильности",
+            "stability_regression_desc": "Анализ регрессии для данных стабильности. Регрессия стабильности позволяет прогнозировать срок годности продуктов на основе результатов долгосрочных исследований стабильности. Это особенно важно в фармацевтической и пищевой промышленности, где стабильность продуктов напрямую влияет на их безопасность и эффективность.",
             "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is the name of the parameter under study (e.g., \"API content\", \"Humidity\"), the second column is the time values (e.g., \"Time [months]\"), the third column is the lower specification limit (\"LSL\"), the fourth column is the upper specification limit (\"USL\"), and the subsequent columns contain the measurement results for individual product series. Values must be numerical, and cells should remain blank if data is missing.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing stability data.",
-                "display_series": "The selected series will be displayed on the chart along with regression lines.",
-                "view_regression_results": "Below the chart, you will find a table with regression parameters for the selected series.",
-                "interpretation": "Interpretation of results: Linear regression helps determine the trend of parameter changes over time. An R² value close to 1 indicates a good model fit. The slope of the regression line shows whether the parameter values increase, decrease, or remain stable."
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец – это название исследуемого параметра (например, \"Содержание API\", \"Влажность\"), второй столбец – это значения времени (например, \"Время [месяцы]\"), третий – нижний предел спецификации (\"LSL\"), четвёртый – верхний предел спецификации (\"USL\"), а последующие столбцы содержат результаты измерений для отдельных серий продуктов. Значения должны быть числовыми, а при отсутствии данных ячейки оставьте пустыми.",
+                "header": "Инструкции",
+                "upload_file": "Загрузите файл Excel с данными стабильности.",
+                "display_series": "На графике будут показаны выбранные серии с линиями регрессии.",
+                "view_regression_results": "Под графиком вы найдёте таблицу с параметрами регрессии для выбранных серий.",
+                "interpretation": "Интерпретация результатов: Линейная регрессия помогает определить тенденцию изменения параметра во времени. Значение R², близкое к 1, указывает на хорошее соответствие модели данным. Наклон линии регрессии показывает, увеличиваются ли, уменьшаются или остаются стабильными значения параметра."
             },
             "file_handling": {
-                "choose_file": "Choose an Excel file (xlsx or xls):",
-                "show_data_preview": "Show data preview",
-                "data_preview": "Data preview (first 10 rows):",
-                "select_series": "Select series for analysis:",
-                "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
+                "choose_file": "Выберите файл Excel (xlsx или xls):",
+                "show_data_preview": "Показать предварительный просмотр данных",
+                "data_preview": "Предварительный просмотр данных (первые 12 строк):",
+                "select_series": "Выберите серии для анализа:",
+                "error_processing_file": "Произошла ошибка при анализе файла",
+                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel."
             },
             "plot": {
-                "data": "data",
-                "regression": "regression",
-                "spec_limit": "Specification Limit",
-                "x_label": "Time (months)",
-                "title": "Stability Analysis"
+                "data": "данные",
+                "regression": "регрессия",
+                "spec_limit": "Предел спецификации",
+                "x_label": "Время (месяцы)",
+                "title": "Анализ стабильности"
             },
             "regression_results": {
-                "header": "Regression Analysis Results for Selected Series",
-                "series": "Series",
-                "slope": "Slope",
-                "intercept": "Intercept",
-                "r_value": "Correlation Coefficient (r)",
-                "p_value": "p-value",
-                "std_err": "Standard Deviation"
+                "header": "Результаты анализа регрессии для выбранных серий",
+                "series": "Серия",
+                "slope": "Наклон (slope)",
+                "intercept": "Перехват (intercept)",
+                "r_value": "Коэффициент корреляции (r)",
+                "p_value": "p-значение",
+                "std_err": "Стандартная ошибка"
             }
         },
         "temp_humidity_analysis": {
-            "title": "Temperature and Humidity Analysis",
-            "show_instructions": "Show instructions",
-            "temp_humidity": "Temperature and Humidity Analysis",
-            "temp_humidity_desc": "Environmental data analysis and identification of limit exceedances. This module allows monitoring environmental conditions, such as temperature and humidity, and detecting any exceedances of established limits. It is particularly important in production and storage processes where environmental conditions can affect product quality and durability.",
+            "title": "Анализ температуры и влажности",
+            "show_instructions": "Показать инструкции",
+            "temp_humidity": "Анализ температуры и влажности",
+            "temp_humidity_desc": "Анализ данных окружающей среды и идентификация превышений установленных лимитов. Этот модуль позволяет отслеживать условия окружающей среды, такие как температура и влажность, и выявлять любые случаи превышения заданных пределов. Это особенно важно в производственных и складских процессах, где условия окружающей среды могут влиять на качество и долговечность продуктов.",
             "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is the date or timestamp (\"Data\"), the second column is temperature values (\"Temperature [°C]\"), and the third column is humidity values (\"Humidity [%]\"). All values must be numerical, and the date format must be consistent throughout the file.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing temperature and humidity data.",
-                "set_limits": "Set temperature and humidity limits using sliders.",
-                "view_results": "Browse charts and the list of limit exceedances.",
-                "interpretation": "Interpretation of results: Temperature and humidity charts help monitor environmental conditions. Stable values indicate good control of storage conditions. Significant fluctuations may suggest issues with maintaining stability conditions."
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это дата или метка времени (\"Дата\"), второй столбец — значения температуры (\"Температура [°C]\"), а третий столбец — значения влажности (\"Влажность [%]\"). Все значения должны быть числовыми, а формат даты должен быть единообразным во всем файле.",
+                "header": "Инструкции",
+                "upload_file": "Загрузите файл Excel, содержащий данные о температуре и влажности.",
+                "set_limits": "Установите пределы температуры и влажности, используя ползунки.",
+                "view_results": "Просмотрите графики и список превышений лимитов.",
+                "interpretation": "Интерпретация результатов: Графики температуры и влажности помогают отслеживать условия окружающей среды. Стабильные значения означают хорошее поддержание условий хранения. Значительные колебания могут указывать на проблемы с обеспечением стабильности."
             },
             "settings": {
-                "temp_lower": "Lower Temperature Limit (°C)",
-                "temp_upper": "Upper Temperature Limit (°C)",
-                "hum_lower": "Lower Humidity Limit (%)",
-                "hum_upper": "Upper Humidity Limit (%)"
+                "temp_lower": "Нижний предел температуры (°C)",
+                "temp_upper": "Верхний предел температуры (°C)",
+                "hum_lower": "Нижний предел влажности (%)",
+                "hum_upper": "Верхний предел влажности (%)"
             },
             "file_handling": {
-                "choose_file": "Choose an Excel file (xlsx or xls):",
-                "data_preview": "Data preview (first 10 rows):",
-                "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
+                "choose_file": "Выберите файл Excel (xlsx, xls):",
+                "data_preview": "Предварительный просмотр данных (первые 10 строк):",
+                "error_processing_file": "Произошла ошибка при анализе файла",
+                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel."
             },
             "statistics": {
-                "temp_stats": "Temperature Statistics",
-                "hum_stats": "Humidity Statistics",
-                "mean": "Mean",
-                "min": "Minimum",
-                "max": "Maximum",
-                "rsd": "Relative Standard Deviation (RSD %)"
+                "temp_stats": "Статистика температуры",
+                "hum_stats": "Статистика влажности",
+                "mean": "Среднее",
+                "min": "Минимум",
+                "max": "Максимум",
+                "rsd": "Коэффициент вариации (RSD %)"
             },
             "thresholds": {
-                "crossings": "Limit Exceedances",
-                "no_crossings": "No temperature/humidity limit exceedances.",
-                "time": "Time",
-                "temperature": "Temperature",
-                "humidity": "Humidity"
+                "crossings": "Превышения лимитов",
+                "no_crossings": "Превышений заданных пределов температуры/влажности не обнаружено.",
+                "time": "Время",
+                "temperature": "Температура",
+                "humidity": "Влажность"
             },
             "plot": {
-                "temp": "Temperature",
-                "hum": "Humidity",
-                "temp_lower_limit": "Lower Temperature Limit",
-                "temp_upper_limit": "Upper Temperature Limit",
-                "hum_lower_limit": "Lower Humidity Limit",
-                "hum_upper_limit": "Upper Humidity Limit",
-                "x_label": "Time",
-                "y_label": "Value",
-                "title": "Temperature and Humidity"
+                "temp": "Температура",
+                "hum": "Влажность",
+                "temp_lower_limit": "Нижний предел температуры",
+                "temp_upper_limit": "Верхний предел температуры",
+                "hum_lower_limit": "Нижний предел влажности",
+                "hum_upper_limit": "Верхний предел влажности",
+                "x_label": "Время",
+                "y_label": "Значение",
+                "title": "Температура и Влажность"
             }
         },
         "pqr_module": {
-            "title": "PQR Module",
-            "show_instructions": "Show instructions",
-            "pqr_module": "PQR Module",
+            "title": "Модуль PQR",
+            "show_instructions": "Показать инструкции",
+            "pqr_module": "Модуль PQR",
             "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is sample identifiers or series numbers (\"Series\"), and the subsequent columns are measurement values for various quality parameters (\"API content\", \"Humidity\"). If the file contains more than one data column, the user will be able to choose which one to analyze. The user can also provide lower and upper specification limits.",
-                "header": "Instructions",
-                "upload_file": "Upload data file",
-                "select_series": "Select series for analysis",
-                "input_spec_limits": "Enter upper and lower specification limits",
-                "view_charts": "View charts",
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это идентификаторы образцов или номера серий (\"Серия\"), а последующие столбцы — значения измерений для различных параметров качества (\"Содержание API\", \"Влажность\"). Если файл содержит более одного столбца с данными, пользователь сможет выбрать, какой анализировать. Также пользователь может указать нижний и верхний пределы спецификации.",
+                "header": "Инструкции",
+                "upload_file": "Загрузите файл с данными",
+                "select_series": "Выберите серию для анализа",
+                "input_spec_limits": "Введите верхний и нижний предел спецификации",
+                "view_charts": "Просмотр графиков",
                 "interpretation": ""
             },
             "file_handling": {
-                "choose_file": "Choose file",
-                "error_two_columns": "The file must contain at least two columns",
-                "select_result_column": "Select result column",
-                "select_result_column_help": "Choose the column containing data for analysis",
-                "show_data_preview": "Show data preview",
-                "data_preview": "Data preview",
-                "error_no_numeric_data": "No numeric data available for analysis",
-                "error_processing_file": "Error processing file",
-                "no_file_uploaded": "No file uploaded"
+                "choose_file": "Выберите файл",
+                "error_two_columns": "Файл должен содержать не менее двух столбцов",
+                "select_result_column": "Выберите столбец с результатами",
+                "select_result_column_help": "Выберите столбец, содержащий данные для анализа",
+                "show_data_preview": "Показать предварительный просмотр данных",
+                "data_preview": "Предварительный просмотр данных",
+                "error_no_numeric_data": "Нет числовых данных для анализа",
+                "error_processing_file": "Ошибка при обработке файла",
+                "no_file_uploaded": "Файл не загружен"
             },
             "chart_labels": {
-                "time_series": "Series Identifier",
-                "values": "Values",
-                "observation": "Observation",
-                "individual_values": "Individual Values",
-                "moving_range": "Moving Range",
-                "frequency": "Frequency",
-                "histogram_with_spec_limits": "Histogram with Specification Limits",
-                "control_chart_with_spec_limits": "Control Chart with Specification Limits"
+                "time_series": "Идентификатор серии",
+                "values": "Значения",
+                "observation": "Наблюдение",
+                "individual_values": "Индивидуальные значения",
+                "moving_range": "Скользящий диапазон",
+                "frequency": "Частота",
+                "histogram_with_spec_limits": "Гистограмма с пределами спецификации",
+                "control_chart_with_spec_limits": "Контрольная карта с пределами спецификации"
             },
             "subheaders": {
-                "imr_chart": "ImR Control Chart",
-                "cpk_analysis": "Process Capability Analysis Cpk",
-                "spec_limits_comparison": "Comparison of Results with Specification Limits"
+                "imr_chart": "Контрольная карта ImR",
+                "cpk_analysis": "Анализ способности процесса Cpk",
+                "spec_limits_comparison": "Сравнение результатов с пределами спецификации"
             },
             "spec_limits": {
-                "usl": "Upper Specification Limit (USL)",
-                "lsl": "Lower Specification Limit (LSL)"
+                "usl": "Верхний предел спецификации (USL)",
+                "lsl": "Нижний предел спецификации (LSL)"
             },
             "warnings": {
-                "spec_limits_equal": "Upper and lower specification limits are equal. Please enter valid values."
+                "spec_limits_equal": "Верхний и нижний пределы спецификации равны. Пожалуйста, введите корректные значения."
             },
             "cpk_results": {
-                "mean": "Mean",
-                "std_dev": "Standard Deviation",
-                "cpk": "Cpk Index"
+                "mean": "Среднее",
+                "std_dev": "Стандартное отклонение",
+                "cpk": "Индекс Cpk"
             }
         },
         "anova_module": {
-            "title": "Analysis of Variance (ANOVA)",
-            "show_instructions": "Show instructions",
-            "anova_module": "Analysis of Variance (ANOVA)",
+            "title": "Дисперсионный анализ (ANOVA)",
+            "show_instructions": "Показать инструкции",
+            "anova_module": "Дисперсионный анализ (ANOVA)",
             "instructions": {
-                "prepare_file": "Provide an Excel file as required by the module.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing data for different groups.",
-                "select_groups": "Select groups for analysis.",
-                "perform_anova": "Perform an analysis of variance (ANOVA) on the selected groups.",
-                "view_results": "View the results of the ANOVA test and Tukey test.",
+                "prepare_file": "Укажите файл Excel в соответствии с требованиями модуля.",
+                "header": "Инструкции",
+                "upload_file": "Загрузите файл Excel, содержащий данные для разных групп.",
+                "select_groups": "Выберите группы для анализа.",
+                "perform_anova": "Выполните дисперсионный анализ (ANOVA) для выбранных групп.",
+                "view_results": "Посмотрите результаты теста ANOVA и теста Тьюки.",
                 "interpretation": ""
             },
             "file_handling": {
-                "choose_file": "Select an Excel file (xlsx or xls):",
-                "show_data_preview": "Show preview of uploaded data",
-                "data_preview": "Data preview (first 10 rows):",
-                "select_groups": "Select groups for analysis:",
-                "error_two_columns": "The file must contain at least 2 columns with data.",
-                "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
+                "choose_file": "Выберите файл Excel (xlsx или xls):",
+                "show_data_preview": "Показать предварительный просмотр данных",
+                "data_preview": "Предварительный просмотр данных (первые 10 строк):",
+                "select_groups": "Выберите группы для анализа:",
+                "error_two_columns": "Файл должен содержать не менее 2 столбцов с данными.",
+                "error_processing_file": "Произошла ошибка при обработке файла",
+                "no_file_uploaded": "Файл не выбран - загрузите файл Excel выше."
             },
             "warnings": {
-                "need_two_groups": "Select at least two groups for analysis."
+                "need_two_groups": "Выберите как минимум две группы для анализа."
             },
             "anova_results": {
-                "header": "ANOVA (Analysis of Variance) Results",
-                "statistic": "F-Statistic",
-                "p_value": "P-Value",
-                "significant_result": "There are statistically significant differences between groups.",
-                "no_significant_result": "No significant differences between groups."
+                "header": "Результаты дисперсионного анализа (ANOVA)",
+                "statistic": "F-Статистика",
+                "p_value": "P-значение",
+                "significant_result": "Между группами есть статистически значимые различия.",
+                "no_significant_result": "Статистически значимых различий между группами нет."
             },
             "subheaders": {
-                "boxplot": "BoxPlot Chart",
-                "tukey_test": "Tukey Test – Pairwise Comparison"
+                "boxplot": "Диаграмма BoxPlot",
+                "tukey_test": "Тест Тьюки – попарное сравнение"
             },
             "boxplot": {
-                "x_label": "Group",
-                "y_label": "Values"
+                "x_label": "Группа",
+                "y_label": "Значения"
             }
         },
         "dissolution_testing": {
-            "title": "Dissolution Profile Comparison",
-            "show_instructions": "Show instructions",
-            "dissolution_testing": "Dissolution Profile Comparison",
+            "title": "Сравнение профилей высвобождения",
+            "show_instructions": "Показать инструкции",
+            "dissolution_testing": "Сравнение профилей высвобождения",
             "instructions": {
-                "prepare_file": "Prepare an Excel file: the first row should contain column headers, where the first column is the measurement time (\"Time [min]\"), the second column is the results for the reference product (\"Original [%]\"), and the subsequent columns are the results for individual series of the generic product (\"Series 1 [%]\", \"Series 2 [%]\"). Values must be numerical, and the measurement time should be the same for all series.",
-                "header": "Instructions",
-                "upload_file": "Upload an Excel file containing dissolution data.",
-                "select_groups": "Select groups for comparison:",
-                "perform_analysis": "Calculate f1 and f2 similarity factors.",
-                "view_results": "View charts and analysis results.",
-                "interpretation": "Interpretation of results: The f1 and f2 factors assess the similarity of dissolution profiles between the reference and test product. An f1 value close to 0 and f2 above 50 indicate a high degree of similarity."
+                "prepare_file": "Подготовьте файл Excel: первая строка должна содержать заголовки столбцов, где первый столбец — это время измерения (\"Время [мин]\"), второй столбец — результаты для референтного продукта (\"Оригинал [%]\"), а последующие столбцы — результаты для отдельных серий дженерического продукта (\"Серия 1 [%]\", \"Серия 2 [%]\"). Все значения должны быть числовыми, а время измерения должно быть одинаковым для всех серий.",
+                "header": "Инструкции",
+                "upload_file": "Загрузите файл Excel, содержащий данные по высвобождению.",
+                "select_groups": "Выберите группы для сравнения:",
+                "perform_analysis": "Рассчитайте коэффициенты f1 и f2.",
+                "view_results": "Просмотрите графики и результаты анализа.",
+                "interpretation": "Интерпретация результатов: Коэффициенты f1 и f2 оценивают степень сходства профилей высвобождения референтного и тестируемого продукта. Значение f1, близкое к 0, и значение f2 выше 50 указывают на высокий уровень сходства."
             },
             "file_handling": {
-                "choose_file": "Select an Excel file (xlsx or xls):",
-                "show_data_preview": "Show data preview",
-                "data_preview": "Data preview (first 10 rows):",
-                "select_groups": "Select series for analysis:",
-                "error_processing_file": "An error occurred while processing the file.",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
+                "choose_file": "Выберите файл Excel (xlsx или xls):",
+                "show_data_preview": "Показать предварительный просмотр данных",
+                "data_preview": "Предварительный просмотр данных (первые 10 строк):",
+                "select_groups": "Выберите серии для анализа:",
+                "error_processing_file": "Произошла ошибка при обработке файла.",
+                "no_file_uploaded": "Файл не выбран - загрузите файл Excel выше."
             },
             "warnings": {
-                "need_two_groups": "Select at least two series for comparison."
+                "need_two_groups": "Выберите как минимум две серии для сравнения."
             },
             "plot": {
-                "title": "Dissolution Profile Chart",
-                "x_label": "Time (min)",
-                "y_label": "Percentage of drug released"
+                "title": "График профиля высвобождения",
+                "x_label": "Время (мин)",
+                "y_label": "Процент высвобожденного вещества"
             },
             "analysis_results": {
-                "header": "Analysis Results",
-                "f1": "Difference Factor (f1)",
-                "f2": "Similarity Factor (f2)",
-                "significant_result": "Profile considered similar (f2 ≥ 50).",
-                "no_significant_result": "Profile considered different (f2 < 50)."
+                "header": "Результаты анализа",
+                "f1": "Фактор разницы (f1)",
+                "f2": "Фактор сходства (f2)",
+                "significant_result": "Профили считаются схожими (f2 ≥ 50).",
+                "no_significant_result": "Профили считаются различными (f2 < 50)."
             }
         }
     }
