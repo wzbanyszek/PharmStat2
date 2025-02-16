@@ -2,7 +2,7 @@ import streamlit as st
 from utils.translations import translations
 
 # Konfiguracja strony
-st.set_page_config(page_title="Santo Pharmstat", layout="wide")
+st.set_page_config(page_title="Pharmstat2", layout="wide")
 
 # Wybór języka
 language = st.sidebar.selectbox(
