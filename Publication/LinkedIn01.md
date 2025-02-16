@@ -1,4 +1,4 @@
-**Tytuł artykułu będzie: Nowoczesne podejście do analizy danych w farmacji – Jak Python, AI i zwinne metody zarządzania projektami obniżają koszty compliance**
+**Tytuł artykułu: Nowoczesne podejście do analizy danych w farmacji – Jak Python, AI i zwinne metody zarządzania projektami obniżają koszty compliance**
 
 
 
