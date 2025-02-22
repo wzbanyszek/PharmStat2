@@ -71,7 +71,7 @@ if st.button("Pobierz dane"):
     data = get_packing_materials(env)
     if data:
         df = pd.DataFrame(data)
-        st.write("### Dane pobrane z API:")
+        st.write("### Dane pobrane z API: ")
         st.dataframe(df)
     else:
         st.error("Nie udało się pobrać danych.")
