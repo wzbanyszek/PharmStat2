@@ -1,7 +1,11 @@
-import socket
 import streamlit as st
-hostname = socket.gethostname()
-IPAddr = socket.gethostbyname(hostname)
+import requests
 
-st.write("Your Computer Name is:" + hostname)
-st.write("Your Computer IP Address is:" + IPAddr)
+#import requests
+#hostname = socket.gethostname()
+#IPAddr = socket.gethostbyname(hostname)
+#st.write("Your Computer Name is:" + hostname)
+#st.write("Your Computer IP Address is:" + IPAddr)
+
+r = requests.get("https://httpbin.org/ip")
+st.write(r.json())
