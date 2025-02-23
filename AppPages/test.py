@@ -13,7 +13,8 @@ def show(language):
   
   #https://www.ipify.org/
   URL = "https://api.ipify.org?format=json"
-  
-  r = requests.get(URL)
-  st.write(r)
-  st.write(r.json())
+
+  if st.button("Pobierz dane"):
+    r = requests.get(URL)
+    st.write(r)
+    st.write(r.json())
