@@ -10,8 +10,7 @@ import requests
 
 def show(language):
   #URL = "https://httpbin.org/ip"
-  URL = "https://api.ipify.org"
+  URL = "https://api.ipify.org?format=json"
   r = requests.get(URL)
   st.write(r)
-  #st.write(r.json())
-  st.write(r.text())
+  st.write(r.json())
