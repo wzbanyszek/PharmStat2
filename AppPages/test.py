@@ -7,5 +7,7 @@ import requests
 #st.write("Your Computer Name is:" + hostname)
 #st.write("Your Computer IP Address is:" + IPAddr)
 
-r = requests.get("https://httpbin.org/ip")
-st.write(r.json())
+
+def show(language):
+  r = requests.get("https://httpbin.org/ip")
+  st.write(r.json())
