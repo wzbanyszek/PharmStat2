@@ -86,4 +86,4 @@ elif page == "Get data":
 
 elif page == "Test":
     from AppPages import test
-    test
+    test.show(language)
