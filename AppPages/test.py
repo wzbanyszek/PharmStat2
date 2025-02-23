@@ -9,5 +9,7 @@ import requests
 
 
 def show(language):
-  r = requests.get("https://httpbin.org/ip")
+  #URL = "https://httpbin.org/ip"
+  URL = "https://api.ipify.org"
+  r = requests.get(URL)
   st.write(r.json())
