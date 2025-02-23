@@ -30,7 +30,7 @@ page = st.sidebar.radio(
         t["pqr_module"]["title"],
         t["anova_module"]["title"],
         t["dissolution_testing"]["title"],
-        "Get data",
+        #"Get data",
         "Test"
     ]
 )
