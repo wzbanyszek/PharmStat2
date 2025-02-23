@@ -61,19 +61,21 @@ def get_packing_materials(env="TEST"):
         st.error(f"Błąd pobierania danych ({env}): {response.status_code} {response.text}")
         return None
 
-# Interfejs użytkownika Streamlit
-st.header("Pobieranie danych z API - PackingMaterial")
 
-# Wybór środowiska (TEST/PROD)
-env = st.radio("Wybierz środowisko:", ["TEST", "PROD"])
-
-if st.button("Pobierz dane"):
-    data = get_packing_materials(env)
-    if data:
-        df = pd.DataFrame(data)
-        st.write("### Dane pobrane z API: ")
-        st.dataframe(df)
-    else:
-        st.error("Nie udało się pobrać danych.")
-
-st.info("Aby pobrać dane, wybierz środowisko i kliknij 'Pobierz dane'.")
+def show(language):
+    # Interfejs użytkownika Streamlit
+    st.header("Pobieranie danych z API - PackingMaterial")
+    
+    # Wybór środowiska (TEST/PROD)
+    env = st.radio("Wybierz środowisko:", ["TEST", "PROD"])
+    
+    if st.button("Pobierz dane"):
+        data = get_packing_materials(env)
+        if data:
+            df = pd.DataFrame(data)
+            st.write("### Dane pobrane z API: ")
+            st.dataframe(df)
+        else:
+            st.error("Nie udało się pobrać danych.")
+    
+    st.info("Aby pobrać dane, wybierz środowisko i kliknij 'Pobierz dane'.")
