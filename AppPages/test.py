@@ -13,4 +13,5 @@ def show(language):
   URL = "https://api.ipify.org"
   r = requests.get(URL)
   st.write(r)
-  st.write(r.json())
+  #st.write(r.json())
+  st.write(r.text())
