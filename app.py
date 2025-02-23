@@ -82,7 +82,7 @@ elif page == t["dissolution_testing"]["title"]:
 
 elif page == "Get data":
     from AppPages import get_data
-    get_data
+    get_data.show(language)
 
 elif page == "Test":
     from AppPages import test
