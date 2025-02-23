@@ -12,4 +12,5 @@ def show(language):
   #URL = "https://httpbin.org/ip"
   URL = "https://api.ipify.org"
   r = requests.get(URL)
+  st.write(r)
   st.write(r.json())
