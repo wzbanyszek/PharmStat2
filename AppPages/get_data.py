@@ -5,20 +5,20 @@ import requests
 # Funkcja do pobrania tokena OAuth2
 def get_oauth_token(env="TEST"):
     auth_urls = {
-        "TEST": "https://login.microsoftonline.com/edf3cfc4-ee60-4b92-a2cb-da2c123fc895/oauth2/v2.0/token",
-        "PROD": "https://login.microsoftonline.com/edf3cfc4-ee60-4b92-a2cb-da2c123fc895/oauth2/v2.0/token"
+        "TEST": st.secrets["test_url"],
+        "PROD": st.secrets["prod_url"]
     }
 
     credentials = {
         "TEST": {
-            "client_id": "a2cf6053-8fcb-4132-a725-0ca7e46bce17",
-            "client_secret": "c7.8Q~cf3sJpPg4yCQ1slBdiTXcXz6oe9CljCcIw",
+            "client_id": st.secrets["test_client_id"],
+            "client_secret": st.secrets["test_client_secret"],
             "scope": "api://59b16def-a1cb-4802-a8d5-27cdecaeb07b/.default",
             "grant_type": "client_credentials"
         },
         "PROD": {
-            "client_id": "cef38701-1021-4a78-a0c5-4b5f35b1a024",
-            "client_secret": "3qL8Q~hwsFtoSi4IDR0d65oDBlAhpPORra7IGc14",
+            "client_id": st.secrets["prod_client_id"],
+            "client_secret": st.secrets["prod_client_secret"],
             "scope": "api://4611a98a-c4b4-4951-9f88-11d2d43443c8/.default",
             "grant_type": "client_credentials"
         }
