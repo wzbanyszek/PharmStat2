@@ -18,3 +18,4 @@ def show(language):
     r = requests.get(URL)
     st.write(r)
     st.write(r.json())
+    st.write(st.secrets("DB_USERNAME"))
