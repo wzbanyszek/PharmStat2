@@ -41,7 +41,7 @@ def get_packing_materials(env="TEST"):
 
     subscription_keys = {
         "TEST": st.secrets["test_subscription_key"],
-        "PROD": st.secrets["test_subscription_key"]
+        "PROD": st.secrets["prod_subscription_key"]
     }
 
     token = get_oauth_token(env)
