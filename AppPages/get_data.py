@@ -35,7 +35,7 @@ def get_oauth_token(env="TEST"):
 # Funkcja do pobrania danych z API
 def get_packing_materials(env="TEST"):
     api_urls = {
-        "TEST": "https://apimgmtdev.polpharma.net/external/Santo/packingMaterial",
+        "TEST": "https://apimgmtdev.polpharma.net/external/Santo/COA",
         "PROD": "https://apimgmt.polpharma.net/external/Santo/packingMaterial"
     }
 
