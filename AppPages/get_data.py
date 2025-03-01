@@ -36,7 +36,7 @@ def get_oauth_token(env="TEST"):
 def get_packing_materials(env="TEST"):
     api_urls = {
         "TEST": "https://apimgmtdev.polpharma.net/external/Santo/packingMaterial",
-        "PROD": "https://apimgmt.polpharma.net/external/Santo/COA"
+        "PROD": "https://apimgmt.polpharma.net/external/Santo/packingMaterial"
     }
 
     subscription_keys = {
