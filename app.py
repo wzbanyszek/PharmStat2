@@ -81,8 +81,8 @@ elif page == t["dissolution_testing"]["title"]:
     dissolution_testing.show(language)
 
 elif page == "Get data":
-    from AppPages import get_data
-    get_data.show(language)
+    from AppPages import read_data
+    read_data.show(language)
 
 elif page == "Test":
     from AppPages import test
