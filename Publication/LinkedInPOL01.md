@@ -36,7 +36,7 @@ Coraz więcej firm dostrzega, że wykorzystanie otwartych technologii takich jak
 
 ## Pharmstat2 – przykład wykorzystania Pythona
 
-Chcąc zobrazować, jak w praktyce działają otwarte rozwiązania, proponujemy przyjrzeć się aplikacji która pokazuje małą część możliwości statystycznych Pythona: **[Pharmstat2 – online tool](https://pharmstat2-test.streamlit.app/)**.  Dzięki temu narzędziu można m.in.:
+Chcąc zobrazować, jak w praktyce działają otwarte rozwiązania, proponujemy przyjrzeć się aplikacji która pokazuje małą część możliwości statystycznych Pythona: **[Pharmstat2 – online tool](https://pharmstat2.streamlit.app/)**.  Dzięki temu narzędziu można m.in.:
 
 - **Szybko analizować trendy i stabilność procesów**,
 - **Tworzyć karty kontrolne** (np. ImR) oraz **obliczać Cp i Cpk**,
