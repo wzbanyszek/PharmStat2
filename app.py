@@ -29,10 +29,10 @@ page = st.sidebar.radio(
         t["temp_humidity_analysis"]["temp_humidity"],
         t["pqr_module"]["title"],
         t["anova_module"]["title"],
-        t["dissolution_testing"]["title"]
-        #"Get data",
-        #"Test",
-        #t["lab_comparison"]["title"]
+        t["dissolution_testing"]["title"],
+        "Get data",
+        "Test",
+        t["lab_comparison"]["title"]
     ]
 )
 
