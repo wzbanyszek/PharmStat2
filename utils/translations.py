@@ -416,7 +416,47 @@ translations = {
                 "significant_result": "Profil uznany za podobny (f2 ≥ 50).",
                 "no_significant_result": "Profil uznany za różny (f2 < 50)."
             }
-        }
+        },
+
+        "lab_comparison": {
+    "title": "Porównanie wyników analiz między laboratoriami",
+    "instructions": {
+        "header": "Instrukcje",
+        "prepare_file": "Przygotuj plik Excel zawierający dwie kolumny: 'Laboratorium1' i 'Laboratorium2'. Pierwszy wiersz powinien zawierać nazwy kolumn, a kolejne wiersze wartości wyników dla obu laboratoriów.",
+        "upload_file": "Wczytaj plik Excel zawierający dane pomiarowe.",
+        "select_columns": "Wybierz kolumny do analizy.",
+        "perform_tests": "Przeprowadź testy statystyczne w celu porównania precyzji, dokładności i korelacji wyników.",
+        "interpretation": "Zinterpretuj wyniki testów i zobacz wizualizacje danych."
+    },
+    "file_handling": {
+        "choose_file": "Wybierz plik Excel (xlsx lub xls):",
+        "show_data_preview": "Pokaż podgląd danych",
+        "data_preview": "Podgląd danych (pierwsze 10 wierszy):",
+        "error_two_columns": "Plik musi zawierać dokładnie dwie kolumny z wynikami analiz.",
+        "error_processing_file": "Wystąpił błąd podczas analizy pliku",
+        "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+    },
+    "results": {
+        "header": "Wyniki testów statystycznych",
+        "f_test_stat": "Statystyka testu F-Snedecora",
+        "t_test_stat": "Statystyka testu t-Studenta",
+        "wilcoxon_stat": "Statystyka testu Wilcoxona",
+        "pearson_corr": "Korelacja Pearsona",
+        "spearman_corr": "Korelacja Spearmana"
+    },
+    "subheaders": {
+        "boxplot": "Wykres pudełkowy (boxplot)",
+        "scatter": "Porównanie wyników – wykres punktowy"
+    },
+    "boxplot": {
+        "x_label": "Laboratoria",
+        "y_label": "Wyniki pomiarów"
+    },
+    "scatter": {
+        "title": "Porównanie wyników między laboratoriami"
+    }
+}
+        
     },
 
     "English": {
@@ -836,7 +876,48 @@ translations = {
                 "significant_result": "Profile considered similar (f2 ≥ 50).",
                 "no_significant_result": "Profile considered different (f2 < 50)."
             }
-        }
+        },
+
+"lab_comparison": {
+    "title": "Comparison of Analytical Results Between Laboratories",
+    "instructions": {
+        "header": "Instructions",
+        "prepare_file": "Prepare an Excel file containing two columns: 'Laboratory1' and 'Laboratory2'. The first row should contain column names, and subsequent rows should have measurement values for both laboratories.",
+        "upload_file": "Upload an Excel file containing measurement data.",
+        "select_columns": "Select columns for analysis.",
+        "perform_tests": "Perform statistical tests to compare precision, accuracy, and correlation of results.",
+        "interpretation": "Interpret test results and view data visualizations."
+    },
+    "file_handling": {
+        "choose_file": "Select an Excel file (xlsx or xls):",
+        "show_data_preview": "Show data preview",
+        "data_preview": "Data preview (first 10 rows):",
+        "error_two_columns": "The file must contain exactly two columns with analytical results.",
+        "error_processing_file": "An error occurred while processing the file",
+        "no_file_uploaded": "No file selected - please upload an Excel file above."
+    },
+    "results": {
+        "header": "Statistical Test Results",
+        "f_test_stat": "F-Snedecor test statistic",
+        "t_test_stat": "t-Student test statistic",
+        "wilcoxon_stat": "Wilcoxon test statistic",
+        "pearson_corr": "Pearson correlation",
+        "spearman_corr": "Spearman correlation"
+    },
+    "subheaders": {
+        "boxplot": "Boxplot",
+        "scatter": "Comparison of Results – Scatter Plot"
+    },
+    "boxplot": {
+        "x_label": "Laboratories",
+        "y_label": "Measurement Results"
+    },
+    "scatter": {
+        "title": "Comparison of Results Between Laboratories"
+    }
+}
+
+        
     },
 
     "Russian": {
@@ -1256,6 +1337,47 @@ translations = {
                 "significant_result": "Профили считаются схожими (f2 ≥ 50).",
                 "no_significant_result": "Профили считаются различными (f2 < 50)."
             }
-        }
+        },
+
+        "lab_comparison": {
+    "title": "Сравнение результатов анализов между лабораториями",
+    "instructions": {
+        "header": "Инструкции",
+        "prepare_file": "Подготовьте файл Excel, содержащий два столбца: 'Лаборатория1' и 'Лаборатория2'. В первой строке должны быть названия столбцов, а в следующих строках – измеренные значения для обеих лабораторий.",
+        "upload_file": "Загрузите файл Excel с данными измерений.",
+        "select_columns": "Выберите столбцы для анализа.",
+        "perform_tests": "Выполните статистические тесты для сравнения прецизионности, точности и корреляции результатов.",
+        "interpretation": "Интерпретируйте результаты тестов и просматривайте визуализацию данных."
+    },
+    "file_handling": {
+        "choose_file": "Выберите файл Excel (xlsx или xls):",
+        "show_data_preview": "Показать предварительный просмотр данных",
+        "data_preview": "Предварительный просмотр данных (первые 10 строк):",
+        "error_two_columns": "Файл должен содержать ровно два столбца с результатами анализов.",
+        "error_processing_file": "Произошла ошибка при обработке файла",
+        "no_file_uploaded": "Файл не выбран – загрузите файл Excel выше."
+    },
+    "results": {
+        "header": "Результаты статистических тестов",
+        "f_test_stat": "Статистика теста Ф-Снедекора",
+        "t_test_stat": "Статистика теста t-Стьюдента",
+        "wilcoxon_stat": "Статистика теста Уилкоксона",
+        "pearson_corr": "Корреляция Пирсона",
+        "spearman_corr": "Корреляция Спирмена"
+    },
+    "subheaders": {
+        "boxplot": "Диаграмма размаха (boxplot)",
+        "scatter": "Сравнение результатов – Точечный график"
+    },
+    "boxplot": {
+        "x_label": "Лаборатории",
+        "y_label": "Результаты измерений"
+    },
+    "scatter": {
+        "title": "Сравнение результатов между лабораториями"
+    }
+}
+
+        
     }
 }
