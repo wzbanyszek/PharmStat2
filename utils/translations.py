@@ -420,6 +420,7 @@ translations = {
 
         "lab_comparison": {
     "title": "Porównanie wyników analiz między laboratoriami",
+    "show_instructions": "Pokaż instrukcje",
     "instructions": {
         "header": "Instrukcje",
         "prepare_file": "Przygotuj plik Excel zawierający dwie kolumny: 'Laboratorium1' i 'Laboratorium2'. Pierwszy wiersz powinien zawierać nazwy kolumn, a kolejne wiersze wartości wyników dla obu laboratoriów.",
@@ -880,6 +881,7 @@ translations = {
 
 "lab_comparison": {
     "title": "Comparison of Analytical Results Between Laboratories",
+    "show_instructions": "Show instructions",
     "instructions": {
         "header": "Instructions",
         "prepare_file": "Prepare an Excel file containing two columns: 'Laboratory1' and 'Laboratory2'. The first row should contain column names, and subsequent rows should have measurement values for both laboratories.",
@@ -1341,6 +1343,7 @@ translations = {
 
         "lab_comparison": {
     "title": "Сравнение результатов анализов между лабораториями",
+    "show_instructions": "Показать инструкции",
     "instructions": {
         "header": "Инструкции",
         "prepare_file": "Подготовьте файл Excel, содержащий два столбца: 'Лаборатория1' и 'Лаборатория2'. В первой строке должны быть названия столбцов, а в следующих строках – измеренные значения для обеих лабораторий.",
