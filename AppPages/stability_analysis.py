@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 from scipy.stats import linregress
 from utils.translations import translations
 
@@ -43,7 +44,9 @@ def show(language):
             fig, ax = plt.subplots(figsize=(12, 8))
             regression_results = []
 
-            for col in selected_series:
+            colors = plt.cm.get_cmap("tab10", len(selected_series))  # Generowanie różnych kolorów dla serii
+
+            for i, col in enumerate(selected_series):
                 y = df[col]
                 valid_indices = y.dropna().index
                 x = time.loc[valid_indices]
@@ -51,11 +54,30 @@ def show(language):
 
                 if len(x) > 1:
                     slope, intercept, r_value, p_value, std_err = linregress(x, y)
-                    y_pred = slope * x + intercept
+                    y_pred = intercept + slope * x
 
-                    ax.scatter(x, y, label=f"{col} ({t['plot']['data']})", alpha=0.7)
-                    ax.plot(x, y_pred, label=f"{col} ({t['plot']['regression']})", linestyle='--')
+                    # Obliczanie przedziału ufności
+                    residuals = y - y_pred
+                    std_resid = np.std(residuals, ddof=2)
+                    n = len(x)
+                    mean_x = np.mean(x)
 
+                    # Linie regresji
+                    x_line = np.linspace(min(x), max(x), 100)
+                    y_line = intercept + slope * x_line
+
+                    conf_interval = 1.96 * std_resid * np.sqrt(1/n + (x_line - mean_x)**2 / np.sum((x - mean_x)**2))
+                    y_upper = y_line + conf_interval
+                    y_lower = y_line - conf_interval
+
+                    # Wybór koloru dla danej serii
+                    color = colors(i)
+
+                    ax.scatter(x, y, label=f"{col} ({t['plot']['data']})", color=color, alpha=0.7)
+                    ax.plot(x_line, y_line, '-', label=f"{col} ({t['plot']['regression']})", color=color)
+                    ax.fill_between(x_line, y_lower, y_upper, color='gray', alpha=0.3, label='95% Przedział ufności' if i == 0 else "")
+
+                    # Zapisywanie wyników regresji
                     regression_results.append({
                         t["regression_results"]["series"]: col,
                         t["regression_results"]["slope"]: round(slope, 3),
@@ -65,15 +87,21 @@ def show(language):
                         t["regression_results"]["std_err"]: round(std_err, 3)
                     })
 
+            # Dodawanie linii specyfikacji
             if min_spec is not None:
-                ax.axhline(min_spec, color='red', linestyle='-', label=t['plot']['spec_limit'])
+                ax.axhline(min_spec, color='green', linestyle='--', label=t['plot']['spec_limit'])
             if max_spec is not None:
-                ax.axhline(max_spec, color='red', linestyle='-', label=t['plot']['spec_limit'])
+                ax.axhline(max_spec, color='green', linestyle='--', label=t['plot']['spec_limit'])
 
             ax.set_xlabel(t["plot"]["x_label"])
             ax.set_ylabel(parameter_name)
             ax.set_title(f"{t['plot']['title']}: {parameter_name}")
             ax.legend()
+
+            # Ustawienie skali na osi X co 3 miesiące
+            ax.set_xticks(np.arange(min(time), max(time) + 1, 3))
+
+            plt.grid(True)
             st.pyplot(fig)
 
             st.subheader(t["regression_results"]["header"])
