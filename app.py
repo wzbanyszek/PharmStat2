@@ -86,8 +86,8 @@ elif page == "Get data":
     read_data.show(language)
 
 elif page == "Test":
-    from AppPages import test
-    test.show(language)
+    from AppPages import test2
+    test2.show(language)
 
 elif page == t["lab_comparison"]["title"]:
     from AppPages import lab_comparison
