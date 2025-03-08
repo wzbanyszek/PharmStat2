@@ -94,8 +94,8 @@ def show(language):
             ax.legend()
 
             # Wyświetlanie równania regresji
-            equation = f"y = {intercept:.2f} + {slope:.2f}x"
-            ax.text(min(x), max(y) * 0.9, equation, fontsize=12, color='red')
+            #equation = f"y = {intercept:.2f} + {slope:.2f}x"
+            #ax.text(min(x), max(y) * 0.9, equation, fontsize=12, color='red')
 
             plt.grid(True)
             st.pyplot(fig)
