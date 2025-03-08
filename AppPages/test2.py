@@ -44,7 +44,9 @@ def show(language):
             fig, ax = plt.subplots(figsize=(12, 8))
             regression_results = []
 
-            for col in selected_series:
+            colors = plt.cm.get_cmap("tab10", len(selected_series))  # Generowanie różnych kolorów dla serii
+
+            for i, col in enumerate(selected_series):
                 y = df[col]
                 valid_indices = y.dropna().index
                 x = time.loc[valid_indices]
@@ -68,9 +70,12 @@ def show(language):
                     y_upper = y_line + conf_interval
                     y_lower = y_line - conf_interval
 
-                    ax.scatter(x, y, label=f"{col} ({t['plot']['data']})", color="blue", alpha=0.7)
-                    ax.plot(x_line, y_line, '-', label=f"{col} ({t['plot']['regression']})", color="red")
-                    ax.fill_between(x_line, y_lower, y_upper, color='gray', alpha=0.3, label='95% Przedział ufności')
+                    # Wybór koloru dla danej serii
+                    color = colors(i)
+
+                    ax.scatter(x, y, label=f"{col} ({t['plot']['data']})", color=color, alpha=0.7)
+                    ax.plot(x_line, y_line, '-', label=f"{col} ({t['plot']['regression']})", color=color)
+                    ax.fill_between(x_line, y_lower, y_upper, color='gray', alpha=0.3, label='95% Przedział ufności' if i == 0 else "")
 
                     # Zapisywanie wyników regresji
                     regression_results.append({
@@ -93,9 +98,8 @@ def show(language):
             ax.set_title(f"{t['plot']['title']}: {parameter_name}")
             ax.legend()
 
-            # Wyświetlanie równania regresji
-            #equation = f"y = {intercept:.2f} + {slope:.2f}x"
-            #ax.text(min(x), max(y) * 0.9, equation, fontsize=12, color='red')
+            # Ustawienie skali na osi X co 3 miesiące
+            ax.set_xticks(np.arange(min(time), max(time) + 1, 3))
 
             plt.grid(True)
             st.pyplot(fig)
