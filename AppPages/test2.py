@@ -37,7 +37,7 @@ def show(language):
             show_data = st.checkbox(t["file_handling"]["show_data_preview"], value=True)
             if show_data:
                 st.subheader(t["file_handling"]["data_preview"])
-                st.dataframe(df.head(12))
+                df = st.data_editor(df, num_rows="dynamic")  # Dodano edytor danych
 
             selected_series = st.multiselect(t["file_handling"]["select_series"], series_columns, default=series_columns)
 
