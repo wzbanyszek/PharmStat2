@@ -216,7 +216,8 @@ translations = {
                 "data_preview": "Podgląd danych (pierwsze 12 wierszy):",
                 "select_series": "Wybierz serie do analizy:",
                 "error_processing_file": "Wystąpił błąd podczas analizy pliku",
-                "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+                "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej.",
+                "edit_data": "Edytuj dane przed analizą"
             },
             "plot": {
                 "data": "dane",
@@ -680,7 +681,8 @@ translations = {
                 "data_preview": "Data preview (first 10 rows):",
                 "select_series": "Select series for analysis:",
                 "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
+                "no_file_uploaded": "No file selected - please upload an Excel file above.",
+                "edit_data": "Edit data before analysis"
             },
             "plot": {
                 "data": "data",
@@ -1145,7 +1147,8 @@ translations = {
                 "data_preview": "Предварительный просмотр данных (первые 12 строк):",
                 "select_series": "Выберите серии для анализа:",
                 "error_processing_file": "Произошла ошибка при анализе файла",
-                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel."
+                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel.",
+                "edit_data": "Редактировать данные перед анализом"
             },
             "plot": {
                 "data": "данные",
