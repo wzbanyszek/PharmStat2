@@ -38,7 +38,7 @@ def show(language):
 
             if st.button(t["file_handling"]["apply_changes"]):
                 st.session_state.df_edited = edited_df
-                st.experimental_rerun()
+                st.rerun()
 
             if st.button(t["file_handling"]["reset_data"]):
                 st.session_state.df_edited = st.session_state.df_original.copy()
