@@ -687,7 +687,8 @@ translations = {
                 "regression": "regression",
                 "spec_limit": "Specification Limit",
                 "x_label": "Time (months)",
-                "title": "Stability Analysis"
+                "title": "Stability Analysis",
+                "show_confidence_interval": "Show confidence interval for regression line"
             },
             "regression_results": {
                 "header": "Regression Analysis Results for Selected Series",
@@ -696,7 +697,9 @@ translations = {
                 "intercept": "Intercept",
                 "r_value": "Correlation Coefficient (r)",
                 "p_value": "p-value",
-                "std_err": "Standard Deviation"
+                "std_err": "Standard Deviation",
+                "predicted_time": "Predicted shelf life",
+                "predicted_time_range": "Predicted shelf life range"
             }
         },
         "temp_humidity_analysis": {
@@ -1149,7 +1152,8 @@ translations = {
                 "regression": "регрессия",
                 "spec_limit": "Предел спецификации",
                 "x_label": "Время (месяцы)",
-                "title": "Анализ стабильности"
+                "title": "Анализ стабильности",
+                "show_confidence_interval": "Показать доверительный интервал для линии регрессии"
             },
             "regression_results": {
                 "header": "Результаты анализа регрессии для выбранных серий",
@@ -1158,7 +1162,9 @@ translations = {
                 "intercept": "Перехват (intercept)",
                 "r_value": "Коэффициент корреляции (r)",
                 "p_value": "p-значение",
-                "std_err": "Стандартная ошибка"
+                "std_err": "Стандартная ошибка",
+                "predicted_time": "Прогнозируемый срок годности",
+                "predicted_time_range": "Диапазон прогнозируемого срока годности"
             }
         },
         "temp_humidity_analysis": {
