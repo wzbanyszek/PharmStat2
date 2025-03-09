@@ -42,7 +42,7 @@ def show(language):
 
             if st.button(t["file_handling"]["reset_data"]):
                 st.session_state.df_edited = st.session_state.df_original.copy()
-                st.experimental_rerun()
+                st.rerun()
 
             df = st.session_state.df_edited
             parameter_name = df.iloc[0, 0]
