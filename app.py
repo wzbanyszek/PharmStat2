@@ -90,7 +90,7 @@ elif page == "Test":
     from AppPages import test
     test.show(language)
 
-elif page == "Test":
+elif page == "Test2":
     from AppPages import test2
     test2.show(language)
 
