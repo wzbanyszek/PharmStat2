@@ -223,7 +223,8 @@ translations = {
                 "regression": "regresja",
                 "spec_limit": "Limit specyfikacji",
                 "x_label": "Czas (mies.)",
-                "title": "Analiza stabilności"
+                "title": "Analiza stabilności",
+                "show_confidence_interval": "Pokaż przedział ufności dla linii regresji"
             },
             "regression_results": {
                 "header": "Wyniki analizy regresji dla wybranych serii",
@@ -232,7 +233,9 @@ translations = {
                 "intercept": "Wyraz wolny (intercept)",
                 "r_value": "Współczynnik korelacji (r)",
                 "p_value": "P-значenie (p-value)",
-                "std_err": "Стандартная ошибка"
+                "std_err": "Стандартная ошибка",
+                "predicted_time": "Przewidywany okres ważności",
+                "predicted_time_range": "Zakres przewidywanego okresu ważności"
             }
         },
         "temp_humidity_analysis": {
