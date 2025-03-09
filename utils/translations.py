@@ -217,7 +217,9 @@ translations = {
                 "select_series": "Wybierz serie do analizy:",
                 "error_processing_file": "Wystąpił błąd podczas analizy pliku",
                 "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej.",
-                "edit_data": "Edytuj dane przed analizą"
+                "edit_data": "Edytuj dane przed analizą",
+                "apply_changes": "Zastosuj zmiany",
+                "reset_data": "Resetuj dane do oryginalnych wartości"
             },
             "plot": {
                 "data": "dane",
