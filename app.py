@@ -29,7 +29,6 @@ page = st.sidebar.radio(
         t["temp_humidity_analysis"]["temp_humidity"],
         t["pqr_module"]["title"],
         t["anova_module"]["title"],
-        Section(name="Section2", icon=":bar_chart:"),
         "Get data",
         "Test",
         "Test2",
