@@ -216,14 +216,18 @@ translations = {
                 "data_preview": "Podgląd danych (pierwsze 12 wierszy):",
                 "select_series": "Wybierz serie do analizy:",
                 "error_processing_file": "Wystąpił błąd podczas analizy pliku",
-                "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej."
+                "no_file_uploaded": "Nie wybrano pliku - proszę wgrać plik Excel powyżej.",
+                "edit_data": "Edytuj dane przed analizą",
+                "apply_changes": "Zastosuj zmiany",
+                "reset_data": "Resetuj dane do oryginalnych wartości"
             },
             "plot": {
                 "data": "dane",
                 "regression": "regresja",
                 "spec_limit": "Limit specyfikacji",
                 "x_label": "Czas (mies.)",
-                "title": "Analiza stabilności"
+                "title": "Analiza stabilności",
+                "show_confidence_interval": "Pokaż przedział ufności dla linii regresji"
             },
             "regression_results": {
                 "header": "Wyniki analizy regresji dla wybranych serii",
@@ -232,7 +236,9 @@ translations = {
                 "intercept": "Wyraz wolny (intercept)",
                 "r_value": "Współczynnik korelacji (r)",
                 "p_value": "P-значenie (p-value)",
-                "std_err": "Стандартная ошибка"
+                "std_err": "Стандартная ошибка",
+                "predicted_time": "Przewidywany okres ważności",
+                "predicted_time_range": "Zakres przewidywanego okresu ważności"
             }
         },
         "temp_humidity_analysis": {
@@ -677,14 +683,16 @@ translations = {
                 "data_preview": "Data preview (first 10 rows):",
                 "select_series": "Select series for analysis:",
                 "error_processing_file": "An error occurred while processing the file",
-                "no_file_uploaded": "No file selected - please upload an Excel file above."
+                "no_file_uploaded": "No file selected - please upload an Excel file above.",
+                "edit_data": "Edit data before analysis"
             },
             "plot": {
                 "data": "data",
                 "regression": "regression",
                 "spec_limit": "Specification Limit",
                 "x_label": "Time (months)",
-                "title": "Stability Analysis"
+                "title": "Stability Analysis",
+                "show_confidence_interval": "Show confidence interval for regression line"
             },
             "regression_results": {
                 "header": "Regression Analysis Results for Selected Series",
@@ -693,7 +701,9 @@ translations = {
                 "intercept": "Intercept",
                 "r_value": "Correlation Coefficient (r)",
                 "p_value": "p-value",
-                "std_err": "Standard Deviation"
+                "std_err": "Standard Deviation",
+                "predicted_time": "Predicted shelf life",
+                "predicted_time_range": "Predicted shelf life range"
             }
         },
         "temp_humidity_analysis": {
@@ -1139,14 +1149,16 @@ translations = {
                 "data_preview": "Предварительный просмотр данных (первые 12 строк):",
                 "select_series": "Выберите серии для анализа:",
                 "error_processing_file": "Произошла ошибка при анализе файла",
-                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel."
+                "no_file_uploaded": "Файл не выбран - пожалуйста, загрузите файл Excel.",
+                "edit_data": "Редактировать данные перед анализом"
             },
             "plot": {
                 "data": "данные",
                 "regression": "регрессия",
                 "spec_limit": "Предел спецификации",
                 "x_label": "Время (месяцы)",
-                "title": "Анализ стабильности"
+                "title": "Анализ стабильности",
+                "show_confidence_interval": "Показать доверительный интервал для линии регрессии"
             },
             "regression_results": {
                 "header": "Результаты анализа регрессии для выбранных серий",
@@ -1155,7 +1167,9 @@ translations = {
                 "intercept": "Перехват (intercept)",
                 "r_value": "Коэффициент корреляции (r)",
                 "p_value": "p-значение",
-                "std_err": "Стандартная ошибка"
+                "std_err": "Стандартная ошибка",
+                "predicted_time": "Прогнозируемый срок годности",
+                "predicted_time_range": "Диапазон прогнозируемого срока годности"
             }
         },
         "temp_humidity_analysis": {

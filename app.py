@@ -29,10 +29,11 @@ page = st.sidebar.radio(
         t["temp_humidity_analysis"]["temp_humidity"],
         t["pqr_module"]["title"],
         t["anova_module"]["title"],
-        t["dissolution_testing"]["title"]
         #"Get data",
         #"Test",
-        #t["lab_comparison"]["title"]
+        #"Test2",
+        #t["lab_comparison"]["title"],
+        t["dissolution_testing"]["title"]
     ]
 )
 
@@ -88,6 +89,10 @@ elif page == "Get data":
 elif page == "Test":
     from AppPages import test
     test.show(language)
+
+elif page == "Test2":
+    from AppPages import test2
+    test2.show(language)
 
 elif page == t["lab_comparison"]["title"]:
     from AppPages import lab_comparison

@@ -26,18 +26,30 @@ def show(language):
 
     if uploaded_file is not None:
         try:
-            df = pd.read_excel(uploaded_file)
+            if "df_original" not in st.session_state:
+                st.session_state.df_original = pd.read_excel(uploaded_file)
+            
+            if "df_edited" not in st.session_state:
+                st.session_state.df_edited = st.session_state.df_original.copy()
 
+            st.subheader(t["file_handling"]["data_preview"])
+            st.write(t["file_handling"]["edit_data"])
+            edited_df = st.data_editor(st.session_state.df_edited, num_rows="dynamic")
+
+            if st.button(t["file_handling"]["apply_changes"]):
+                st.session_state.df_edited = edited_df
+                st.rerun()
+
+            if st.button(t["file_handling"]["reset_data"]):
+                st.session_state.df_edited = st.session_state.df_original.copy()
+                st.rerun()
+
+            df = st.session_state.df_edited
             parameter_name = df.iloc[0, 0]
             time = df['Time']
             min_spec = df['Min'].iloc[0] if not pd.isna(df['Min'].iloc[0]) else None
             max_spec = df['Max'].iloc[0] if not pd.isna(df['Max'].iloc[0]) else None
             series_columns = df.columns[4:]
-
-            show_data = st.checkbox(t["file_handling"]["show_data_preview"], value=True)
-            if show_data:
-                st.subheader(t["file_handling"]["data_preview"])
-                st.dataframe(df.head(12))
 
             selected_series = st.multiselect(t["file_handling"]["select_series"], series_columns, default=series_columns)
 
@@ -45,7 +57,6 @@ def show(language):
 
             fig, ax = plt.subplots(figsize=(12, 8))
             regression_results = []
-
             colors = plt.cm.get_cmap("tab10", len(selected_series))
 
             for i, col in enumerate(selected_series):
