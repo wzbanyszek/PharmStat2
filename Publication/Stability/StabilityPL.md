@@ -1,4 +1,4 @@
-**Tytuł: „Od teorii do praktyki: wykorzystanie modelu liniowego w PharmStat2 (Python/AI) do analiz stabilności”**
+#Od teorii do praktyki: wykorzystanie modelu liniowego w PharmStat2 (Python/AI) do analiz stabilności
 
 ---
 
