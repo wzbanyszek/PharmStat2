@@ -1,6 +1,6 @@
 # Od teorii do praktyki: wykorzystanie modelu liniowego w PharmStat2 (Python/AI) do analiz stabilności
 
-W tej kontynuacji serii o nowoczesnych metodach analiz statystycznych w farmacji pokazujemy, jak model liniowy zrealizowany w narzędziu PharmStat2 (opartym na Python/AI) pozwala w prosty sposób oceniać stabilność i przewidywać okres ważności produktów leczniczych. Dowiesz się, jak przygotować dane w Excelu, dokonać kluczowych obliczeń zgodnie z wytycznymi ICH (Q1A(R2), Q1E) i w kilka sekund uzyskać intuicyjne wyniki, które ułatwią zarządzanie ryzykiem oraz obniżą koszty compliance.
+W tej kontynuacji serii o nowoczesnych metodach analiz statystycznych w farmacji pokazujemy, jak model liniowy zrealizowany w narzędziu PharmStat2 (opartym na Python/AI) pozwala w prosty sposób oceniać stabilność i przewidywać okres ważności produktów leczniczych. Dowiesz się, jak przygotować dane w Excelu, dokonać kluczowych obliczeń zgodnie z wytycznymi ICH (Q1A(R2), Q1E) i w kilka sekund przeprowadzić obliczenia, które które pozwolą ocenić i przewidzieć stabilność produktu leczniczego.
 
 ---
 
@@ -44,12 +44,17 @@ Praktyczne wykorzystanie regresji liniowej w ocenie stabilności polega na szere
 
 ## 3. Jak wykorzystać do tego Pharmstat2?
 
+PharmStat2 (online tool) – https://pharmstat2.streamlit.app/ – to narzędzie oparte na Python/AI, które umożliwia automatyczną analizę danych ze stabilności:
+
 ### a) Przygotowanie danych
 
 - Pierwszy wiersz w Excelu: nazwa parametru (np. „Zawartość API” lub „Zanieczyszczenie A”).
 - Kolumna `Time` – zawierająca czas w miesiącach.
 - (Opcjonalnie) Kolumny `Min` i `Max` – jeśli chcemy, by raport pokazywał przecięcie z limitem specyfikacji.
 - Kolejne kolumny – wyniki dla każdej serii (np. Seria_1, Seria_2…).
+
+Przykładowy plik Excel (do pobrania):
+https://docs.google.com/spreadsheets/d/1tMSGOBJkq9zxpLugE51UZUjVWGpji8dK/edit?usp=sharing&ouid=118120522004481145097&rtpof=true&sd=true
 
 ### b) Analiza w Pharmstat2
 
@@ -83,7 +88,7 @@ Ocena regresji liniowej w tych różnych warunkach pozwala wyciągać wnioski na
 
 ## Podsumowanie
 
-Analiza stabilności przy użyciu **regresji liniowej** pozostaje fundamentem oceny jakości i bezpieczeństwa produktu leczniczego w czasie. Zrozumienie nachylenia i wyrazu wolnego, korelacji oraz możliwość łączenia wyników z różnych serii (o ile statystyka to dopuszcza) to kluczowe elementy postępowania zalecanego przez wytyczne ICH Q1A(R2) i Q1E.  
-**Pharmstat2** (Farmstat2) automatyzuje ten proces – wystarczy odpowiednio przygotowany plik Excel, by w kilka chwil wygenerować wykresy i tabele z istotnymi wskaźnikami (nachyleniem, korelacją, predykcją terminu wygaśnięcia). W efekcie możemy szybko ocenić, czy produkt zachowa wymaganą jakość przez zakładany okres przechowywania.
+Analiza stabilności przy użyciu **regresji liniowej** pozostaje fundamentem oceny jakości i bezpieczeństwa produktu leczniczego w czasie. Właściwa interpretacja nachylenia i wyrazu wolnego, korelacji oraz możliwość łączenia wyników z różnych serii (o ile statystyka to dopuszcza) to kluczowe elementy postępowania zalecanego przez wytyczne ICH Q1A(R2) i Q1E.  
+**Pharmstat2** (Farmstat2) automatyzuje ten proces – wystarczy odpowiednio przygotowany plik Excel, by w kilka chwil wygenerować wykresy i tabele z istotnymi wskaźnikami (nachyleniem, korelacją, predykcją terminu ważności). W efekcie możemy szybko ocenić, czy produkt zachowa wymaganą jakość przez zakładany okres przechowywania.
 
 **Zachęcam do podzielenia się swoimi spostrzeżeniami w komentarzach** – czy w swoich badaniach stabilności też korzystacie z modeli liniowych? A może macie doświadczenia z bardziej rozbudowanymi analizami? Chętnie porozmawiam o praktycznych przykładach!
