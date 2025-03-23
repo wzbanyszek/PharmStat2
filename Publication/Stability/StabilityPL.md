@@ -8,9 +8,8 @@ W tej kontynuacji serii o nowoczesnych metodach analiz statystycznych w farmacji
 
 Jednym z kluczowych elementów programu badań stabilności produktu leczniczego jest określenie, jak dany parametr jakościowy (np. zawartość substancji czynnej, poziom zanieczyszczeń) zmienia się w czasie. W praktyce, zgodnie z wytycznymi ICH (m.in. [Q1A(R2)](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-q-1-stability-testing-new-drug-substances-products-step-5_en.pdf) i [Q1E](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-q-1-e-evaluation-stability-data-step-5_en.pdf)), często wystarcza prosty **model liniowy**, który opisuje relację:
 
-\[
-\wynik = a + b \times t
-\]
+
+wynik = a + b * t
 
 - \( t \) – czas przechowywania (np. w miesiącach),  
 - \( a \) (wyraz wolny) – wartość początkowa danego parametru,  
