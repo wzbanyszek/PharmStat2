@@ -1,5 +1,7 @@
 # Od teorii do praktyki: wykorzystanie modelu liniowego w PharmStat2 (Python/AI) do analiz stabilności
 
+W tej kontynuacji serii o nowoczesnych metodach analiz statystycznych w farmacji pokazujemy, jak model liniowy zrealizowany w narzędziu PharmStat2 (opartym na Python/AI) pozwala w prosty sposób oceniać stabilność i przewidywać okres ważności produktów leczniczych. Dowiesz się, jak przygotować dane w Excelu, dokonać kluczowych obliczeń zgodnie z wytycznymi ICH (Q1A(R2), Q1E) i w kilka sekund uzyskać intuicyjne wyniki, które ułatwią zarządzanie ryzykiem oraz obniżą koszty compliance.
+
 ---
 
 ## 1. Ocena stabilności – dlaczego regresja liniowa?
