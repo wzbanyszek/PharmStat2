@@ -1,8 +1,4 @@
-Poniżej znajduje się zaktualizowany artykuł, w którym:
-- Dodano pełny cytat do „Handbook of Stability Testing…” (w nawiasie),
-- Usunięto bezpośrednie odniesienie do pliku z danymi Montelukastu, zastępując je przykładową sytuacją,
-- Zamiast „poolowanie” zastosowano „łączenie wyników”,
-- Dodano kilka informacji o typowych warunkach stabilności (25°C ± 2°C / 60% ± 5% RH itp.).
+**Tytuł: „Od teorii do praktyki: wykorzystanie modelu liniowego w PharmStat2 (Python/AI) do analiz stabilności”**
 
 ---
 
