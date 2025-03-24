@@ -1,6 +1,6 @@
 # From Theory to Practice: Using a Linear Model in PharmStat2 (Python/AI) for Stability Analyses
 
-In this continuation of our series on employing modern tools for statistical analysis in the pharmaceutical field, we demonstrate how a linear model, implemented in the PharmStat2 tool (based on Python/AI), provides a straightforward way to assess stability and predict the shelf life of medicinal products. You will learn how to prepare data in Excel, perform key calculations in line with ICH guidelines (Q1A(R2), Q1E), and evaluate as well as forecast product stability.
+In this continuation of our series on modern tools for statistical analysis in the pharmaceutical industry, we demonstrate how a linear model, implemented in the PharmStat2 tool (based on Python/AI), provides a straightforward way to assess stability and predict the shelf life of medicinal products. You will learn how to prepare data in Excel, perform key calculations in line with ICH guidelines (Q1A(R2), Q1E), and evaluate as well as forecast product stability.
 
 ---
 
